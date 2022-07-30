@@ -56,7 +56,7 @@ export default function Contact({ page, placeholders }) {
             {data.social.links.map((link) => (
               <li key={link.name}>
                 <Link href={link.link}>
-                  <a target={link.new_window ? "_blank" : "_self"}>
+                  <a target={link.newTab ? "_blank" : "_self"}>
                     {link.socialIcon && <Icon icon={link.socialIcon} />}{" "}
                     {link.name}
                   </a>

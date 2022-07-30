@@ -171,7 +171,7 @@ export default function DefaultLayout({ children, page }) {
               {data.footer.links.map((link) => (
                 <li key={link.name}>
                   <Link href={link.link}>
-                    <a target={link.new_window ? "_blank" : "_self"}>
+                    <a target={link.newTab ? "_blank" : "_self"}>
                       {link.socialIcon && <Icon icon={link.socialIcon} />}{" "}
                       {link.name}
                     </a>
@@ -188,7 +188,7 @@ export default function DefaultLayout({ children, page }) {
               {data.social.links.map((link) => (
                 <li key={link.name}>
                   <Link href={link.link}>
-                    <a target={link.new_window ? "_blank" : "_self"}>
+                    <a target={link.newTab ? "_blank" : "_self"}>
                       {link.socialIcon && <Icon icon={link.socialIcon} />}{" "}
                       {link.name}
                     </a>

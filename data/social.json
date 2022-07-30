@@ -4,49 +4,49 @@
       "name": "Slack",
       "link": "https://go.eauw.org/slack",
       "socialIcon": "Slack",
-      "new_window": true
+      "newTab": true
     },
     {
       "name": "WIN",
       "link": "https://go.eauw.org/win",
       "socialIcon": "WIN",
-      "new_window": true
+      "newTab": true
     },
     {
       "name": "LinkedIn",
       "link": "https://linkedin.com/company/eauw",
       "socialIcon": "LinkedIn",
-      "new_window": true
+      "newTab": true
     },
     {
       "name": "GitHub",
       "link": "https://github.com/eauwmadison",
       "socialIcon": "GitHub",
-      "new_window": true
+      "newTab": true
     },
     {
       "name": "YouTube",
       "link": "https://www.youtube.com/channel/UCvQu2QhWLNPZwVA-41lXnqQ",
       "socialIcon": "YouTube",
-      "new_window": true
+      "newTab": true
     },
     {
       "name": "Facebook",
       "link": "https://www.facebook.com/eauwmadison",
       "socialIcon": "Facebook",
-      "new_window": true
+      "newTab": true
     },
     {
       "name": "Instagram",
       "link": "https://www.instagram.com/uweffectivealtruism/",
       "socialIcon": "Instagram",
-      "new_window": true
+      "newTab": true
     },
     {
       "name": "RSS",
       "link": "/feed.xml",
       "socialIcon": "RSS",
-      "new_window": false
+      "newTab": false
     }
   ]
 }

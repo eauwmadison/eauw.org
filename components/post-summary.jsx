@@ -4,7 +4,7 @@ import PostSummaryDetails from "./post-summary-details";
 
 export default function PostSummary({ post }) {
   return (
-    <li className="post-summary">
+    <li className="post-summary hover">
       <div className="post-summary-image">
         <Image
           src={post.image}
@@ -34,7 +34,7 @@ export default function PostSummary({ post }) {
 
       <p
         className="post-summary-excerpt"
-        dangerouslySetInnerHTML={{ __html: post.excerpt_html }}
+        dangerouslySetInnerHTML={{ __html: post.excerptHtml }}
       />
     </li>
   );

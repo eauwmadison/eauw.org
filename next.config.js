@@ -12,8 +12,8 @@ module.exports = withBundleAnalyzer({
   },
   images: {
     domains: ["placekitten.com", "placebear.com", "unsplash.it", "localhost"],
-    loader: "imgix",
-    path: ""
+    // loader: "next/image",
+    // "path": ""
   },
   swcMinify: true
 });

@@ -1,14 +1,15 @@
 module.exports = {
   "_comments": {
-    largeHeader: "Toggles the size of the top banner.",
-    show_in_navigation: "Toggles a link in the top banner.",
-    author_staff_member: "The staff member writing this post.",
-    callToAction: "Type of request shown at the bottom of this page.",
-    testimonials: "Update, add or remove testimonials.",
-    role: "Shown as subtext on leadership team member summaries.",
-    contactEmailAddress: "Address for the contact form to send to.",
-    new_window: "Whether the link opens a new browser tab/window.",
-    calendar: "Whether a calendar is shown on the page."
+    largeHeader: "Toggles the size of the top banner",
+    author_staff_member: "The staff member writing this post",
+    callToAction: "Type of request shown at the bottom of this page",
+    testimonials: "Update, add or remove testimonials",
+    role: "Shown as subtext on leadership team member summaries",
+    contactEmailAddress: "Address for the contact form to send to",
+    newTab: "Whether the link opens a new browser tab",
+    calendar: "Whether a calendar is shown on the page",
+    pinned: "Whether a post is pinned to the top of the Posts page",
+    excerptHtml: "The HTML preview for a post summary"
   },
 
   "_select_data": {
