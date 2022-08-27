@@ -63,7 +63,7 @@ export default function Event({ event }) {
         data-tip="View in Google Calendar"
       >
         <div className="event hover">
-          {event.attachments[0] &&
+          {event.attachments &&
             event.attachments[0]?.mimeType.startsWith("image/") && (
               <div className="event-image">
                 <img
