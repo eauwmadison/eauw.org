@@ -7,6 +7,8 @@ import siteData from "../lib/data";
 
 import Event from "./event";
 
+import Masonry from "@mui/lab/Masonry";
+
 const fetcher = async (url) => {
   const res = await fetch(url);
 
@@ -86,7 +88,7 @@ export default function Calendar() {
 
   return (
     <>
-      <div className="events">
+      <Masonry columns={3} spacing={3}>
         {filteredEvents.length > 0 ? (
           filteredEvents.map((event, i) => {
             return <Event event={event} key={i} />;
@@ -94,7 +96,7 @@ export default function Calendar() {
         ) : (
           <div>No events for now.</div>
         )}
-      </div>
+      </Masonry>
       <div className="time">
         Last updated{" "}
         <Moment fromNow interval={30000}>
