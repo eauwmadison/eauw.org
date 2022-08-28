@@ -1,34 +1,50 @@
-{
-  "eventTypes": {
-    "Social": {
-      "color": "#995b7b"
-    },
-    "Collaborative Social": {
-      "color": "#995b7b"
-    },
-    "Dinner": {
-      "color": "#9a7b6b"
-    },
-    "Student Speaker": {
-      "color": "#598f98"
-    },
-    "Speaker": {
-      "color": "#598f98"
-    },
-    "Discussion": {
-      "color": "#6cb692"
-    },
-    "Workshop": {
-      "color": "#ff7b7b"
-    },
-    "Introductory Event": {
-      "color": "#0c869b"
-    },
-    "Information Session": {
-      "color": "#ff9169"
-    },
-    "Other": {
-      "color": "#999"
-    }
+[
+  {
+    "name": "Social",
+    "color": "#995b7b"
+  },
+  {
+    "name": "Collaborative Social",
+    "color": "#995b7b"
+  },
+  {
+    "name": "Dinner",
+    "color": "#9a7b6b"
+  },
+  {
+    "name": "Student Speaker",
+    "color": "#598f98"
+  },
+  {
+    "name": "Speaker",
+    "color": "#598f98"
+  },
+  {
+    "name": "Discussion",
+    "color": "#6cb692"
+  },
+  {
+    "name": "Workshop",
+    "color": "#ff7b7b"
+  },
+  {
+    "name": "Introductory Event",
+    "color": "#0c869b"
+  },
+  {
+    "name": "Information Session",
+    "color": "#ff9169"
+  },
+  {
+    "name": "Other",
+    "color": "#999"
+  },
+  {
+    "name": "Effective Animal Advocacy",
+    "color": "#0f3918"
+  },
+  {
+    "name": "Good Futures",
+    "color": "#000e99"
   }
-}
+]

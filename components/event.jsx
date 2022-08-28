@@ -4,6 +4,13 @@ import { useState } from "react";
 import ManagedTooltip from "./managed-tooltip";
 import Icon from "./icon";
 
+import siteData from "../lib/data";
+
+// pattern to match event type in the event description; max of 3 words
+// supports both HTML blob and plain text
+const eventTypeRegEx =
+  /((<span>){1,2})?event type:\s*\w+\s{0,2}\w+\s{0,2}\w+((<\/span>){1,2}\s<br>)?/i;
+
 // to check if event location is link
 const isURL = (str) => {
   try {
@@ -36,6 +43,17 @@ export default function Event({ event }) {
   // add 1 day to all-day event start Date to match calendar
   if (event.start.date) {
     eventStart.setDate(eventStart.getDate() + 1);
+  }
+
+  if (event.description) {
+    // extract event type from the description
+    const eventType = event.description.match(eventTypeRegEx);
+    if (eventType) {
+      event.type = siteData.eventTypes.find((type) =>
+        eventType[0].toLowerCase().includes(type.name.toLowerCase())
+      );
+      event.description = event.description.replace(eventTypeRegEx, "");
+    }
   }
 
   return (
@@ -97,6 +115,20 @@ export default function Event({ event }) {
                   </>
                 )}
               </span>
+              {event.start.dateTime && event.end.dateTime && (
+                <span className="event-time">
+                  <Icon icon="Time" />
+                  {eventStart.toLocaleTimeString(undefined, {
+                    hour: "numeric",
+                    minute: "2-digit"
+                  })}{" "}
+                  &ndash;{" "}
+                  {eventEnd.toLocaleTimeString(undefined, {
+                    hour: "numeric",
+                    minute: "2-digit"
+                  })}
+                </span>
+              )}
               {event.location && (
                 <span className="event-location">
                   <Icon icon={isURL(event.location) ? "Link" : "Location"} />
@@ -116,20 +148,6 @@ export default function Event({ event }) {
                   )}
                 </span>
               )}
-              {event.start.dateTime && event.end.dateTime && (
-                <span className="event-time">
-                  <Icon icon="Time" />
-                  {eventStart.toLocaleTimeString(undefined, {
-                    hour: "numeric",
-                    minute: "2-digit"
-                  })}{" "}
-                  &ndash;{" "}
-                  {eventEnd.toLocaleTimeString(undefined, {
-                    hour: "numeric",
-                    minute: "2-digit"
-                  })}
-                </span>
-              )}
             </div>
           </div>
           {event.description && (
@@ -141,8 +159,11 @@ export default function Event({ event }) {
               }}
             />
           )}
-          <div className="event-type">
-            <span>Social</span>
+          <div
+            className="event-type"
+            style={{ background: event.type ? `${event.type.color}` : `#999` }}
+          >
+            <span>{event.type ? event.type.name : "Other"}</span>
           </div>
         </div>
       </a>

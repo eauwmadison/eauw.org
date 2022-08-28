@@ -37,8 +37,11 @@
 
 .event-info {
   font-size: 0.75em;
+  line-height: 1.5em;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+  row-gap: 0.5em;
 }
 
 .event-info svg {
@@ -56,7 +59,6 @@
 }
 
 .event-type {
-  background: $color-ea-muted-blue;
   font-size: 0.75em;
   color: $white;
   padding: 8px 16px;
