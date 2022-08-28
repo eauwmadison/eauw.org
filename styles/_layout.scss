@@ -1,7 +1,9 @@
+@import "colors";
+
 body {
   margin: 0;
   padding: 0;
-  background-color: #fefefe;
+  background-color: $white;
 }
 
 .container {
@@ -10,10 +12,21 @@ body {
 }
 
 .box {
-  background-color: #fefefe;
-  box-shadow: 1px 1px 5px 0 rgba(100, 100, 100, 0.2);
+  background-color: $white;
+  border: 1px solid $color-ea-dark;
+  border-radius: 4px;
   padding: 20px;
-  border-radius: 2px;
+}
+
+header .logo {
+  height: 25rem;
+}
+
+header .organization-group {
+  display: flex;
+  align-items: center;
+  column-gap: 3rem;
+  cursor: pointer;
 }
 
 .organization-group > * {
@@ -21,11 +34,12 @@ body {
 }
 
 .organization-name {
-  color: #05566b;
   font-weight: bold;
+  color: $color-ea-dark;
 }
 .organization-subheading {
-  color: #068294;
+  margin-top: 0;
+  color: $color-ea-primary;
 }
 
 header {
@@ -41,19 +55,16 @@ header {
   }
 
   @media (min-width: $mobile-break) {
-    background-size: contain;
-    background-position: calc(50% - 300px) calc(100% + 20px);
-
-    &.main-hero {
+    &.large-header {
       // height: 80vh;
       // background-position: calc(50% - 350px) calc(100% + 20px);
       .organization-name {
-        color: #05566b;
+        color: $color-ea-dark;
         font-weight: bold;
       }
       .organization-subheading {
         margin-top: 0;
-        color: #068294;
+        color: $color-ea-primary;
       }
     }
 
@@ -63,6 +74,9 @@ header {
   }
 
   nav {
+    margin-top: 2rem;
+    font-size: 2.25rem;
+    text-align: center;
     max-width: 100%;
 
     ul {
@@ -81,11 +95,18 @@ header {
 header,
 footer {
   a {
-    color: #3a4145;
+    color: $color-ea-dark;
 
     &.active {
       border-bottom: 2px solid;
     }
+  }
+}
+
+header,
+footer {
+  a:hover {
+    color: $color-ea-primary;
   }
 }
 
@@ -111,19 +132,25 @@ section {
 }
 
 .main {
-  @extend .light-section;
+  @extend .white-section;
   font-size: 2.25rem;
 }
 
-.light-section {
-  background-color: #f5f5f7;
-  box-shadow: inset 0px 15px 15px -15px rgba(100, 100, 100, 0.2);
+.white-section {
+  background-color: $white;
+}
+
+.beige-section {
+  background-color: $color-ea-beige;
+}
+
+.blue-section {
+  background-color: $color-ea-primary;
 }
 
 .dark-section {
-  background-color: #3e3f46;
+  background-color: $color-ea-dark;
   color: #c1c1c1;
-  box-shadow: inset 0px 15px 15px -15px rgba(0, 0, 0, 0.5);
 
   a {
     color: #efefef;
@@ -225,9 +252,7 @@ footer {
   }
 }
 
-.footer-links {
-  flex: 1 0 180px;
-  margin: 10px;
+.social-links {
   padding: 0;
 
   li {
@@ -235,19 +260,41 @@ footer {
     margin: 15px 0;
 
     a {
+      color: $color-ea-dark;
+
+      &:hover {
+        color: $color-ea-primary;
+      }
+
       svg {
-        fill: #3a4145;
+        fill: $color-ea-dark;
         margin-right: 10px;
         transition: fill 0.2s ease;
         vertical-align: middle;
         position: relative;
         top: -2px;
-        width: 22px;
-        height: 22px;
+        width: 26px;
+        height: 26px;
       }
 
       &:hover svg {
-        fill: #73a9c9;
+        fill: $color-ea-primary;
+      }
+    }
+  }
+}
+
+.footer-links {
+  @extend .social-links;
+
+  flex: 1 0 180px;
+  margin: 10px;
+
+  li {
+    a {
+      svg {
+        width: 22px;
+        height: 22px;
       }
     }
   }
@@ -268,6 +315,7 @@ footer {
 .testimonial-author {
   display: flex;
   align-items: center;
+  column-gap: 10px;
   color: #75828a;
   margin: 25px 20px 0 20px;
 
@@ -287,8 +335,7 @@ footer {
   position: relative;
 }
 
-.testimonial-message::before,
-.testimonial-message::after {
+.testimonial-message::before {
   content: " ";
   position: absolute;
   transform: translateY(-50%) rotate(45deg);
@@ -296,20 +343,11 @@ footer {
 }
 
 .testimonial-message::before {
-  top: 100%;
-  left: 25px;
+  top: 100.5%;
   width: 18px;
   height: 18px;
-  box-shadow: 1px 1px 5px 0 rgba(100, 100, 100, 0.2);
-}
-
-.testimonial-message::after {
-  top: 100%;
-  left: 22px;
-  height: 24px;
-  width: 24px;
-  z-index: 1;
-  margin-top: -5px;
+  border-right: 1px solid $color-ea-dark;
+  border-bottom: 1px solid $color-ea-dark;
 }
 
 .columns {

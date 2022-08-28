@@ -1,6 +1,6 @@
-import Link from "next/link";
+// import Link from "next/link";
 import Image from "next/image";
-import data from "../lib/data";
+// import data from "../lib/data";
 
 export default function Leader({ leader }) {
   return (
@@ -19,11 +19,7 @@ export default function Leader({ leader }) {
           <li>
             <small>{leader.role}</small>
           </li>
-          <li>
-            <Link href={`tel:${data.organization.phone}`}>
-              {data.organization.phone}
-            </Link>{" "}
-          </li>
+          <li></li>
         </ul>
       </div>
 

@@ -1,0 +1,103 @@
+@import "colors";
+@import "typography";
+
+.events {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.event-link {
+  display: inline-grid;
+  color: $color-ea-dark;
+
+  &:hover {
+    color: $color-ea-dark;
+  }
+}
+
+.event {
+  @extend .box;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.event-header {
+  padding: 16px;
+  border-bottom: 1px solid $color-ea-dark;
+}
+
+.event-title {
+  font-size: 1.125em;
+  font-weight: 600;
+}
+
+.event-info {
+  font-size: 0.75em;
+  line-height: 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 0.5em;
+}
+
+.event-info svg {
+  fill: $color-ea-dark;
+  margin-right: 0.5rem;
+  vertical-align: text-top;
+  width: 1em;
+  height: 1em;
+}
+
+.event-description {
+  font-size: 0.75em;
+  padding: 16px;
+  flex-grow: 1;
+}
+
+.event-type {
+  font-size: 0.75em;
+  color: $white;
+  padding: 8px 16px;
+}
+
+.event-tooltip {
+  font-family: $font-sans !important;
+  font-size: 0.65em !important;
+  color: $color-ea-dark !important;
+  line-height: initial !important;
+  padding: 8px !important;
+  border-radius: 4px !important;
+  border: 1px solid $color-ea-dark !important;
+  background-color: $color-ea-beige !important;
+}
+
+.event-tooltip-arrow {
+  &::before {
+    background-color: $color-ea-beige !important;
+    border: 1px solid $color-ea-dark !important;
+  }
+}
+
+.event-tooltip-child svg {
+  fill: $color-ea-dark;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+  width: 1em;
+  height: 1em;
+}
+
+.calendar-error {
+  background: $light-blue;
+  border-radius: 4px;
+  padding: 1rem;
+  margin-top: 1rem;
+
+  .error {
+    margin-top: 1rem;
+    font-family: monospace;
+  }
+}

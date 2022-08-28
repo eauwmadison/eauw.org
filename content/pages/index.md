@@ -2,6 +2,11 @@
 title:
 callToAction: Contact
 largeHeader: true
+calendar: true
+# testimonialSection: true
+contentHTML: >-
+  <div class="image-and-text"><img src="/uploads/members.png" alt="members"/><p>We are a community of UW–Madison students unified by a common desire to do the most we can to improve the world. Our organization seeks to promote the global movement of effective altruism, using evidence and reason to assess how to benefit others as much as possible and taking action based on the findings.</p></div>
+mainImage: /uploads/members.png
 testimonials:
   - message: >-
       We use Justice Law in all our endeavours. They offer an unparalleled
@@ -18,11 +23,4 @@ testimonials:
       home. Highly recommended to all.
     testimonialImage: https://placebear.com/60/60?a=.png
     name: D. and G. Gibbleston
-contentHTML: >-
-  <p>This is the <em>Justice</em> template from <a
-  href="https://cloudcannon.com/">CloudCannon</a>. Justice is strong foundation
-  for the web presence of a law firm or business. It&rsquo;s filled with
-  fictitious example content to get you started.</p><p>Justice Law is
-  professional representation. Practicing for over 50 years, our team have the
-  knowledge and skills to get you results.</p>
 ---

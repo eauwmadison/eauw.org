@@ -11,9 +11,12 @@ module.exports = withBundleAnalyzer({
     return config;
   },
   images: {
-    domains: ["placekitten.com", "placebear.com", "unsplash.it"],
-    loader: "imgix",
-    path: ""
+    domains: ["placekitten.com", "placebear.com", "unsplash.it", "localhost"]
   },
-  swcMinify: true
+  swcMinify: true,
+  experimental: {
+    images: {
+      unoptimized: true
+    }
+  }
 });

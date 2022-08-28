@@ -28,7 +28,7 @@ export default function PostLayout({ children, page, author }) {
               className="post-comments"
               shortname={data.site.disqus_shortname}
               config={{
-                url: `${data.site.url}/blog/${page.slug}`.replace(/\/+/g, "/"),
+                url: `${data.site.url}/posts/${page.slug}`.replace(/\/+/g, "/"),
                 identifier: page.slug,
                 title: page.title
               }}

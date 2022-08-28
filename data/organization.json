@@ -1,9 +1,8 @@
 {
   "organizationName": "Effective Altruism",
   "organizationSubheading": "UW\u2013Madison",
-  "description": "Working with people for over 50 years. Justice Law strives to excel for all clients in every situation.",
+  "description": "A group of students at UW–Madison with the common desire to do the most good we can.",
   "contactEmailAddress": "contact@eauw.org",
-  "phone": "(03) 123 4567",
-  "address": "123 Example Street, Gooseburb, 9876, Ducktown, New Zealand",
-  "postalAddress": "PO Box 123, Ducktown, New Zealand"
+  "officeAddress": "333 East Campus Mall, Student Activity Center, 3rd Floor, Room 100, Madison, WI 53715",
+  "postalAddress": "333 East Campus Mall, Student Activity Center, 3rd Floor, Mailbox #236, Madison, WI 53715"
 }

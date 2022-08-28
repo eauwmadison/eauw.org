@@ -2,7 +2,7 @@ import PageLayout from "../components/layouts/page";
 import Leader from "../components/leader";
 import { getCollection, getCollectionItem } from "../lib/collections";
 
-export default function About({ page, leaders }) {
+export default function Team({ page, leaders }) {
   return (
     <PageLayout page={page}>
       <p>Meet the members of our capable team:</p>
@@ -17,7 +17,7 @@ export default function About({ page, leaders }) {
 }
 
 export async function getStaticProps({ params }) {
-  const page = await getCollectionItem("pages", "about");
+  const page = await getCollectionItem("pages", "team");
   const leaders = await getCollection("leadership-team");
 
   return {

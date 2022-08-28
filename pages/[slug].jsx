@@ -8,8 +8,8 @@ export default function Page({ page }) {
 export async function getStaticPaths() {
   const slugs = await getCollectionSlugs("pages");
   const ignored = {
-    about: true,
-    blog: true,
+    team: true,
+    posts: true,
     contact: true,
     index: true
   };

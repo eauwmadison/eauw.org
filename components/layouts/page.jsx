@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import DefaultLayout from "./default";
 
 export default function PageLayout({ children, page }) {
@@ -9,7 +11,6 @@ export default function PageLayout({ children, page }) {
 
       <article className="content">
         <div dangerouslySetInnerHTML={{ __html: page.contentHTML }} />
-
         {children}
       </article>
     </DefaultLayout>

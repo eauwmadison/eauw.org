@@ -1,7 +1,11 @@
+/* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
+import Image from "next/image";
 import Link from "next/link";
 import { NextSeo } from "next-seo";
+
 import data from "../../lib/data";
+import Calendar from "../../components/calendar";
 import Icon from "../../components/icon";
 
 export default function DefaultLayout({ children, page }) {
@@ -19,19 +23,19 @@ export default function DefaultLayout({ children, page }) {
         <link
           rel="apple-touch-icon"
           sizes="180x180"
-          href="/apple-touch-icon.png"
+          href="/ico/apple-touch-icon.png"
         />
         <link
           rel="icon"
           type="image/png"
           sizes="32x32"
-          href="/favicon-32x32.png"
+          href="/ico/favicon-32x32.png"
         />
         <link
           rel="icon"
           type="image/png"
           sizes="16x16"
-          href="/favicon-16x16.png"
+          href="/ico/favicon-16x16.png"
         />
         <link rel="manifest" href="/ico/site.webmanifest" />
         <link
@@ -64,46 +68,38 @@ export default function DefaultLayout({ children, page }) {
         }}
       />
 
-      <header className={page.largeHeader ? "main-hero" : ""}>
+      <header className={page.largeHeader ? "large-header" : ""}>
         <div className="container">
-          {/* <Link href="/">
-              <h1>{data.organization.organizationName}</h1>
-              <h1>{data.organization.organizationSubheading}</h1>
-            </Link> */}
-          <div className="organization-group">
-          <h1 className="organization-name">
-            {data.organization.organizationName}
-          </h1>
-          <h1 className="organization-subheading">
-            {data.organization.organizationSubheading}
-          </h1>
-          </div>
+          <Link href="/" passHref>
+            <div className="organization-group">
+              <img
+                className="logo"
+                src="/uploads/Effective Altruism Lightbulb.svg"
+                alt="EA lightbulb Logo"
+              ></img>
+              <div className="organization-text">
+                <h1 className="organization-name">
+                  {data.organization.organizationName}
+                </h1>
+                <h1 className="organization-subheading">
+                  {data.organization.organizationSubheading}
+                </h1>
+              </div>
+            </div>
+          </Link>
           <nav>
             <ul>
-              <li>
-                <Link href="/about">
-                  <a className={page.slug === "about" ? "active" : ""}>About</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/services">
-                  <a className={page.slug === "services" ? "active" : ""}>
-                    Services
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact">
-                  <a className={page.slug === "contact" ? "active" : ""}>
-                    Contact
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/blog">
-                  <a className={page.slug === "blog" ? "active" : ""}>Blog</a>
-                </Link>
-              </li>
+              {data.navbar.links.map((link) => (
+                <li key={link.link}>
+                  <Link href={link.link}>
+                    <a
+                      className={"/" + page.slug === link.link ? "active" : ""}
+                    >
+                      {link.name}
+                    </a>
+                  </Link>
+                </li>
+              ))}
             </ul>
           </nav>
         </div>
@@ -112,6 +108,36 @@ export default function DefaultLayout({ children, page }) {
       <section className="main">
         <div className="container">{children}</div>
       </section>
+
+      {page.calendar && (
+        <section className="beige-section">
+          <div className="container">
+            <h2>Upcoming Events</h2>
+            <Calendar />
+          </div>
+        </section>
+      )}
+
+      {page.testimonials && (
+        <section className="container">
+          <div className="testimonials">
+            {page.testimonials.map((testimonial, i) => (
+              <blockquote className="testimonial" key={i}>
+                <p className="testimonial-message">{testimonial.message}</p>
+                <p className="testimonial-author">
+                  <Image
+                    src={testimonial.testimonialImage}
+                    alt={`Photo of ${testimonial.name}`}
+                    width={60}
+                    height={60}
+                  />{" "}
+                  {testimonial.name}
+                </p>
+              </blockquote>
+            ))}
+          </div>
+        </section>
+      )}
 
       {page.callToAction === "Contact" && (
         <section className="quote-section">
@@ -125,7 +151,7 @@ export default function DefaultLayout({ children, page }) {
       {page.callToAction === "Blog" && (
         <section className="quote-section">
           <p className="container">
-            <Link href="/blog">Read our blog</Link> for an introduction and
+            <Link href="/posts">Read our blog</Link> for an introduction and
             quick tips on various areas of the law.
           </p>
         </section>
@@ -137,50 +163,63 @@ export default function DefaultLayout({ children, page }) {
             className="footer-columns"
             data-cms-editor-link="cloudcannon:collections/content/data/footer.json"
           >
-            {data.footer.map((column) => (
-              <ul className="footer-links" key={column.title}>
-                <li>
-                  <h2>{column.title}</h2>
-                </li>
+            <ul className="footer-links">
+              <li>
+                <h2>Pages</h2>
+              </li>
 
-                {column.links.map((link) => (
-                  <li key={link.name}>
-                    <Link href={link.link}>
-                      <a target={link.new_window ? "_blank" : "_self"}>
-                        {link.social_icon && <Icon icon={link.social_icon} />}{" "}
-                        {link.name}
-                      </a>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            ))}
+              {data.footer.links.map((link) => (
+                <li key={link.name}>
+                  <Link href={link.link}>
+                    <a target={link.newTab ? "_blank" : "_self"}>
+                      {link.socialIcon && <Icon icon={link.socialIcon} />}{" "}
+                      {link.name}
+                    </a>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
+            <ul className="footer-links">
+              <li>
+                <h2>Social</h2>
+              </li>
+
+              {data.social.links.map((link) => (
+                <li key={link.name}>
+                  <Link href={link.link}>
+                    <a target={link.newTab ? "_blank" : "_self"}>
+                      {link.socialIcon && <Icon icon={link.socialIcon} />}{" "}
+                      {link.name}
+                    </a>
+                  </Link>
+                </li>
+              ))}
+            </ul>
 
             <ul className="footer-links">
               <li>
                 <div className="organization-group">
-                  <h2 className="organization-name">{data.organization.organizationName}</h2>
-                  <h2 className="organization-subheading">{data.organization.organizationSubheading}</h2>
+                  <h2 className="organization-name">
+                    {data.organization.organizationName}
+                  </h2>
+                  <h2 className="organization-subheading">
+                    {data.organization.organizationSubheading}
+                  </h2>
                 </div>
               </li>
               <li>{data.organization.description}</li>
               <li>
-                <Link href="/feed.xml">
-                  <a>
-                    <Icon icon="RSS" /> Subscribe with RSS
-                  </a>
-                </Link>
+                {
+                  // add newsletter signup here
+                }
               </li>
             </ul>
           </div>
         </div>
 
         <div className="legal-line">
-          <p className="container">
-            &copy; {new Date().getFullYear()}{" "}
-            {data.organization.organizationName} &bull;{" "}
-            <Link href="/terms">Terms</Link>
-          </p>
+          <p className="container">Made with 💡 in Madison, WI</p>
         </div>
       </footer>
     </>
