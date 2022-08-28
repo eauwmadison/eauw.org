@@ -1,5 +1,5 @@
 // import Link from "next/link";
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 // import data from "../lib/data";
 
 export default function Leader({ leader }) {
@@ -7,7 +7,7 @@ export default function Leader({ leader }) {
     <li className="staff">
       <div className="staff-details">
         <div className="staff-image">
-          <Image
+          <ExportedImage
             src={leader.image}
             alt={`Staff photo for ${leader.name}`}
             width="120"

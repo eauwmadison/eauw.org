@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 import Link from "next/link";
 import { NextSeo } from "next-seo";
 
@@ -74,7 +74,7 @@ export default function DefaultLayout({ children, page }) {
             <div className="organization-group">
               <img
                 className="logo"
-                src="/uploads/Effective Altruism Lightbulb.svg"
+                src="/images/Effective Altruism Lightbulb.svg"
                 alt="EA lightbulb Logo"
               ></img>
               <div className="organization-text">
@@ -125,7 +125,7 @@ export default function DefaultLayout({ children, page }) {
               <blockquote className="testimonial" key={i}>
                 <p className="testimonial-message">{testimonial.message}</p>
                 <p className="testimonial-author">
-                  <Image
+                  <ExportedImage
                     src={testimonial.testimonialImage}
                     alt={`Photo of ${testimonial.name}`}
                     width={60}

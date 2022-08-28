@@ -74,6 +74,7 @@ export default function Calendar() {
   if (data) {
     // the first 6 non-private events which haven't ended
     filteredEvents = data.items
+      .filter((event) => event.start)
       .sort(
         (a, b) =>
           new Date(a.start.dateTime || a.start.date) -
