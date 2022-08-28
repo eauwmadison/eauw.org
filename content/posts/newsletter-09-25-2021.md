@@ -4,7 +4,7 @@ date: 2021-09-25T00:00:00Z
 tags:
   - Newsletter
 author_staff_member: jane-doe
-image: /newsletter-images/09-25-2021/cover.jpeg
+image: /images/newsletter-images/09-25-2021/cover.jpeg
 excerptHtml: "This is a short excerpt of the newsletter."
 ---
 

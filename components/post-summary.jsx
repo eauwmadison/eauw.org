@@ -1,12 +1,12 @@
 import Link from "next/link";
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 import PostSummaryDetails from "./post-summary-details";
 
 export default function PostSummary({ post }) {
   return (
     <li className="post-summary hover">
       <div className="post-summary-image">
-        <Image
+        <ExportedImage
           src={post.image}
           alt={`Photo of ${post.title}`}
           width={600}
@@ -22,7 +22,7 @@ export default function PostSummary({ post }) {
         <PostSummaryDetails post={post} />
 
         <p className="post-summary-author">
-          <Image
+          <ExportedImage
             src={post.author.image}
             alt={`Photo of ${post.author.name}`}
             width="30"

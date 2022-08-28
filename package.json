@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "analyze": "ANALYZE=true next build",
-    "build": "next build && next-sitemap && next export",
+    "build": "next build && next-sitemap && next export && next-image-export-optimizer",
     "dev": "next dev -p 3333",
     "format": "prettier --write .",
     "lint": "next lint",
@@ -21,6 +21,7 @@
     "gray-matter": "^4.0.3",
     "markdown-it": "^12.3.2",
     "next": "^12.1.0",
+    "next-image-export-optimizer": "^0.12.2",
     "next-seo": "^5.1.0",
     "prop-types": "^15.8.1",
     "react": "^17.0.2",

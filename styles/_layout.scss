@@ -114,6 +114,10 @@ header a.active {
   border-bottom: 2px solid;
 }
 
+footer {
+  @extend .beige-section;
+}
+
 header,
 footer,
 section {
