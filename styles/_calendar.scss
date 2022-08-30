@@ -30,9 +30,15 @@
   border-bottom: 1px solid $color-ea-dark;
 }
 
+.event-image img {
+  display: block;
+  width: 100%;
+}
+
 .event-title {
   font-size: 1.125em;
   font-weight: 600;
+  line-height: 0;
 }
 
 .event-info {
@@ -42,6 +48,7 @@
   flex-direction: column;
   justify-content: space-between;
   row-gap: 0.5em;
+  margin-top: 16px;
 }
 
 .event-info svg {
