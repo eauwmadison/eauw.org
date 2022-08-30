@@ -171,8 +171,8 @@ export default function DefaultLayout({ children, page }) {
               {data.footer.links.map((link) => (
                 <li key={link.name}>
                   <Link href={link.link}>
-                    <a target={link.newTab ? "_blank" : "_self"}>
-                      {link.socialIcon && <Icon icon={link.socialIcon} />}{" "}
+                    <a target={link.external ? "_blank" : "_self"}>
+                      {link.external && <Icon icon="Link" />}{" "}
                       {link.name}
                     </a>
                   </Link>
