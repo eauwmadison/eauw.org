@@ -3,7 +3,7 @@ title: 👋 Saying hello with new opportunities to do good
 date: 2021-09-15T00:00:00Z
 tags:
   - Newsletter
-author_staff_member: jane-doe
+author_staff_member: eeshaan-pirani
 image: "https://unsplash.it/600/450?image=737&a=.png"
 ---
 
