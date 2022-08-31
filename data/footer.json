@@ -19,6 +19,20 @@
     {
       "name": "Posts",
       "link": "/posts"
+    },
+    {
+      "name": "Apply",
+      "link": "/apply"
+    },
+    {
+      "name": "Effective Animal Advocacy",
+      "link": "https://win.wisc.edu/organization/animal",
+      "external": true
+    },
+    {
+      "name": "Good Futures",
+      "link": "https://win.wisc.edu/organization/goodfutures",
+      "external": true
     }
   ]
 }

@@ -68,7 +68,7 @@ export default function Contact({ page, placeholders }) {
 
         <div className="column">
           <form method="post" action="/contact-success">
-            <label htmlFor="email_address">Email Address</label>
+            <label htmlFor="email_address">Your Email Address</label>
             <input
               id="email_address"
               type="text"

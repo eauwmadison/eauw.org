@@ -245,7 +245,7 @@ footer {
     margin: -10px -10px 10px -10px;
   }
 
-  .legal-line {
+  .bottom-line {
     width: 100%;
     padding: 30px 0 0 0;
     margin: 0;
@@ -434,4 +434,11 @@ footer {
 .post-summary-author {
   @extend .testimonial-author;
   margin: 1em 0;
+}
+
+.responsive-iframe {
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+  width: 100%;
 }

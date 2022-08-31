@@ -36,6 +36,10 @@
     "color": "#ff9169"
   },
   {
+    "name": "Deadline",
+    "color": "#ff004f"
+  },
+  {
     "name": "Other",
     "color": "#999"
   },

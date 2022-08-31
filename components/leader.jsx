@@ -17,7 +17,7 @@ export default function Leader({ leader }) {
         <ul className="staff-info">
           <li>{leader.name}</li>
           <li>
-            <small>{leader.role}</small>
+            <small>{leader.pronouns}</small>
           </li>
           <li></li>
         </ul>

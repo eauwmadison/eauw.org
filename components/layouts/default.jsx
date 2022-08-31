@@ -9,6 +9,31 @@ import Calendar from "../../components/calendar";
 import Icon from "../../components/icon";
 
 export default function DefaultLayout({ children, page }) {
+  // handles the submit event on email subscription form submit.
+  const handleSubmit = async (event) => {
+    // stop the form from submitting and refreshing the page.
+    event.preventDefault();
+
+    const data = {
+      firstName: event.target.firstName.value,
+      email: event.target.email.value
+    };
+
+    const stringifiedData = JSON.stringify(data);
+
+    const endpoint = "https://api.eauw.org/email";
+
+    const options = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: stringifiedData
+    };
+
+    await fetch(endpoint, options);
+  };
+
   const title = page.title
     ? `${page.title} | ${data.seo.siteTitle}`
     : data.seo.siteTitle;
@@ -130,6 +155,7 @@ export default function DefaultLayout({ children, page }) {
                     alt={`Photo of ${testimonial.name}`}
                     width={60}
                     height={60}
+                    unoptimized
                   />{" "}
                   {testimonial.name}
                 </p>
@@ -171,9 +197,8 @@ export default function DefaultLayout({ children, page }) {
               {data.footer.links.map((link) => (
                 <li key={link.name}>
                   <Link href={link.link}>
-                    <a target={link.newTab ? "_blank" : "_self"}>
-                      {link.socialIcon && <Icon icon={link.socialIcon} />}{" "}
-                      {link.name}
+                    <a target={link.external ? "_blank" : "_self"}>
+                      {link.external && <Icon icon="Link" />} {link.name}
                     </a>
                   </Link>
                 </li>
@@ -189,7 +214,7 @@ export default function DefaultLayout({ children, page }) {
                 <li key={link.name}>
                   <Link href={link.link}>
                     <a target={link.newTab ? "_blank" : "_self"}>
-                      {link.socialIcon && <Icon icon={link.socialIcon} />}{" "}
+                      {link.socialIcon && <Icon icon={link.socialIcon} />}
                       {link.name}
                     </a>
                   </Link>
@@ -210,16 +235,31 @@ export default function DefaultLayout({ children, page }) {
               </li>
               <li>{data.organization.description}</li>
               <li>
-                {
-                  // add newsletter signup here
-                }
+                <form onSubmit={handleSubmit}>
+                  <h4>Stay up-to-date!</h4>
+                  <input
+                    placeholder="First name"
+                    type="text"
+                    name="firstName"
+                    required
+                  />
+                  <input
+                    placeholder="Email"
+                    type="email"
+                    name="email"
+                    required
+                  />
+                  <button data-element-type="button" type="submit">
+                    <span>Subscribe</span>
+                  </button>
+                </form>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="legal-line">
-          <p className="container">Made with 💡 in Madison, WI</p>
+        <div className="bottom-line">
+          <p className="container">Made with ❤️ in Madison, WI.</p>
         </div>
       </footer>
     </>

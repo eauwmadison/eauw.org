@@ -1,10 +1,14 @@
 module.exports = {
   "_comments": {
     largeHeader: "Toggles the size of the top banner",
+    showTitle: "Toggles the title on the page",
     author_staff_member: "The staff member writing this post",
     callToAction: "Type of request shown at the bottom of this page",
     testimonials: "Update, add or remove testimonials",
     role: "Shown as subtext on leadership team member summaries",
+    pronouns: "Shown as subtext on leadership team member summaries",
+    executive: "True or false, whether the leader is a member of the executive team",
+    previous: "True or false, whether the leader is no longer a part of leadership",
     contactEmailAddress: "Address for the contact form to send to",
     newTab: "Whether the link opens a new browser tab",
     calendar: "Whether a calendar is shown on the page",
@@ -25,7 +29,8 @@ module.exports = {
       "RSS",
       "GitHub",
       "WIN",
-      "Slack"
+      "Slack",
+      "Link"
     ]
   },
 
