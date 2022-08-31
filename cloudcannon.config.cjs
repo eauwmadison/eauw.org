@@ -1,6 +1,7 @@
 module.exports = {
   "_comments": {
     largeHeader: "Toggles the size of the top banner",
+    showTitle: "Toggles the title on the page",
     author_staff_member: "The staff member writing this post",
     callToAction: "Type of request shown at the bottom of this page",
     testimonials: "Update, add or remove testimonials",

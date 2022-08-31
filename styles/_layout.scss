@@ -435,3 +435,10 @@ footer {
   @extend .testimonial-author;
   margin: 1em 0;
 }
+
+.responsive-iframe {
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+  width: 100%;
+}
