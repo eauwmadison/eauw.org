@@ -304,6 +304,21 @@ footer {
   }
 }
 
+.footer-subscription-form {
+  h4 {
+    margin: 20px 0 10px 0;
+  }
+
+  input,
+  textarea {
+    margin: 0 0 10px 0;
+  }
+
+  button {
+    margin-top: 7.5px;
+  }
+}
+
 .testimonials {
   font-size: 1.8rem;
   display: flex;

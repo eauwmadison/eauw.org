@@ -7,9 +7,10 @@ module.exports = {
     testimonials: "Update, add or remove testimonials",
     role: "Shown as subtext on leadership team member summaries",
     pronouns: "Shown as subtext on leadership team member summaries",
-    executive: "True or false, whether the leader is a member of the executive team",
-    previous: "True or false, whether the leader is no longer a part of leadership",
-    contactEmailAddress: "Address for the contact form to send to",
+    executive: "Toggles whether the leader is a member of the executive team",
+    previous:
+      "Toggles whether the leader is no longer a part of leadership or the program is no longer active",
+    contactEmailAddress: "Address to be displayed on the Contact page",
     newTab: "Whether the link opens a new browser tab",
     calendar: "Whether a calendar is shown on the page",
     pinned: "Whether a post is pinned to the top of the Posts page",
@@ -17,7 +18,7 @@ module.exports = {
   },
 
   "_select_data": {
-    callToActions: ["Contact", "Blog"],
+    callToActions: ["Contact", "Subscribe"],
     socialIcons: [
       "Facebook",
       "Instagram",

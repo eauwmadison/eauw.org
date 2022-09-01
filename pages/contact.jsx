@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 import PageLayout from "../components/layouts/page";
 import Icon from "../components/icon";
@@ -7,6 +8,37 @@ import data from "../lib/data";
 import { getCollection, getCollectionItem } from "../lib/collections";
 
 export default function Contact({ page, placeholders }) {
+  const router = useRouter();
+
+  // handles the submit event on contact form submit.
+  const handleSubmit = async (event) => {
+    // stop the form from submitting and refreshing the page.
+    event.preventDefault();
+
+    const data = {
+      email: event.target.email.value,
+      name: event.target.name.value,
+      message: event.target.message.value
+    };
+
+    const stringifiedData = JSON.stringify(data);
+
+    const endpoint = "https://api.eauw.org/contact";
+
+    const options = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: stringifiedData
+    };
+
+    // await fetch(endpoint, options);
+
+    // redirect to the thank you page.
+    router.push("/contact-success");
+  };
+
   const randomPlaceholder = placeholders[
     Math.floor(Math.random() * placeholders.length)
   ] || {
@@ -67,7 +99,7 @@ export default function Contact({ page, placeholders }) {
         </div>
 
         <div className="column">
-          <form method="post" action="/contact-success">
+          <form onSubmit={handleSubmit}>
             <label htmlFor="email_address">Your Email Address</label>
             <input
               id="email_address"
