@@ -169,16 +169,16 @@ export default function DefaultLayout({ children, page }) {
         <section className="quote-section">
           <p className="container">
             <Link href="/contact">Contact us</Link> today to find out how we can
-            help you. Your first consultation is free.
+            help you.
           </p>
         </section>
       )}
 
-      {page.callToAction === "Blog" && (
+      {page.callToAction === "Subscribe" && (
         <section className="quote-section">
           <p className="container">
-            <Link href="/posts">Read our blog</Link> for an introduction and
-            quick tips on various areas of the law.
+            <Link href="/posts">Join our mailing list</Link> to stay up-to-date
+            on our latest opportunities.
           </p>
         </section>
       )}
@@ -235,7 +235,10 @@ export default function DefaultLayout({ children, page }) {
               </li>
               <li>{data.organization.description}</li>
               <li>
-                <form onSubmit={handleSubmit}>
+                <form
+                  className="footer-subscription-form"
+                  onSubmit={handleSubmit}
+                >
                   <h4>Stay up-to-date!</h4>
                   <input
                     placeholder="First name"
@@ -249,7 +252,7 @@ export default function DefaultLayout({ children, page }) {
                     name="email"
                     required
                   />
-                  <button data-element-type="button" type="submit">
+                  <button className="btn" type="submit">
                     <span>Subscribe</span>
                   </button>
                 </form>
