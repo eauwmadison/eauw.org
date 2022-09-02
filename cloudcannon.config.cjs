@@ -13,6 +13,7 @@ module.exports = {
     contactEmailAddress: "Address to be displayed on the Contact page",
     newTab: "Whether the link opens a new browser tab",
     calendar: "Whether a calendar is shown on the page",
+    calUsername: "Username for https://cal.eauw.org",
     pinned: "Whether a post is pinned to the top of the Posts page",
     excerptHtml: "The HTML preview for a post summary"
   },
