@@ -26,7 +26,7 @@ html {
   font-size: 9px;
   -webkit-tap-highlight-color: transparent;
 
-  @media (min-width: $mobile-break) {
+  @media (min-width: $sm-break) {
     font-size: 10px;
   }
 }
@@ -70,13 +70,19 @@ h6 {
 }
 
 h1 {
-  font-size: 6.5rem;
-  line-height: 80px;
+  // font-size: 3.82rem;
+  font-size: clamp(0rem, 7vw, 4.5rem);
+  line-height: normal;
   margin: 0 -10px 0 0;
 
-  @media (min-width: $mobile-break) {
-    line-height: 100px;
-    font-size: 8rem;
+  @media (min-width: $sm-break) {
+    font-size: clamp(3.82rem, -1.94rem + 9vw, 6.7rem);
+    line-height: normal;
+  }
+
+  @media (min-width: 900px) {
+    line-height: 80px;
+    font-size: clamp(6rem, 2.4286rem + 4.7619vw, 7rem);
   }
 }
 

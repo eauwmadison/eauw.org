@@ -89,7 +89,11 @@ export default function Calendar() {
 
   return (
     <>
-      <Masonry columns={{ xs: 1, md: 2, lg: 3 }} spacing={3}>
+      <Masonry
+        columns={{ xs: 1, sm: 2, lg: 3 }}
+        spacing={3}
+        sx={{ width: "auto" }}
+      >
         {filteredEvents.length > 0 ? (
           filteredEvents.map((event, i) => {
             return <Event event={event} key={i} />;
