@@ -90,7 +90,7 @@ export default function Calendar() {
   return (
     <>
       <Masonry
-        columns={{ xs: 1, md: 2, lg: 3 }}
+        columns={{ xs: 1, sm: 2, lg: 3 }}
         spacing={3}
         sx={{ width: "auto" }}
       >

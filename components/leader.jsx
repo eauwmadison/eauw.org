@@ -20,7 +20,11 @@ export default function Leader({ leader }) {
             <small>{leader.pronouns}</small>
           </li>
           <li>
-            {leader.calUsername && <button data-cal-link={leader.calUsername}>Book an Appointment</button>}
+            {leader.calUsername && (
+              <button data-cal-link={leader.calUsername}>
+                Book an Appointment
+              </button>
+            )}
           </li>
         </ul>
       </div>

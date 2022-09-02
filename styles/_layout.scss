@@ -19,14 +19,23 @@ body {
 }
 
 header .logo {
-  height: 25rem;
+  width: clamp(10rem, 20%, 15rem);
+
+  @media (max-width: $sm-break) {
+    width: clamp(8rem, 12.5%, 20rem);
+  }
 }
 
 header .organization-group {
   display: flex;
   align-items: center;
+  justify-content: center;
   column-gap: 3rem;
   cursor: pointer;
+
+  @media (max-width: $sm-break) {
+    column-gap: 2rem;
+  }  
 }
 
 .organization-group > * {
@@ -37,6 +46,7 @@ header .organization-group {
   font-weight: bold;
   color: $color-ea-dark;
 }
+
 .organization-subheading {
   margin-top: 0;
   color: $color-ea-primary;
@@ -54,23 +64,25 @@ header {
     text-align: center;
   }
 
-  @media (min-width: $mobile-break) {
-    &.large-header {
-      // height: 80vh;
-      // background-position: calc(50% - 350px) calc(100% + 20px);
-      .organization-name {
-        color: $color-ea-dark;
-        font-weight: bold;
-      }
-      .organization-subheading {
-        margin-top: 0;
-        color: $color-ea-primary;
-      }
-    }
+  .organization-name {
+    color: $color-ea-dark;
+    font-weight: bold;
+  }
 
-    .container {
-      text-align: left;
-    }
+  .organization-subheading {
+    margin-top: 0 !important;
+    color: $color-ea-primary;
+  }
+
+  // @media (min-width: $sm-break) {
+  //   // &.large-header {
+  //   //   // height: 80vh;
+  //   //   // background-position: calc(50% - 350px) calc(100% + 20px);
+  //   // }
+  // }
+
+  .container {
+    text-align: left;
   }
 
   nav {
@@ -123,7 +135,7 @@ footer,
 section {
   padding: 30px 20px;
 
-  @media (min-width: $mobile-break) {
+  @media (min-width: $sm-break) {
     padding: 80px 40px;
   }
 }
@@ -412,7 +424,7 @@ footer {
   display: flex;
   flex-direction: column;
 
-  @media (min-width: $mobile-break) {
+  @media (min-width: $sm-break) {
     flex-direction: row;
     flex-wrap: wrap;
   }
@@ -435,7 +447,7 @@ footer {
   box-sizing: border-box;
   margin-bottom: 15px;
 
-  @media (min-width: $mobile-break) {
+  @media (min-width: $sm-break) {
     margin-bottom: 0;
     padding-right: 20px;
   }
