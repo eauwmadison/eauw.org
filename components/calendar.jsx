@@ -1,13 +1,22 @@
+/* React imports */
+import { useEffect, useReducer } from "react";
+
+/* Next.js imports */
 import Link from "next/link";
-
 import useSWR from "swr";
-import Moment from "react-moment";
 
-import siteData from "../lib/data";
+/* misc. library imports */
+import dayjs from "dayjs";
+import relativeTime from "dayjs/plugin/relativeTime";
 
+/* third-party component imports */
+import Masonry from "@mui/lab/Masonry";
+
+/* first-party component imports */
 import Event from "./event";
 
-import Masonry from "@mui/lab/Masonry";
+/* site data */
+import siteData from "../lib/data";
 
 const fetcher = async (url) => {
   const res = await fetch(url);
@@ -23,6 +32,38 @@ const fetcher = async (url) => {
   }
 
   return res.json();
+};
+
+// grab current time both for checking if event is upcoming and for "time ago"
+const now = new Date();
+
+// plugin to use relative time
+dayjs.extend(relativeTime);
+
+// initial state for reducer
+const initialState = { timeAgo: dayjs(now).fromNow() };
+
+const reducer = (state, action) => {
+  switch (action.type) {
+    case "updateTimeAgo":
+      return { timeAgo: action.payload };
+    default:
+      return state;
+  }
+};
+
+const TimeAgo = () => {
+  const [state, dispatch] = useReducer(reducer, initialState);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      dispatch({ type: "updateTimeAgo", payload: dayjs(now).fromNow() });
+    }, 30000);
+
+    return () => clearInterval(interval);
+  });
+
+  return <span>{state.timeAgo}</span>;
 };
 
 export default function Calendar() {
@@ -44,7 +85,7 @@ export default function Calendar() {
         <div className="error">
           Error code: {error.status || "unknown"}
           <br />
-          Error message: {error.info.error.message || "unknown"}
+          Error message: {error.info?.error.message || "unknown"}
         </div>
       </div>
     );
@@ -66,8 +107,6 @@ export default function Calendar() {
       </>
     );
   }
-
-  const now = new Date();
 
   let filteredEvents = [];
 
@@ -103,11 +142,7 @@ export default function Calendar() {
         )}
       </Masonry>
       <div className="time">
-        Last updated{" "}
-        <Moment fromNow interval={30000}>
-          {now}
-        </Moment>{" "}
-        via{" "}
+        Last updated <TimeAgo /> via{" "}
         <a href={siteData.site.google_calendar_share_link}>Google Calendar</a>.
       </div>
     </>
