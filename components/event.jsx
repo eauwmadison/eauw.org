@@ -1,9 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
+/* React imports */
 import { useState } from "react";
 
+/* first-party component imports */
 import ManagedTooltip from "./managed-tooltip";
 import Icon from "./icon";
 
+/* site data */
 import siteData from "../lib/data";
 
 // pattern to match event type in the event description; max of 3 words

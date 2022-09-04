@@ -1,4 +1,7 @@
+/* first-party component imports */
 import PageLayout from "../components/layouts/page";
+
+/* site data */
 import { getCollectionItem } from "../lib/collections";
 
 export default function Home({ page }) {

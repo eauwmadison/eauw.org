@@ -1,7 +1,11 @@
+/* Next.js imports */
 import Script from "next/script";
 
+/* first-party component imports */
 import PageLayout from "../components/layouts/page";
 import Leader from "../components/leader";
+
+/* site data */
 import { getCollection, getCollectionItem } from "../lib/collections";
 
 export default function Team({ page, leaders }) {

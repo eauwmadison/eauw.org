@@ -1,9 +1,12 @@
+/* Next.js imports */
 import Link from "next/link";
 import { useRouter } from "next/router";
 
+/* first-party component imports */
 import PageLayout from "../components/layouts/page";
 import Icon from "../components/icon";
 
+/* site data */
 import data from "../lib/data";
 import { getCollection, getCollectionItem } from "../lib/collections";
 

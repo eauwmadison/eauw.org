@@ -1,12 +1,17 @@
 /* eslint-disable @next/next/no-img-element */
+
+/* Next.js imports */
 import Head from "next/head";
-import ExportedImage from "next-image-export-optimizer";
 import Link from "next/link";
 import { NextSeo } from "next-seo";
+import ExportedImage from "next-image-export-optimizer";
 
-import data from "../../lib/data";
+/* first-party component imports */
 import Calendar from "../../components/calendar";
 import Icon from "../../components/icon";
+
+/* site data */
+import siteData from "../../lib/data";
 
 export default function DefaultLayout({ children, page }) {
   // handles the submit event on email subscription form submit.
@@ -35,9 +40,9 @@ export default function DefaultLayout({ children, page }) {
   };
 
   const title = page.title
-    ? `${page.title} | ${data.seo.siteTitle}`
-    : data.seo.siteTitle;
-  const description = page.description || data.seo.description;
+    ? `${page.title} | ${siteData.seo.siteTitle}`
+    : siteData.seo.siteTitle;
+  const description = page.description || siteData.seo.description;
 
   return (
     <>
@@ -80,11 +85,11 @@ export default function DefaultLayout({ children, page }) {
         title={title}
         description={description}
         openGraph={{
-          siteName: data.seo.siteName,
-          url: data.site.url,
+          siteName: siteData.seo.siteName,
+          url: siteData.site.url,
           title: title,
           description: description,
-          images: data.seo.images.map((image) => ({
+          images: siteData.seo.images.map((image) => ({
             url: image.image,
             width: image.height,
             height: image.width,
@@ -104,17 +109,17 @@ export default function DefaultLayout({ children, page }) {
               ></img>
               <div className="organization-text">
                 <h1 className="organization-name">
-                  {data.organization.organizationName}
+                  {siteData.organization.organizationName}
                 </h1>
                 <h1 className="organization-subheading">
-                  {data.organization.organizationSubheading}
+                  {siteData.organization.organizationSubheading}
                 </h1>
               </div>
             </div>
           </Link>
           <nav>
             <ul>
-              {data.navbar.links.map((link) => (
+              {siteData.navbar.links.map((link) => (
                 <li key={link.link}>
                   <Link href={link.link}>
                     <a
@@ -194,7 +199,7 @@ export default function DefaultLayout({ children, page }) {
                 <h2>Pages</h2>
               </li>
 
-              {data.footer.links.map((link) => (
+              {siteData.footer.links.map((link) => (
                 <li key={link.name}>
                   <Link href={link.link}>
                     <a target={link.external ? "_blank" : "_self"}>
@@ -210,7 +215,7 @@ export default function DefaultLayout({ children, page }) {
                 <h2>Social</h2>
               </li>
 
-              {data.social.links.map((link) => (
+              {siteData.social.links.map((link) => (
                 <li key={link.name}>
                   <Link href={link.link}>
                     <a target={link.newTab ? "_blank" : "_self"}>
@@ -226,14 +231,14 @@ export default function DefaultLayout({ children, page }) {
               <li>
                 <div className="organization-group">
                   <h2 className="organization-name">
-                    {data.organization.organizationName}
+                    {siteData.organization.organizationName}
                   </h2>
                   <h2 className="organization-subheading">
-                    {data.organization.organizationSubheading}
+                    {siteData.organization.organizationSubheading}
                   </h2>
                 </div>
               </li>
-              <li>{data.organization.description}</li>
+              <li>{siteData.organization.description}</li>
               <li>
                 <form
                   className="footer-subscription-form"
