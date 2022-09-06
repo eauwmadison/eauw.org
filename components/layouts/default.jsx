@@ -1,5 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 
+/* React imports */
+import { useState } from "react";
+
 /* Next.js imports */
 import Head from "next/head";
 import Link from "next/link";
@@ -14,14 +17,20 @@ import Icon from "../../components/icon";
 import siteData from "../../lib/data";
 
 export default function DefaultLayout({ children, page }) {
+  const [formSubmitted, setFormSubmitted] = useState(false);
+  const [firstName, setFirstName] = useState("");
+
   // handles the submit event on email subscription form submit.
   const handleSubmit = async (event) => {
     // stop the form from submitting and refreshing the page.
     event.preventDefault();
 
+    setFirstName(event.target.firstName.value);
+
     const data = {
       firstName: event.target.firstName.value,
-      email: event.target.email.value
+      email: event.target.email.value,
+      source: "new website!"
     };
 
     const stringifiedData = JSON.stringify(data);
@@ -36,7 +45,11 @@ export default function DefaultLayout({ children, page }) {
       body: stringifiedData
     };
 
-    await fetch(endpoint, options);
+    await fetch(endpoint, options).then((response) => {
+      if (response.ok) {
+        setFormSubmitted(true);
+      }
+    });
   };
 
   const title = page.title
@@ -245,21 +258,27 @@ export default function DefaultLayout({ children, page }) {
                   onSubmit={handleSubmit}
                 >
                   <h4>Stay up-to-date!</h4>
-                  <input
-                    placeholder="First name"
-                    type="text"
-                    name="firstName"
-                    required
-                  />
-                  <input
-                    placeholder="Email"
-                    type="email"
-                    name="email"
-                    required
-                  />
-                  <button className="btn" type="submit">
-                    <span>Subscribe</span>
-                  </button>
+                  {!formSubmitted ? (
+                    <>
+                      <input
+                        placeholder="First name"
+                        type="text"
+                        name="firstName"
+                        required
+                      />
+                      <input
+                        placeholder="Email"
+                        type="email"
+                        name="email"
+                        required
+                      />
+                      <button className="btn" type="submit">
+                        <span>Subscribe</span>
+                      </button>
+                    </>
+                  ) : (
+                    <p>Thanks, {firstName}! Check your inbox for a confirmation. 🙂</p>
+                  )}
                 </form>
               </li>
             </ul>
