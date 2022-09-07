@@ -21,7 +21,8 @@ export default function Contact({ page, placeholders }) {
     const data = {
       email: event.target.email.value,
       name: event.target.name.value,
-      message: event.target.message.value
+      message: event.target.message.value,
+      source: "new website!"
     };
 
     const stringifiedData = JSON.stringify(data);
@@ -36,7 +37,11 @@ export default function Contact({ page, placeholders }) {
       body: stringifiedData
     };
 
-    // await fetch(endpoint, options);
+    // await fetch(endpoint, options).then((response) => {
+    //   if (response.ok) {
+    //     router.push("/contact-success");
+    //   }
+    // });
 
     // redirect to the thank you page.
     router.push("/contact-success");
