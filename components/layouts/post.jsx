@@ -1,5 +1,5 @@
 /* misc. library imports */
-import { DiscussionEmbed } from "disqus-react";
+// import { DiscussionEmbed } from "disqus-react";
 
 /* first party component imports */
 import DefaultLayout from "./default";
@@ -29,7 +29,7 @@ export default function PostLayout({ children, page, author }) {
         {siteData.site.disqus_shortname && (
           <>
             <h2>Have your say</h2>
-            <DiscussionEmbed
+            {/* <DiscussionEmbed
               className="post-comments"
               shortname={siteData.site.disqus_shortname}
               config={{
@@ -40,7 +40,7 @@ export default function PostLayout({ children, page, author }) {
                 identifier: page.slug,
                 title: page.title
               }}
-            />
+            /> */}
           </>
         )}
       </article>
