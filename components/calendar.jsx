@@ -8,6 +8,7 @@ import useSWR from "swr";
 /* misc. library imports */
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
+dayjs.extend(relativeTime);
 
 /* third-party component imports */
 import Masonry from "@mui/lab/Masonry";
@@ -36,9 +37,6 @@ const fetcher = async (url) => {
 
 // grab current time both for checking if event is upcoming and for "time ago"
 const now = new Date();
-
-// plugin to use relative time
-dayjs.extend(relativeTime);
 
 // initial state for reducer
 const initialState = { timeAgo: dayjs(now).fromNow() };
