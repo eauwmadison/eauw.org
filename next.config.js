@@ -30,6 +30,11 @@ module.exports = withBundleAnalyzer({
         source: "/slack",
         destination: "https://go.eauw.org/slack",
         permanent: true
+      },
+      {
+        source: "/feedback",
+        destination: "https://go.eauw.org/feedback",
+        permanent: true
       }
     ];
   }

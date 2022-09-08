@@ -25,6 +25,11 @@
       "link": "/apply"
     },
     {
+      "name": "Anonymous Feedback",
+      "link": "/feedback",
+      "external": true
+    },
+    {
       "name": "Effective Animal Advocacy",
       "link": "https://win.wisc.edu/organization/animal",
       "external": true
