@@ -11,10 +11,11 @@ export default function Page({ page }) {
 export async function getStaticPaths() {
   const slugs = await getCollectionSlugs("pages");
   const ignored = {
+    index: true,
     team: true,
-    posts: true,
+    programs: true,
     contact: true,
-    index: true
+    posts: true
   };
 
   return {

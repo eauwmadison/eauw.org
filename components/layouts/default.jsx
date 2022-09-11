@@ -277,7 +277,10 @@ export default function DefaultLayout({ children, page }) {
                       </button>
                     </>
                   ) : (
-                    <p>Thanks, {firstName}! Check your inbox for a confirmation. 🙂</p>
+                    <p>
+                      Thanks, {firstName}! Check your inbox for a confirmation.
+                      🙂
+                    </p>
                   )}
                 </form>
               </li>
