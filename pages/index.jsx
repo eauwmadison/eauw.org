@@ -8,7 +8,7 @@ export default function Home({ page }) {
   return <PageLayout page={page} />;
 }
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps() {
   const page = await getCollectionItem("pages", "index");
 
   return {

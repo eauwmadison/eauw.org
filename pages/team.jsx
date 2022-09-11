@@ -34,7 +34,7 @@ export default function Team({ page, leaders }) {
   );
 }
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps() {
   const page = await getCollectionItem("pages", "team");
   const leaders = await getCollection("leadership-team");
 
