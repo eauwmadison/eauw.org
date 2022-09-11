@@ -37,14 +37,12 @@ export default function Contact({ page, placeholders }) {
       body: stringifiedData
     };
 
-    // await fetch(endpoint, options).then((response) => {
-    //   if (response.ok) {
-    //     router.push("/contact-success");
-    //   }
-    // });
-
-    // redirect to the thank you page.
-    router.push("/contact-success");
+    await fetch(endpoint, options).then((response) => {
+      if (response.ok) {
+        // redirect to the thank you page.
+        router.push("/contact-success");
+      }
+    });
   };
 
   const randomPlaceholder = placeholders[
@@ -146,7 +144,7 @@ export default function Contact({ page, placeholders }) {
   );
 }
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps() {
   const page = await getCollectionItem("pages", "contact");
   const placeholders = await getCollection("form-placeholders");
 
