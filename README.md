@@ -32,7 +32,7 @@ This site is based on the "Justice" template made by [CloudCannon](https://cloud
 
 ## Develop
 
-This website is built with [Next.js](https://nextjs.org/) (version `11.0.0`).
+This website is built with [Next.js](https://nextjs.org/) (version `12.2.5`).
 
 ```bash
 $ npm install
