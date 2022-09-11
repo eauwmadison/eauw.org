@@ -1,6 +1,5 @@
-// import Link from "next/link";
+/* Next.js imports */
 import ExportedImage from "next-image-export-optimizer";
-// import data from "../lib/data";
 
 export default function Leader({ leader }) {
   return (

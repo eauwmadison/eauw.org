@@ -1,5 +1,4 @@
-import Image from "next/image";
-
+/* first-party component imports */
 import DefaultLayout from "./default";
 
 export default function PageLayout({ children, page }) {

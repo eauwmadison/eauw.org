@@ -1,5 +1,7 @@
+/* React imports */
 import { useState, useEffect } from "react";
 
+/* third-party component imports */
 import Tooltip from "@mui/material/Tooltip";
 
 export default function ManagedTooltip({

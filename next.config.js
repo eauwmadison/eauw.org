@@ -23,5 +23,19 @@ module.exports = withBundleAnalyzer({
     nextImageExportOptimizer_quality: 75,
     nextImageExportOptimizer_storePicturesInWEBP: true,
     nextImageExportOptimizer_generateAndUseBlurImages: true
+  },
+  async redirects() {
+    return [
+      {
+        source: "/slack",
+        destination: "https://go.eauw.org/slack",
+        permanent: true
+      },
+      {
+        source: "/feedback",
+        destination: "https://go.eauw.org/feedback",
+        permanent: true
+      }
+    ];
   }
 });

@@ -1,11 +1,14 @@
+/* first-party component imports */
 import PageLayout from "../components/layouts/page";
+
+/* site data */
 import { getCollectionItem } from "../lib/collections";
 
 export default function Home({ page }) {
   return <PageLayout page={page} />;
 }
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps() {
   const page = await getCollectionItem("pages", "index");
 
   return {

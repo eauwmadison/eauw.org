@@ -1,9 +1,14 @@
+/* misc. library imports */
+// import { DiscussionEmbed } from "disqus-react";
+
+/* first party component imports */
 import DefaultLayout from "./default";
-import PostSummary from "../post-summary";
+// import PostSummary from "../post-summary";
 import PostSummaryDetails from "../post-summary-details";
 import Leader from "../leader";
-import data from "../../lib/data";
-import { DiscussionEmbed } from "disqus-react";
+
+/* site data */
+import siteData from "../../lib/data";
 
 export default function PostLayout({ children, page, author }) {
   return (
@@ -21,18 +26,21 @@ export default function PostLayout({ children, page, author }) {
           <Leader leader={author} />
         </ul>
 
-        {data.site.disqus_shortname && (
+        {siteData.site.disqus_shortname && (
           <>
             <h2>Have your say</h2>
-            <DiscussionEmbed
+            {/* <DiscussionEmbed
               className="post-comments"
-              shortname={data.site.disqus_shortname}
+              shortname={siteData.site.disqus_shortname}
               config={{
-                url: `${data.site.url}/posts/${page.slug}`.replace(/\/+/g, "/"),
+                url: `${siteData.site.url}/posts/${page.slug}`.replace(
+                  /\/+/g,
+                  "/"
+                ),
                 identifier: page.slug,
                 title: page.title
               }}
-            />
+            /> */}
           </>
         )}
       </article>

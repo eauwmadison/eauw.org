@@ -1,3 +1,4 @@
+/* first-party component imports */
 import PageLayout from "../components/layouts/page";
 
 export default function NotFound() {

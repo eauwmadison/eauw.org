@@ -1,5 +1,8 @@
+/* Next.js imports */
 import Link from "next/link";
 import ExportedImage from "next-image-export-optimizer";
+
+/* first-party component imports */
 import PostSummaryDetails from "./post-summary-details";
 
 export default function PostSummary({ post }) {

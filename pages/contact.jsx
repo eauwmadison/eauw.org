@@ -1,9 +1,12 @@
+/* Next.js imports */
 import Link from "next/link";
 import { useRouter } from "next/router";
 
+/* first-party component imports */
 import PageLayout from "../components/layouts/page";
 import Icon from "../components/icon";
 
+/* site data */
 import data from "../lib/data";
 import { getCollection, getCollectionItem } from "../lib/collections";
 
@@ -18,7 +21,8 @@ export default function Contact({ page, placeholders }) {
     const data = {
       email: event.target.email.value,
       name: event.target.name.value,
-      message: event.target.message.value
+      message: event.target.message.value,
+      source: "new website!"
     };
 
     const stringifiedData = JSON.stringify(data);
@@ -33,10 +37,12 @@ export default function Contact({ page, placeholders }) {
       body: stringifiedData
     };
 
-    // await fetch(endpoint, options);
-
-    // redirect to the thank you page.
-    router.push("/contact-success");
+    await fetch(endpoint, options).then((response) => {
+      if (response.ok) {
+        // redirect to the thank you page.
+        router.push("/contact-success");
+      }
+    });
   };
 
   const randomPlaceholder = placeholders[
@@ -138,7 +144,7 @@ export default function Contact({ page, placeholders }) {
   );
 }
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps() {
   const page = await getCollectionItem("pages", "contact");
   const placeholders = await getCollection("form-placeholders");
 
