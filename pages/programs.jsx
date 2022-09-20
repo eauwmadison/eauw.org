@@ -7,13 +7,13 @@ import { getCollection, getCollectionItem } from "../lib/collections";
 
 export default function Programs({ page, programs }) {
   return (
-      <PageLayout page={page}>
-        <ul className="team-list">
-          {programs.map((program, i) => (
-            <Program program={program} key={i} />
-          ))}
-        </ul>
-      </PageLayout>
+    <PageLayout page={page}>
+      <ul className="team-list">
+        {programs.map((program, i) => (
+          <Program program={program} key={i} />
+        ))}
+      </ul>
+    </PageLayout>
   );
 }
 
