@@ -140,19 +140,19 @@ section {
   }
 }
 
-@media (min-width: 800px){
+@media (min-width: 800px) {
   .image-and-text {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: 'left right';
+    grid-template-areas: "left right";
     column-gap: 20px;
   }
 
-  .grid-left{
+  .grid-left {
     grid-area: left;
   }
 
-  .grid-right{
+  .grid-right {
     grid-area: right;
   }
 }
@@ -164,7 +164,6 @@ section {
   border-radius: 2px;
   flex: 1;
   min-height: 0;
-  
 }
 
 .main {

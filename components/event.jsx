@@ -102,11 +102,9 @@ export default function Event({ event }) {
               <span className="event-date">
                 <Icon icon="Date" />
                 {eventStart.toLocaleDateString(undefined, {
-
                   month: "long",
                   day: "numeric",
                   weekday: "long"
-
                 })}
                 {eventStart.getDate() !== eventEnd.getDate() && (
                   <>
