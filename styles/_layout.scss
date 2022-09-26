@@ -133,6 +133,7 @@ footer {
 header,
 footer,
 section {
+  // overflow-x:hidden;
   padding: 30px 20px;
 
   @media (min-width: $sm-break) {

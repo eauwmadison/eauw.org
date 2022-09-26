@@ -9,14 +9,37 @@ import Leader from "../components/leader";
 import { getCollection, getCollectionItem } from "../lib/collections";
 
 export default function Team({ page, leaders }) {
+  leaders.sort((a, b) => a.priority - b.priority);
+
   return (
     <>
       <PageLayout page={page}>
-        {/* <p>Meet the members of our capable team:</p> */}
+        <section className="executive-section">
+          <div className="container">
+            <h2>Executive Team</h2>
+            <ul className="team-list">
+              {leaders
+                .filter((leader) => leader.executive && !leader.previous)
+                .map((leader, i) => (
+                  <Leader leader={leader} key={i} />
+                ))}
+            </ul>
+          </div>
+        </section>
         <ul className="team-list">
-          {leaders.map((leader, i) => (
-            <Leader leader={leader} key={i} />
-          ))}
+          {leaders
+            .filter((leader) => !leader.executive && !leader.previous)
+            .map((leader, i) => (
+              <Leader leader={leader} key={i} />
+            ))}
+        </ul>
+        <h2>Alumni and Affiliates</h2>
+        <ul className="team-list">
+          {leaders
+            .filter((leader) => leader.previous)
+            .map((leader, i) => (
+              <Leader leader={leader} key={i} />
+            ))}
         </ul>
       </PageLayout>
       <Script
