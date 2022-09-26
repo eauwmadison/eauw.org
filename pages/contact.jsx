@@ -10,7 +10,7 @@ import Icon from "../components/icon";
 import data from "../lib/data";
 import { getCollection, getCollectionItem } from "../lib/collections";
 
-export default function Contact({ page, placeholders }) {
+export default function Contact({ page, placeholders, popups }) {
   const router = useRouter();
 
   // handles the submit event on contact form submit.
@@ -54,7 +54,7 @@ export default function Contact({ page, placeholders }) {
   };
 
   return (
-    <PageLayout page={page}>
+    <PageLayout page={page} popups={popups}>
       <div className="columns">
         <div className="column">
           <p className="editor-link">
@@ -147,11 +147,13 @@ export default function Contact({ page, placeholders }) {
 export async function getStaticProps() {
   const page = await getCollectionItem("pages", "contact");
   const placeholders = await getCollection("form-placeholders");
+  const popups = await getCollection("popups");
 
   return {
     props: {
       page: JSON.parse(JSON.stringify(page)),
-      placeholders
+      placeholders,
+      popups
     }
   };
 }

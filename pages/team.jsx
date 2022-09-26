@@ -8,12 +8,12 @@ import Leader from "../components/leader";
 /* site data */
 import { getCollection, getCollectionItem } from "../lib/collections";
 
-export default function Team({ page, leaders }) {
+export default function Team({ page, leaders, popups }) {
   leaders.sort((a, b) => a.priority - b.priority);
 
   return (
     <>
-      <PageLayout page={page}>
+      <PageLayout page={page} popups={popups}>
         <section className="executive-section">
           <div className="container">
             <h2>Executive Team</h2>
@@ -60,11 +60,13 @@ export default function Team({ page, leaders }) {
 export async function getStaticProps() {
   const page = await getCollectionItem("pages", "team");
   const leaders = await getCollection("leadership-team");
+  const popups = await getCollection("popups");
 
   return {
     props: {
       page: JSON.parse(JSON.stringify(page)),
-      leaders
+      leaders,
+      popups
     }
   };
 }
