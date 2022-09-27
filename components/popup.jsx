@@ -1,9 +1,11 @@
+import Link from "next/link";
+
 /* adapted from https://mui.com/material-ui/react-modal/#unstyled */
 
 import { forwardRef, useState } from "react";
 import PropTypes from "prop-types";
 import clsx from "clsx";
-import { Box, styled } from "@mui/system";
+import { styled } from "@mui/system";
 import ModalUnstyled from "@mui/base/ModalUnstyled";
 import Fade from "@mui/material/Fade";
 
@@ -26,7 +28,7 @@ BackdropUnstyled.propTypes = {
 
 const Modal = styled(ModalUnstyled)`
   position: fixed;
-  z-index: 1300;
+  z-index: 99;
   right: 0;
   bottom: 0;
   top: 0;
@@ -47,17 +49,6 @@ const Backdrop = styled(BackdropUnstyled)`
   -webkit-tap-highlight-color: transparent;
 `;
 
-const style = (theme) => ({
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: 400,
-  backgroundColor: theme.palette.mode === "dark" ? "#0A1929" : "white",
-  boxShadow: 24,
-  padding: "16px 32px 24px 32px"
-});
-
 export default function Popup({ popup }) {
   const [open, setOpen] = useState(true);
   const handleClose = () => setOpen(false);
@@ -66,22 +57,21 @@ export default function Popup({ popup }) {
     <div>
       <Modal
         aria-labelledby="transition-modal-title"
-        aria-describedby="transition-modal-description"
         open={open}
         onClose={handleClose}
         closeAfterTransition
         components={{ Backdrop }}
       >
         <Fade in={open} timeout={300}>
-          <Box sx={style}>
+          <div className="modal">
             <h2 id="transition-modal-title">{popup.title}</h2>
-            <span
-              id="transition-modal-description"
-              style={{ marginTop: "16px" }}
-            ></span>
-            <div dangerouslySetInnerHTML={{__html: popup.contentHTML}} />
-            {/* {popup.contentHTML} */}
-          </Box>
+            <div dangerouslySetInnerHTML={{ __html: popup.contentHTML }} />
+            
+            <Link href={popup.link}>
+              <button>{popup.button}</button>
+            </Link>
+
+          </div>
         </Fade>
       </Modal>
     </div>

@@ -2,10 +2,14 @@
 import PageLayout from "../components/layouts/page";
 
 /* site data */
-import { getCollectionSlugs, getCollectionItem } from "../lib/collections";
+import {
+  getCollection,
+  getCollectionItem,
+  getCollectionSlugs
+} from "../lib/collections";
 
 export default function Page({ page, popups }) {
-  return <PageLayout page popups />;
+  return <PageLayout page={page} popups={popups} />;
 }
 
 export async function getStaticPaths() {
