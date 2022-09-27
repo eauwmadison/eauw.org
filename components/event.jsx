@@ -104,7 +104,7 @@ export default function Event({ event }) {
                 {eventStart.toLocaleDateString(undefined, {
                   month: "long",
                   day: "numeric",
-                  year: "numeric"
+                  weekday: "long"
                 })}
                 {eventStart.getDate() !== eventEnd.getDate() && (
                   <>

@@ -8,15 +8,38 @@ import Leader from "../components/leader";
 /* site data */
 import { getCollection, getCollectionItem } from "../lib/collections";
 
-export default function Team({ page, leaders }) {
+export default function Team({ page, leaders, popups }) {
+  leaders.sort((a, b) => a.priority - b.priority);
+
   return (
     <>
-      <PageLayout page={page}>
-        {/* <p>Meet the members of our capable team:</p> */}
+      <PageLayout page={page} popups={popups}>
+        <section className="executive-section">
+          <div className="container">
+            <h2>Executive Team</h2>
+            <ul className="team-list">
+              {leaders
+                .filter((leader) => leader.executive && !leader.previous)
+                .map((leader, i) => (
+                  <Leader leader={leader} key={i} />
+                ))}
+            </ul>
+          </div>
+        </section>
         <ul className="team-list">
-          {leaders.map((leader, i) => (
-            <Leader leader={leader} key={i} />
-          ))}
+          {leaders
+            .filter((leader) => !leader.executive && !leader.previous)
+            .map((leader, i) => (
+              <Leader leader={leader} key={i} />
+            ))}
+        </ul>
+        <h2>Alumni and Affiliates</h2>
+        <ul className="team-list">
+          {leaders
+            .filter((leader) => leader.previous)
+            .map((leader, i) => (
+              <Leader leader={leader} key={i} />
+            ))}
         </ul>
       </PageLayout>
       <Script
@@ -37,11 +60,13 @@ export default function Team({ page, leaders }) {
 export async function getStaticProps() {
   const page = await getCollectionItem("pages", "team");
   const leaders = await getCollection("leadership-team");
+  const popups = await getCollection("popups");
 
   return {
     props: {
       page: JSON.parse(JSON.stringify(page)),
-      leaders
+      leaders,
+      popups
     }
   };
 }
