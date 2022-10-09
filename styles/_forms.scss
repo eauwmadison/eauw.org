@@ -1,5 +1,6 @@
 @import "colors";
 @import "typography";
+@import "button";
 
 ::placeholder {
   color: $gray;
@@ -33,25 +34,8 @@ input[type="submit"] {
   display: block;
 }
 
-input[type="submit"],
-.btn {
-  padding: 12px 24px;
-  margin: 0;
-  background-color: $color-ea-primary;
-  border: none;
-  border-bottom: 1px solid $color-ea-dark;
-  border-radius: 4px;
-  font-family: $font-serif;
-  font-size: 2rem;
-  color: $white;
-  cursor: pointer;
-  transition: color 0.1s ease-in-out, border 0.2s ease-in-out,
-    background-color 0.2s ease-in-out;
-
-  &:hover {
-    background-color: $color-ea-light;
-    border-bottom: 1px solid $color-ea-primary;
-  }
+input[type="submit"] {
+  @extend .btn;
 }
 
 input[type="text"]:focus,
@@ -81,5 +65,6 @@ textarea:focus {
 
   button {
     margin-top: 7.5px;
+    padding: 12px 24px;
   }
 }

@@ -154,7 +154,7 @@ section {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "left right";
-    column-gap: 20px;
+    column-gap: 40px;
   }
 
   .grid-left {
@@ -204,6 +204,17 @@ section {
 
     &:hover {
       color: #fefefe;
+    }
+  }
+
+  .btn {
+    background-color: $color-ea-beige;
+    color: $color-ea-dark;
+
+    &:hover {
+      background-color: $color-ea-light-beige;
+      color: $color-ea-dark;
+      border-bottom: 1px solid $color-ea-dark;
     }
   }
 }
