@@ -9,4 +9,4 @@ calUsername:
 priority: 6
 ---
 
-Cian is a second-year student studying Computer Sciences. He works on doing tabling outreach and helps deterimine the organizations's general priorities.
+Cian is a second-year student studying Computer Sciences. He works on doing tabling outreach and helps determine the organizations's general priorities.

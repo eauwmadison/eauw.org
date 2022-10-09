@@ -1,6 +1,7 @@
 /* Next.js imports */
 import Image from "next/image";
 import ExportedImage from "next-image-export-optimizer";
+import Icon from "./icon";
 
 export default function Leader({ leader }) {
   return (
@@ -26,11 +27,17 @@ export default function Leader({ leader }) {
         )}
       </div>
 
-      <h3>{leader.name}</h3>
-      <small>{leader.pronouns}</small>
-      { leader.role && leader.role.split(", ").map((role, i) => (
-        <label key={i}>{role}</label>
-      ))}
+      <h3>{leader.name && leader.name}</h3>
+      <small>{leader.pronouns && leader.pronouns}</small>
+      {leader.role && (
+        <div>
+          {leader.role.split(", ").map((role, i) => (
+            <label key={i}>{role}</label>
+          ))}
+        </div>
+      )}
+
+      {/* horizontal line comes from `.label:last-child` */}
 
       <div
         className="leader-bio"
@@ -38,8 +45,11 @@ export default function Leader({ leader }) {
       ></div>
 
       {leader.calUsername && (
-        <a className="btn" data-cal-link={leader.calUsername}>
-          Book a 1-on-1
+        <a
+          className="btn btn-small btn-flipped"
+          data-cal-link={leader.calUsername}
+        >
+          <Icon icon="Date" /> Book a 1-on-1
         </a>
       )}
     </li>

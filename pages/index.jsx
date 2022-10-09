@@ -36,7 +36,7 @@ export default function Home({ page, popups }) {
             rel="noreferrer"
           >
             Learn more about effective altruism
-            <Icon icon="Go"/>
+            <Icon icon="Go" />
           </a>
         </div>
       </div>

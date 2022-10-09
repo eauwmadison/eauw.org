@@ -1,4 +1,5 @@
 @import "layout";
+@import "typography";
 @import "colors";
 
 .executive-section {
@@ -12,6 +13,10 @@
   margin-left: calc(
     (100% - 100vw) / 2
   ); /* then remove the gap to the left of the container with this equation */
+
+  label:last-child {
+    border-color: $color-ea-beige !important;
+  }
 }
 
 .team-list {
@@ -30,5 +35,10 @@
 
   .leader-bio {
     font-size: small;
+  }
+
+  label:last-child {
+    padding-bottom: 8px;
+    border-bottom: 1px solid #054d5a;
   }
 }
