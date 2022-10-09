@@ -7,7 +7,7 @@ body {
 }
 
 .container {
-  max-width: 960px;
+  max-width: 1328px;
   margin: 0 auto;
 }
 
@@ -40,6 +40,7 @@ header .organization-group {
 
 .organization-group > * {
   margin: 0 !important;
+  font-family: $font-slab !important;
 }
 
 .organization-name {
@@ -49,7 +50,12 @@ header .organization-group {
 
 .organization-subheading {
   margin-top: 0;
+  font-weight: 400;
   color: $color-ea-primary;
+}
+
+.organization-description {
+  font-family: $font-serif;
 }
 
 header {
@@ -57,7 +63,7 @@ header {
     background: aliceblue;
   }
 
-  background: #cbe5e9;
+  background: $light-blue;
   box-sizing: border-box;
 
   .container {
@@ -108,17 +114,20 @@ header,
 footer {
   a {
     color: $color-ea-dark;
+    font-family: $font-sans;
+    font-weight: 400;
+    font-variation-settings: "wght" 400;
+    transition: font-variation-settings 0.1s ease;
 
     &.active {
       border-bottom: 2px solid;
     }
-  }
-}
 
-header,
-footer {
-  a:hover {
-    color: $color-ea-primary;
+    &:hover {
+      color: $color-ea-dark;
+      font-variation-settings: "wght" 600;
+      font-weight: 600;
+    }
   }
 }
 
@@ -133,7 +142,6 @@ footer {
 header,
 footer,
 section {
-  // overflow-x:hidden;
   padding: 30px 20px;
 
   @media (min-width: $sm-break) {
@@ -181,12 +189,28 @@ section {
 }
 
 .blue-section {
+  ::selection,
+  ::-moz-selection {
+    background: $color-ea-light;
+  }
+
   background-color: $color-ea-primary;
+  color: $white;
+
+  a {
+    color: $white;
+    border-bottom: 2px solid $white;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: #fefefe;
+    }
+  }
 }
 
 .dark-section {
   background-color: $color-ea-dark;
-  color: #c1c1c1;
+  color: $color-ea-beige;
 
   a {
     color: #efefef;
@@ -207,9 +231,9 @@ section {
 }
 
 .quote-section {
-  @extend .dark-section;
-  font-size: 3rem;
-  font-style: italic;
+  @extend .blue-section;
+  font-size: 4rem;
+  font-weight: 700;
   padding: 70px 20px;
 
   .container {
@@ -289,6 +313,7 @@ footer {
 }
 
 .social-links {
+  font-family: $font-sans;
   padding: 0;
 
   li {
@@ -297,9 +322,14 @@ footer {
 
     a {
       color: $color-ea-dark;
+      font-weight: 400;
+      font-variation-settings: "wght" 400;
+      transition: font-variation-settings 0.1s ease;
 
       &:hover {
         color: $color-ea-primary;
+        font-variation-settings: "wght" 600;
+        font-weight: 600;
       }
 
       svg {
@@ -333,21 +363,6 @@ footer {
         height: 22px;
       }
     }
-  }
-}
-
-.footer-subscription-form {
-  h4 {
-    margin: 20px 0 10px 0;
-  }
-
-  input,
-  textarea {
-    margin: 0 0 10px 0;
-  }
-
-  button {
-    margin-top: 7.5px;
   }
 }
 

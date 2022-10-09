@@ -104,7 +104,7 @@ export default function Contact({ page, placeholders, popups }) {
           </ul>
         </div>
 
-        <div className="column">
+        <div className="column" style={{flexGrow: 4}}>
           <form onSubmit={handleSubmit}>
             <label htmlFor="email_address">Your Email Address</label>
             <input

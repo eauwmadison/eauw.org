@@ -1,6 +1,6 @@
 ---
 title:
-callToAction: Contact
+callToAction: Subscribe
 largeHeader: true
 calendar: true
 # testimonialSection: true

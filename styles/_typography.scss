@@ -19,8 +19,14 @@
   font-style: normal;
 }
 
-$font-sans: "Cabin", "Aller", "Merriweather", "Ubuntu", sans-serif;
+$font-sans: "Inter", "Merriweather Sans", "Cabin", "Aller", "Ubuntu", sans-serif;
+$font-serif: "Merriweather", Georgia, "Average", "Times New Roman", serif;
 $font-slab: "Rockwell Nova", "Roboto Slab", "Merriweather", Georgia, serif;
+
+::selection,
+::-moz-selection {
+  background: $light-blue;
+}
 
 html {
   font-size: 9px;
@@ -39,20 +45,24 @@ body {
 body,
 input,
 textarea {
-  font-family: $font-sans;
+  font-family: $font-serif;
   color: $color-ea-dark;
   text-rendering: geometricPrecision;
 }
 
 label,
-h1,
+h1 {
+  font-family: $font-slab;
+  font-weight: 400;
+}
+
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: $font-slab;
-  font-weight: 400;
+  font-family: $font-serif;
+  font-weight: 700;
 }
 
 h1,

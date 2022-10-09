@@ -66,11 +66,11 @@ module.exports = {
     },
     programs: {
       path: "content/programs",
-      output: false,
+      output: false
     },
     popups: {
       path: "content/popups",
-      output: false,
+      output: false
     },
     data: {
       path: "data",

@@ -20,7 +20,6 @@ textarea {
   border: 1px solid $light-gray;
   border-radius: 4px;
   width: 100%;
-  max-width: 500px;
   margin: 0 0 20px 0;
   box-sizing: border-box;
   font-size: 2rem;
@@ -42,7 +41,7 @@ input[type="submit"],
   border: none;
   border-bottom: 1px solid $color-ea-dark;
   border-radius: 4px;
-  font-family: $font-sans;
+  font-family: $font-serif;
   font-size: 2rem;
   color: $white;
   cursor: pointer;
@@ -61,4 +60,26 @@ textarea:focus {
   outline: none;
   border: 1px solid $color-ea-dark;
   // box-shadow: 0 0 5px $color-ea-dark;
+}
+
+.hero-subscription-form {
+  margin: 0 auto;
+  max-width: 500px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.footer-subscription-form {
+  h4 {
+    margin: 20px 0 10px 0;
+  }
+
+  input,
+  textarea {
+    margin: 0 0 10px 0;
+  }
+
+  button {
+    margin-top: 7.5px;
+  }
 }
