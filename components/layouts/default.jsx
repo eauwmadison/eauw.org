@@ -194,7 +194,9 @@ export default function DefaultLayout({ children, page }) {
 
       {page.callToAction === "Subscribe" && (
         <section className="quote-section">
-          <p className="container editable">Find out about our latest opportunities.</p>
+          <p className="container editable">
+            Find out about our latest opportunities.
+          </p>
           <form className="hero-subscription-form" onSubmit={handleSubmit}>
             {!formSubmitted ? (
               <>
@@ -299,10 +301,10 @@ export default function DefaultLayout({ children, page }) {
                     </>
                   ) : (
                     <div className="footer-subscription-confirmation">
-                    <p>
-                      Thanks, {firstName}! Check your inbox for a confirmation.
-                      🙂
-                    </p>
+                      <p>
+                        Thanks, {firstName}! Check your inbox for a
+                        confirmation. 🙂
+                      </p>
                     </div>
                   )}
                 </form>
