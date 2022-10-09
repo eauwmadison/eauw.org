@@ -27,10 +27,17 @@ export default function Leader({ leader }) {
         )}
       </div>
 
-      <h3>{leader.name}</h3>
-      <small>{leader.pronouns}</small>
-      {leader.role &&
-        leader.role.split(", ").map((role, i) => <label key={i}>{role}</label>)}
+      <h3>{leader.name && leader.name}</h3>
+      <small>{leader.pronouns && leader.pronouns}</small>
+      {leader.role && (
+        <div>
+          {leader.role.split(", ").map((role, i) => (
+            <label key={i}>{role}</label>
+          ))}
+        </div>
+      )}
+
+      {/* horizontal line comes from `.label:last-child` */}
 
       <div
         className="leader-bio"

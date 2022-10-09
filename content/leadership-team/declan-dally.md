@@ -1,7 +1,7 @@
 ---
 name: Declan Dally
 pronouns: he/him
-role: Vice President
+role: Vice President, Treasurer
 image: /uploads/declan-dally.jpg
 calUsername: declan
 executive: true
