@@ -1,0 +1,45 @@
+@import "colors";
+@import "typography";
+
+.btn {
+  display: inline-block;
+  padding: 16px 28px;
+  margin: 0;
+  background-color: $color-ea-primary;
+  color: $white;
+  border: none;
+  border-bottom: 1px solid $color-ea-dark;
+  border-radius: 4px;
+  font-family: $font-serif;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: color 0.1s ease-in-out, border 0.2s ease-in-out,
+    background-color 0.2s ease-in-out;
+
+  &:hover {
+    background-color: $color-ea-light;
+    color: $white;
+    border-bottom: 1px solid $color-ea-primary;
+  }
+
+  svg {
+    fill: $white;
+    margin-left: 0.75rem;
+    vertical-align: middle;
+    width: 1.5em;
+    height: 1.5em;
+  }
+}
+
+.btn-office-hours {
+	display: inline-block;
+	padding: 12px 24px;
+	margin-bottom: 25px;
+
+	font-size: 1.5rem;
+
+	svg {
+    width: 1.2em;
+    height: 1.2em;
+  }
+}

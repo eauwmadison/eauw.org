@@ -1,8 +1,8 @@
 ---
-name: Cian
+name: Cian Dally
 pronouns: he/him
-image: /uploads/cian-dally.jpg
-role: Student Organizer
+role: Student Organizer, Animal Ethics Fellowship Coordinator
+image:
 executive: false
 previous: false
 calUsername:

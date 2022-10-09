@@ -1,7 +1,7 @@
 ---
 name: Lenni Justen
 pronouns: he/him
-image: "https://placekitten.com/440/440?a=.png"
+image:
 previous: true
 ---
 

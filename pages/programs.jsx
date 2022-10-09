@@ -25,7 +25,7 @@ export async function getStaticProps() {
   return {
     props: {
       page: JSON.parse(JSON.stringify(page)),
-      programs,
+      programs: JSON.parse(JSON.stringify(programs)),
       popups
     }
   };

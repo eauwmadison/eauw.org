@@ -1,8 +1,8 @@
 ---
 name: Doran Redlich
 pronouns: he/him
-image: https://placehold.it/440/440?a=.png
-role: Environmental Events Manager, Fellowship Coordinator
+role: Fellowship Coordinator, Environmental Events Manager
+image:
 executive: false
 previous: false
 calUsername:

@@ -12,9 +12,23 @@
   margin-left: calc(
     (100% - 100vw) / 2
   ); /* then remove the gap to the left of the container with this equation */
+}
 
-  h2,
-  h3 {
-    color: $white;
+.team-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.leader {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  .leader-bio {
+    font-size: small;
   }
 }

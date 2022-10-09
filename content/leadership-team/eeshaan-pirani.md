@@ -1,11 +1,11 @@
 ---
 name: Eeshaan Pirani
 pronouns: he/they
-image: "https://placekitten.com/440/440?a=.png"
-role: Lead Organizer
+role: Lead Organizer, Technology Lead, President of Animal Advocacy UW–Madison
+image:
 executive: true
 calUsername: eeshaan
 priority: 3
 ---
 
-Jane has 19 years of experience in law, and specializes in property and business.
+Eeshaan is a senior studying Computer Sciences and Philosophy. They became interested in EA in late 2020 while thinking about ways to help non-human animals beyond adopting a vegan lifestyle, helped start EA UW–Madison in Summer 2021, and founded Animal Advocacy UW–Madison in Fall 2022. They are particularly interested in suffering-focused ethics and strategies to help make EA more diverse and inclusive of a movement. Their hobbies include casual bike riding, amatuer vegan cooking, listening to jazz, drinking kombucha, and language learning (sometimes all at once).

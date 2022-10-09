@@ -2,8 +2,9 @@
 import Script from "next/script";
 
 /* first-party component imports */
-import PageLayout from "../components/layouts/page";
+import Grid, { Item } from "../components/grid";
 import Leader from "../components/leader";
+import PageLayout from "../components/layouts/page";
 
 /* site data */
 import { getCollection, getCollectionItem } from "../lib/collections";
@@ -17,30 +18,40 @@ export default function Team({ page, leaders, popups }) {
         <section className="executive-section">
           <div className="container">
             <h2>Executive Team</h2>
-            <ul className="team-list">
+            <p>
+              Members of our executive team commit about 10 hours per week or
+              more to the organization.
+            </p>
+            <Grid>
               {leaders
                 .filter((leader) => leader.executive && !leader.previous)
                 .map((leader, i) => (
-                  <Leader leader={leader} key={i} />
+                  <Item key={i}>
+                    <Leader leader={leader} />
+                  </Item>
                 ))}
-            </ul>
+            </Grid>
           </div>
         </section>
-        <ul className="team-list">
+        <Grid>
           {leaders
             .filter((leader) => !leader.executive && !leader.previous)
             .map((leader, i) => (
-              <Leader leader={leader} key={i} />
+              <Item key={i}>
+                <Leader leader={leader} key={i} />
+              </Item>
             ))}
-        </ul>
+        </Grid>
         <h2>Alumni and Affiliates</h2>
-        <ul className="team-list">
+        <Grid>
           {leaders
             .filter((leader) => leader.previous)
             .map((leader, i) => (
-              <Leader leader={leader} key={i} />
+              <Item key={i}>
+                <Leader leader={leader} key={i} />
+              </Item>
             ))}
-        </ul>
+        </Grid>
       </PageLayout>
       <Script
         id="cal-embed"

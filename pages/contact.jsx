@@ -59,7 +59,7 @@ export default function Contact({ page, placeholders, popups }) {
         <div className="column">
           <p className="editor-link">
             <a
-              href="cloudcannon:collections/content/data/company.yml"
+              href="cloudcannon:collections/data/organization.json"
               className="btn"
             >
               <strong>&#9998;</strong> Update Company Details
@@ -80,6 +80,17 @@ export default function Contact({ page, placeholders, popups }) {
               __html: data.organization.officeAddress.replace(/,/g, "<br>")
             }}
           ></address>
+
+          <label>Office Hours</label>
+          <a
+            className="contact-info btn btn-office-hours"
+            href={data.organization.officeHoursLink}
+            target="_blank"
+            rel="noreferrer"
+          >
+            {data.organization.officeHoursLinkText}
+            <Icon icon="Go" />
+          </a>
 
           <label>Postal Address</label>
           <address
@@ -104,7 +115,7 @@ export default function Contact({ page, placeholders, popups }) {
           </ul>
         </div>
 
-        <div className="column">
+        <div className="column" style={{ flexGrow: 4 }}>
           <form onSubmit={handleSubmit}>
             <label htmlFor="email_address">Your Email Address</label>
             <input

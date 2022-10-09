@@ -1,8 +1,8 @@
 ---
 name: Reid Kuenzi
 pronouns: he/him
-image: https://placehold.it/440/440?a=.png
-role: Faculty Outreach Coordinator / Social Event Planner
+role: Faculty Outreach Coordinator, Social Event Planner
+image:
 executive: false
 previous: false
 calUsername:

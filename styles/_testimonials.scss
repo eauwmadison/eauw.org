@@ -1,0 +1,51 @@
+@import "colors";
+
+.testimonials {
+  font-size: 1.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -20px;
+}
+
+.testimonial {
+  flex: 1 0 0%;
+  margin: 0 20px;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  color: $color-ea-dark;
+  margin: 25px 20px 0 20px;
+
+  img {
+    max-width: 30px;
+    max-height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+    position: relative;
+    top: -2px;
+  }
+}
+
+.testimonial-message {
+  @extend .box;
+  font-style: italic;
+  position: relative;
+}
+
+.testimonial-message::before {
+  content: " ";
+  position: absolute;
+  transform: translateY(-50%) rotate(45deg);
+  background-color: #fefefe;
+}
+
+.testimonial-message::before {
+  top: 100.5%;
+  width: 18px;
+  height: 18px;
+  border-right: 1px solid $color-ea-dark;
+  border-bottom: 1px solid $color-ea-dark;
+}

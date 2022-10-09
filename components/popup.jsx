@@ -66,11 +66,10 @@ export default function Popup({ popup }) {
           <div className="modal">
             <h2 id="transition-modal-title">{popup.title}</h2>
             <div dangerouslySetInnerHTML={{ __html: popup.contentHTML }} />
-            
+
             <Link href={popup.link}>
               <button>{popup.button}</button>
             </Link>
-
           </div>
         </Fade>
       </Modal>
