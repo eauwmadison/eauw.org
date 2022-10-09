@@ -25,12 +25,21 @@ export default function PostSummary({ post }) {
         <PostSummaryDetails post={post} />
 
         <p className="post-summary-author">
-          <ExportedImage
-            src={post.author.image}
-            alt={`Photo of ${post.author.name}`}
-            width="30"
-            height="30"
-          />{" "}
+          {post.author.image ? (
+            <ExportedImage
+              src={post.author.image}
+              alt={`Photo of ${post.author.name}`}
+              width="30"
+              height="30"
+            />
+          ) : (
+            <ExportedImage
+              src={"https://placehold.jp/f4efe9/054d5a/30x30.jpg?text=Image+Coming+Soon"}
+              alt={`Photo of ${post.author.name}`}
+              width="30"
+              height="30"
+            />
+          )}{" "}
           {post.author.name}
         </p>
       </div>
