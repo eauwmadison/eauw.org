@@ -1,10 +1,11 @@
 ---
 name: Meera Bradley
 pronouns: they/them
-image: "https://placekitten.com/440/440?a=.png"
-role: CEO
+role: Community Health Advisor
+image:
+calUsername: meera
 executive: true
 priority: 4
 ---
 
-Jane has 19 years of experience in law, and specializes in property and business.
+Meera is a second-year Computer Sciences major with an interest in machine learning and AI. They love reading novels and hiking. Meera is the resident community health point-person. If you have any concerns about something that has happened in the group, you can talk to them (or someone else on leadership if you're more comfortable with that). They are committed to helping make EA a welcoming and accessible space for people who identify as queer or disabled.

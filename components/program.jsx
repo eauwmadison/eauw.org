@@ -3,26 +3,17 @@ import ExportedImage from "next-image-export-optimizer";
 
 export default function Program({ program }) {
   return (
-    <li className="staff">
-      <div className="staff-details">
-        <div className="staff-image">
-          <ExportedImage
-            src={program.image}
-            alt={`Staff photo for ${program.name}`}
-            width="120"
-            height="120"
-            unoptimized
-          />
-        </div>
-        <ul className="staff-info">
-          <li>{program.name}</li>
-        </ul>
-      </div>
+    <li className="program">
+      <h3>{program.name}</h3>
+      <ExportedImage
+        src={program.image}
+        alt={`Staff photo for ${program.name}`}
+        width="120"
+        height="120"
+        unoptimized
+      />
 
-      <div
-        className="staff-bio"
-        dangerouslySetInnerHTML={{ __html: program.contentHTML }}
-      ></div>
+      <div dangerouslySetInnerHTML={{ __html: program.contentHTML }}></div>
     </li>
   );
 }

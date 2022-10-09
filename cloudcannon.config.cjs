@@ -13,10 +13,12 @@ module.exports = {
     contactEmailAddress: "Address to be displayed on the Contact page",
     newTab: "Whether the link opens a new browser tab",
     calendar: "Whether a calendar is shown on the page",
-    calUsername: "Username for https://cal.eauw.org",
+    calUsername: "Username for https://cal.eauw.org/",
     pinned: "Whether a post is pinned to the top of the Posts page",
     excerptHtml: "The HTML preview for a post summary",
-    popupEnabled: "Show popup on page load. Can only show one popup per page."
+    popupEnabled: "Show popup on page load. Can only show one popup per page.",
+    priority: "Helps adjust the position on the page — lower value is higher on the page",
+    startingDate: "The first day of the week when the fellowship begins",
   },
 
   "_select_data": {

@@ -185,7 +185,7 @@ export default function DefaultLayout({ children, page }) {
 
       {page.callToAction === "Contact" && (
         <section className="quote-section">
-          <p className="container">
+          <p className="container editable">
             <Link href="/contact">Contact us</Link> today to find out how we can
             help you do more good.
           </p>
@@ -194,7 +194,7 @@ export default function DefaultLayout({ children, page }) {
 
       {page.callToAction === "Subscribe" && (
         <section className="quote-section">
-          <p className="container">Find out about our latest opportunities.</p>
+          <p className="container editable">Find out about our latest opportunities.</p>
           <form className="hero-subscription-form" onSubmit={handleSubmit}>
             {!formSubmitted ? (
               <>
@@ -210,9 +210,11 @@ export default function DefaultLayout({ children, page }) {
                 </button>
               </>
             ) : (
-              <p>
-                Thanks, {firstName}! Check your inbox for a confirmation. 🙂
-              </p>
+              <div className="box beige-section hero-subscription-confirmation">
+                <p>
+                  Thanks, {firstName}! Check your inbox for a confirmation. 🙂
+                </p>
+              </div>
             )}
           </form>
         </section>
@@ -222,7 +224,7 @@ export default function DefaultLayout({ children, page }) {
         <div className="container">
           <div
             className="footer-columns"
-            data-cms-editor-link="cloudcannon:collections/content/data/footer.json"
+            data-cms-editor-link="cloudcannon:collections/data/footer.json"
           >
             <ul className="footer-links">
               <li>
@@ -268,7 +270,9 @@ export default function DefaultLayout({ children, page }) {
                   </h2>
                 </div>
               </li>
-              <li className="organization-description">{siteData.organization.description}</li>
+              <li className="organization-description">
+                {siteData.organization.description}
+              </li>
               <li>
                 <form
                   className="footer-subscription-form"
@@ -294,10 +298,12 @@ export default function DefaultLayout({ children, page }) {
                       </button>
                     </>
                   ) : (
+                    <div className="footer-subscription-confirmation">
                     <p>
                       Thanks, {firstName}! Check your inbox for a confirmation.
                       🙂
                     </p>
+                    </div>
                   )}
                 </form>
               </li>

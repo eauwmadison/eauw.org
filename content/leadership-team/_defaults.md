@@ -1,8 +1,8 @@
 ---
 name:
 pronouns:
-image: "https://placehold.it/440/440?a=.png"
 role:
+image:
 executive: false
 previous: false
 calUsername:

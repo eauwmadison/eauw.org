@@ -49,10 +49,6 @@ footer {
   }
 }
 
-header a.active {
-  border-bottom: 2px solid;
-}
-
 header {
   ::selection {
     background: aliceblue;
@@ -87,6 +83,10 @@ header {
         display: inline-block;
         margin: 0 10px;
       }
+    }
+
+    a.active {
+      border-bottom: 2px solid;
     }
   }
 
@@ -181,6 +181,7 @@ footer {
 
 .beige-section {
   background-color: $color-ea-beige;
+  color: $color-ea-dark;
 }
 
 .blue-section {
@@ -215,6 +216,11 @@ footer {
 }
 
 .dark-section {
+  ::selection,
+  ::-moz-selection {
+    background: $color-ea-primary;
+  }
+
   background-color: $color-ea-dark;
   color: $color-ea-beige;
 
@@ -237,50 +243,6 @@ footer {
   .container {
     max-width: max-content;
     text-align: center;
-  }
-}
-
-.team-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 -20px;
-
-  .staff {
-    margin: 20px;
-  }
-}
-
-.staff {
-  @extend .box;
-  flex: 1 1 300px;
-  flex-wrap: wrap;
-  margin: 20px 0;
-
-  p {
-    margin: 0;
-  }
-
-  small {
-    opacity: 0.6;
-    font-size: 1.7rem;
-  }
-}
-
-.staff-info {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.staff-details {
-  margin: 0;
-  display: flex;
-
-  .staff-image {
-    margin-right: 20px;
   }
 }
 
@@ -362,56 +324,6 @@ footer {
       }
     }
   }
-}
-
-.testimonials {
-  font-size: 1.8rem;
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 -20px;
-}
-
-.testimonial {
-  flex: 1 0 0%;
-  margin: 0 20px;
-}
-
-.testimonial-author {
-  display: flex;
-  align-items: center;
-  column-gap: 10px;
-  color: #75828a;
-  margin: 25px 20px 0 20px;
-
-  img {
-    max-width: 30px;
-    max-height: 30px;
-    border-radius: 50%;
-    margin-right: 10px;
-    position: relative;
-    top: -2px;
-  }
-}
-
-.testimonial-message {
-  @extend .box;
-  font-style: italic;
-  position: relative;
-}
-
-.testimonial-message::before {
-  content: " ";
-  position: absolute;
-  transform: translateY(-50%) rotate(45deg);
-  background-color: #fefefe;
-}
-
-.testimonial-message::before {
-  top: 100.5%;
-  width: 18px;
-  height: 18px;
-  border-right: 1px solid $color-ea-dark;
-  border-bottom: 1px solid $color-ea-dark;
 }
 
 .columns {

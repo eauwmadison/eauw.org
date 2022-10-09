@@ -1,12 +1,6 @@
 @import "colors";
 @import "typography";
 
-.events {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-}
-
 .event-link {
   display: inline-grid;
   color: $color-ea-dark;
