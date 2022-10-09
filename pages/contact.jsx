@@ -83,7 +83,7 @@ export default function Contact({ page, placeholders, popups }) {
 
           <label>Office Hours</label>
           <a
-            className="contact-info btn btn-office-hours"
+            className="contact-info btn btn-small btn-go"
             href={data.organization.officeHoursLink}
             target="_blank"
             rel="noreferrer"
