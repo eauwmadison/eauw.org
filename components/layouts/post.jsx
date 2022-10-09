@@ -22,9 +22,7 @@ export default function PostLayout({ children, page, author }) {
         <div dangerouslySetInnerHTML={{ __html: page.contentHTML }} />
 
         <h2>Meet the author</h2>
-        <ul className="post-author team-list">
-          <Leader leader={author} />
-        </ul>
+        <Leader leader={author} />
 
         {siteData.site.disqus_shortname && (
           <>

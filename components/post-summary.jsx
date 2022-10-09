@@ -34,7 +34,9 @@ export default function PostSummary({ post }) {
             />
           ) : (
             <ExportedImage
-              src={"https://placehold.jp/f4efe9/054d5a/30x30.jpg?text=Image+Coming+Soon"}
+              src={
+                "https://placehold.jp/f4efe9/054d5a/30x30.jpg?text=Image+Coming+Soon"
+              }
               alt={`Photo of ${post.author.name}`}
               width="30"
               height="30"
