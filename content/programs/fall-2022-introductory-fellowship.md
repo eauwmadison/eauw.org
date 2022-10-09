@@ -1,6 +1,6 @@
 ---
 name: Introductory Fellowship
-image: https://placehold.jp/150x150.png
+image: /uploads/profile-pic.png
 starting-date: 2022-09-26T00:00:00Z
 duration: 7 weeks
 application-link: https://eauw.org/apply
