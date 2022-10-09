@@ -68,11 +68,13 @@ module.exports = {
     },
     programs: {
       path: "content/programs",
-      output: false
+      output: false,
+      _icon: "school"
     },
     popups: {
       path: "content/popups",
-      output: false
+      output: false,
+      _icon: "filter_frames"
     },
     data: {
       path: "data",
