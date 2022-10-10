@@ -1,0 +1,14 @@
+{
+  "routes": [
+    {
+      "from": "/slack",
+      "to": "https://go.eauw.org/slack",
+      "status": 308
+    },
+    {
+      "from": "/feedback",
+      "to": "https://go.eauw.org/feedback",
+      "status": 302
+    }
+  ]
+}
