@@ -19,7 +19,10 @@ module.exports = {
     popupEnabled: "Show popup on page load. Can only show one popup per page.",
     priority:
       "Helps adjust the position on the page — lower value is higher on the page",
-    startingDate: "The first day of the week when the fellowship begins"
+    startingDate: "The first day of the week when the fellowship begins",
+    semester:
+      "Displays as a small horizontal banner at the bottom of the program box",
+    hidden: "Whether the element is shown"
   },
 
   "_select_data": {

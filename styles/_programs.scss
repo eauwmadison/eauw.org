@@ -1,11 +1,17 @@
 @import "colors";
 @import "typography";
 
-// .program {
-//   @extend .box;
-//   padding: 0;
-//   display: flex;
-//   flex-direction: column;
-//   overflow: hidden;
-//   cursor: pointer;
-// }
+.program {
+  @extend .box;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $sm-break) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}

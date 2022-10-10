@@ -24,7 +24,10 @@ export default function Team({ page, leaders, popups }) {
             </p>
             <Grid>
               {leaders
-                .filter((leader) => leader.executive && !leader.previous)
+                .filter(
+                  (leader) =>
+                    leader.executive && !leader.previous && !leader.hidden
+                )
                 .map((leader, i) => (
                   <Item key={i}>
                     <Leader leader={leader} />
@@ -35,7 +38,10 @@ export default function Team({ page, leaders, popups }) {
         </section>
         <Grid>
           {leaders
-            .filter((leader) => !leader.executive && !leader.previous)
+            .filter(
+              (leader) =>
+                !leader.executive && !leader.previous && !leader.hidden
+            )
             .map((leader, i) => (
               <Item key={i}>
                 <Leader leader={leader} key={i} />
@@ -45,7 +51,7 @@ export default function Team({ page, leaders, popups }) {
         <h2>Alumni and Affiliates</h2>
         <Grid>
           {leaders
-            .filter((leader) => leader.previous)
+            .filter((leader) => leader.previous && !leader.hidden)
             .map((leader, i) => (
               <Item key={i}>
                 <Leader leader={leader} key={i} />

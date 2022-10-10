@@ -3,7 +3,7 @@ import ExportedImage from "next-image-export-optimizer";
 
 export default function Program({ program }) {
   return (
-    <li className="program">
+    <li className="program hover">
       <h3>{program.name}</h3>
       <ExportedImage
         src={program.image}

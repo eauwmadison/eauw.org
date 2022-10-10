@@ -6,13 +6,21 @@ import Program from "../components/program";
 import { getCollection, getCollectionItem } from "../lib/collections";
 
 export default function Programs({ page, programs, popups }) {
+  const currentPrograms = programs.filter((program) => !program.previous);
+  const previousPrograms = programs.filter((program) => program.previous);
+
   return (
     <PageLayout page={page}>
-      <ul className="team-list">
-        {programs.map((program, i) => (
+      {currentPrograms.length !== 0 && <h2>Current Programs</h2>}
+      {currentPrograms
+        .filter((program) => !program.main)
+        .map((program, i) => (
           <Program program={program} popups={popups} key={i} />
         ))}
-      </ul>
+      <h2>Previous Programs</h2>
+      {previousPrograms.map((program, i) => (
+        <Program program={program} popups={popups} key={i} />
+      ))}
     </PageLayout>
   );
 }

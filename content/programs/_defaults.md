@@ -5,5 +5,6 @@ startingDate:
 semester:
 duration:
 applicationLink:
+main: false
 previous: false
 ---

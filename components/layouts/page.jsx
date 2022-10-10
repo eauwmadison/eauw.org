@@ -5,12 +5,16 @@ import Popup from "../popup";
 export default function PageLayout({ children, page, popups }) {
   return (
     <DefaultLayout page={page}>
-      <div className="page-header">
-        {page.showTitle && <h2>{page.title}</h2>}
-      </div>
+      {page.showTitle && (
+        <div className="page-header">
+          <h2>{page.title}</h2>
+        </div>
+      )}
 
       <article className="content">
-        <div dangerouslySetInnerHTML={{ __html: page.contentHTML }} />
+        {page.contentHTML && (
+          <div dangerouslySetInnerHTML={{ __html: page.contentHTML }} />
+        )}
         {children}
       </article>
 

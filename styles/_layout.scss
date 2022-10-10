@@ -340,11 +340,6 @@ footer {
   margin: 0 0 25px 0;
 }
 
-.post-list {
-  list-style: none;
-  padding: 0;
-}
-
 .pagination {
   margin-top: 30px;
   display: flex;
@@ -356,55 +351,6 @@ footer {
   span {
     flex: 1;
   }
-}
-
-.post-comments {
-  @extend .box;
-  margin-top: 20px;
-}
-
-.post-summary {
-  @extend .box;
-  display: flex;
-  flex-direction: column;
-
-  @media (min-width: $sm-break) {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  &:not(:last-child) {
-    margin-bottom: 30px;
-  }
-}
-
-.post-summary-excerpt {
-  margin-bottom: 0;
-}
-
-.post-summary-content.has-post-summary-image {
-  flex: 0 1 75%;
-}
-
-.post-summary-image {
-  flex: 0 1 25%;
-  box-sizing: border-box;
-  margin-bottom: 15px;
-
-  @media (min-width: $sm-break) {
-    margin-bottom: 0;
-    padding-right: 20px;
-  }
-}
-
-.post-summary-details {
-  color: #75828a;
-  font-size: 1.9rem;
-}
-
-.post-summary-author {
-  @extend .testimonial-author;
-  margin: 1em 0;
 }
 
 .responsive-iframe {
