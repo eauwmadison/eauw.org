@@ -12,8 +12,8 @@ contentHTML: >-
   <strong><a target="_blank" rel="noopener" href="/office-hours">open office
   hours</a> </strong>or <strong><a target="_blank" rel="noopener"
   href="/team">meeting with us</a></strong>.&nbsp;</p><h3>The EA Opportunities
-  Board</h3><p><img style="display: block;-webkit-user-select: none;margin:
-  auto;background-color: hsl(0, 0%, 90%);transition: background-color 0ms;"
-  src="blob:https://app.cloudcannon.com/f4c759a8-2f0e-4f1f-b117-cd5ecd0ecbe3"
-  /></p><p>&nbsp;</p><p>&nbsp;</p>
+  Board</h3><p><img alt="logo" width="500" height="150" class="chakra-image
+  css-12lv81v"
+  src="https://res.cloudinary.com/pory/image/upload/v1656607172/production/public/6190331b7c982d00182a49d7/internships-for-impact-logo.png"
+  href="https://ea-internships.pory.app/" /></p><p>&nbsp;</p>
 ---
