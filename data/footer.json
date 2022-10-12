@@ -25,6 +25,10 @@
       "link": "/apply"
     },
     {
+      "name": "Office Hours",
+      "link": "/office-hours"
+    },
+    {
       "name": "Anonymous Feedback",
       "link": "/feedback",
       "external": true

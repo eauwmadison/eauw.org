@@ -1,11 +1,11 @@
 # Effective Altruism UW–Madison Website
 
 An Effective Altruism website built with Next.js. Browse through a
-[live demo](https://haloed-coal.cloudvent.net/). Any other EA organizations are welcome to use this template.
+[live demo](https://excited-skunk.cloudvent.net/). Any other EA organizations are welcome to use this template.
 
 This site is based on the "Justice" template made by [CloudCannon](https://cloudcannon.com/).
 
-[![Deploy to CloudCannon](https://buttons.cloudcannon.com/deploy.svg)](https://app.cloudcannon.com/register#sites/connect/github/Effective-Altruism-UW-Madison/new.eauw.org)
+[![Deploy to CloudCannon](https://buttons.cloudcannon.com/deploy.svg)](https://app.cloudcannon.com/register#sites/connect/github/eauwmadison/eauw.org)
 
 ## Features
 
@@ -18,7 +18,7 @@ This site is based on the "Justice" template made by [CloudCannon](https://cloud
 - Disqus comments for posts
 - Staff and author system
 - Configurable footer
-- Optimised for editing in [CloudCannon](https://cloudcannon.com/)
+- Optimized for editing in [CloudCannon](https://cloudcannon.com/)
 - RSS/Atom feed
 - SEO tags
 - Google Analytics
@@ -41,7 +41,7 @@ $ npm run dev
 
 ## Editing
 
-This website is optimised for adding, updating and removing pages, staff, posts, company details
+This website is optimized for adding, updating and removing pages, staff, posts, company details
 and footer elements in [CloudCannon](https://app.cloudcannon.com/).
 
 ### Posts
