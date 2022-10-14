@@ -9,16 +9,16 @@
       "link": "/programs"
     },
     {
-      "name": "Contact",
-      "link": "/contact"
-    },
-    {
       "name": "Posts",
       "link": "/posts"
     },
     {
-      "name": "Jobs & Opportunities",
-      "link": "/jobs-and-opportunities"
+      "name": "Opportunities",
+      "link": "/opportunities"
+    },
+    {
+      "name": "Contact",
+      "link": "/contact"
     }
   ]
 }

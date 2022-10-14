@@ -25,6 +25,14 @@
       "link": "/apply"
     },
     {
+      "name": "Opportunities",
+      "link": "/opportunities"
+    },
+    {
+      "name": "Books",
+      "link": "/books"
+    },
+    {
       "name": "Office Hours",
       "link": "/office-hours"
     },
@@ -42,11 +50,6 @@
       "name": "Good Futures",
       "link": "https://win.wisc.edu/organization/goodfutures",
       "external": true
-    },
-    {
-      "name": "Checkout and Return Books",
-      "link": "/checkout-and-return-books",
-      "external": false
     }
   ]
 }

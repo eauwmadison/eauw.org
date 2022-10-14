@@ -1,5 +1,5 @@
 ---
-title: Jobs and Opportunities
+title: Opportunities
 callToAction: Contact
 largeHeader: false
 showTitle: true
