@@ -11,7 +11,7 @@ export default function PageLayout({ children, page, popups }) {
         </div>
       )}
 
-      <article className="content">
+      <article>
         {page.contentHTML && (
           <div dangerouslySetInnerHTML={{ __html: page.contentHTML }} />
         )}

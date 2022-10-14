@@ -20,7 +20,7 @@ body {
 
 header,
 footer,
-section {
+.section {
   padding: 30px 20px;
 
   @media (min-width: $sm-break) {
@@ -175,15 +175,19 @@ footer {
 }
 
 .white-section {
+  @extend .section;
   background-color: $white;
 }
 
 .beige-section {
+  @extend .section;
   background-color: $color-ea-beige;
   color: $color-ea-dark;
 }
 
 .blue-section {
+  @extend .section;
+
   ::selection,
   ::-moz-selection {
     background: $color-ea-light;
@@ -215,6 +219,8 @@ footer {
 }
 
 .dark-section {
+  @extend .section;
+
   ::selection,
   ::-moz-selection {
     background: $color-ea-primary;

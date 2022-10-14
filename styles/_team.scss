@@ -5,14 +5,7 @@
 .executive-section {
   @extend .dark-section;
 
-  margin-top: -80px;
-
-  // from https://stackoverflow.com/questions/48817028/how-to-make-full-width-div-inside-container
-  // max-width:100%;  /* added */
-  width: 100svw; /* make it 100% of the viewport width (vw) */
-  margin-left: calc(
-    (100% - 100vw) / 2
-  ); /* then remove the gap to the left of the container with this equation */
+  // margin-top: -80px;
 
   label:last-child {
     border-color: $color-ea-beige !important;

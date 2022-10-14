@@ -22,7 +22,9 @@ module.exports = {
     startingDate: "The first day of the week when the fellowship begins",
     semester:
       "Displays as a small horizontal banner at the bottom of the program box",
-    hidden: "Whether the element is shown"
+    hidden: "Whether the element is shown",
+    fullWidth:
+      "Content stretches to the full width of the page. (Not recommended unless you know what you're doing.)"
   },
 
   "_select_data": {

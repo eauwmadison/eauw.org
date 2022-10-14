@@ -36,28 +36,30 @@ export default function Team({ page, leaders, popups }) {
             </Grid>
           </div>
         </section>
-        <Grid>
-          {leaders
-            .filter(
-              (leader) =>
-                !leader.executive && !leader.previous && !leader.hidden
-            )
-            .map((leader, i) => (
-              <Item key={i}>
-                <Leader leader={leader} key={i} />
-              </Item>
-            ))}
-        </Grid>
-        <h2>Alumni and Affiliates</h2>
-        <Grid>
-          {leaders
-            .filter((leader) => leader.previous && !leader.hidden)
-            .map((leader, i) => (
-              <Item key={i}>
-                <Leader leader={leader} key={i} />
-              </Item>
-            ))}
-        </Grid>
+        <section className="main container">
+          <Grid>
+            {leaders
+              .filter(
+                (leader) =>
+                  !leader.executive && !leader.previous && !leader.hidden
+              )
+              .map((leader, i) => (
+                <Item key={i}>
+                  <Leader leader={leader} key={i} />
+                </Item>
+              ))}
+          </Grid>
+          <h2>Alumni and Affiliates</h2>
+          <Grid>
+            {leaders
+              .filter((leader) => leader.previous && !leader.hidden)
+              .map((leader, i) => (
+                <Item key={i}>
+                  <Leader leader={leader} key={i} />
+                </Item>
+              ))}
+          </Grid>
+        </section>
       </PageLayout>
       <Script
         id="cal-embed"

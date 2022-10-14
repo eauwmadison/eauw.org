@@ -148,8 +148,8 @@ export default function DefaultLayout({ children, page }) {
         </div>
       </header>
 
-      <section className="main">
-        <div className="container">{children}</div>
+      <section className={page.fullWidth ? "" : "main"}>
+        <div className={page.fullWidth ? "" : "container"}>{children}</div>
       </section>
 
       {page.calendar && (
@@ -162,7 +162,7 @@ export default function DefaultLayout({ children, page }) {
       )}
 
       {page.testimonials && (
-        <section className="container">
+        <section className="container white-section">
           <div className="testimonials">
             {page.testimonials.map((testimonial, i) => (
               <blockquote className="testimonial" key={i}>
