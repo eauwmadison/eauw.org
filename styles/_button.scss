@@ -31,6 +31,22 @@
   }
 }
 
+.btn-light {
+  background-color: $color-ea-beige;
+  color: $color-ea-dark;
+  border-bottom: 1px solid $color-ea-dark;
+
+  &:hover {
+    background-color: $color-ea-light-beige;
+    color: $color-ea-dark;
+    border-bottom: 1px solid $color-ea-dark;
+  }
+
+  svg {
+    fill: $color-ea-dark;
+  }
+}
+
 .btn-small {
   padding: 12px 24px;
   width: fit-content;

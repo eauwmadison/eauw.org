@@ -1,13 +1,15 @@
-import Link from "next/link";
-
 /* adapted from https://mui.com/material-ui/react-modal/#unstyled */
 
+/* React imports */
 import { forwardRef, useState } from "react";
-import PropTypes from "prop-types";
-import clsx from "clsx";
-import { styled } from "@mui/system";
+
+/* third-party component imports */
 import ModalUnstyled from "@mui/base/ModalUnstyled";
 import Fade from "@mui/material/Fade";
+import styled from "@mui/system/styled";
+
+/* misc. library imports */
+import clsx from "clsx";
 
 const BackdropUnstyled = forwardRef((props, ref) => {
   const { open, className, ...other } = props;
@@ -21,22 +23,6 @@ const BackdropUnstyled = forwardRef((props, ref) => {
 });
 
 BackdropUnstyled.displayName = "BackdropUnstyled";
-BackdropUnstyled.propTypes = {
-  className: PropTypes.string.isRequired,
-  open: PropTypes.bool
-};
-
-const Modal = styled(ModalUnstyled)`
-  position: fixed;
-  z-index: 99;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
 
 const Backdrop = styled(BackdropUnstyled)`
   z-index: -1;
@@ -55,7 +41,8 @@ export default function Popup({ popup }) {
 
   return (
     <div>
-      <Modal
+      <ModalUnstyled
+        className="modal-container"
         aria-labelledby="transition-modal-title"
         open={open}
         onClose={handleClose}
@@ -67,12 +54,17 @@ export default function Popup({ popup }) {
             <h2 id="transition-modal-title">{popup.title}</h2>
             <div dangerouslySetInnerHTML={{ __html: popup.contentHTML }} />
 
-            <Link href={popup.link}>
-              <button>{popup.button}</button>
-            </Link>
+            <div className="buttons">
+              <button className="btn btn-light" onClick={handleClose}>
+                Close
+              </button>
+              <a className="btn" href={popup.link}>
+                {popup.buttonText}
+              </a>
+            </div>
           </div>
         </Fade>
-      </Modal>
+      </ModalUnstyled>
     </div>
   );
 }

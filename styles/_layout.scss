@@ -220,14 +220,7 @@ footer {
   }
 
   .btn {
-    background-color: $color-ea-beige;
-    color: $color-ea-dark;
-
-    &:hover {
-      background-color: $color-ea-light-beige;
-      color: $color-ea-dark;
-      border-bottom: 1px solid $color-ea-dark;
-    }
+    @extend .btn-light;
   }
 }
 

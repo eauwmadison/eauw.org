@@ -1,6 +1,6 @@
 ---
 title: "Fellowship applications are now open!"
-button: "Apply"
+buttonText: "Apply"
 link: "/apply"
 page: index
 popUpEnabled: false
