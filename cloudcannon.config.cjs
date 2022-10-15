@@ -14,8 +14,7 @@ module.exports = {
     newTab: "Whether the link opens a new browser tab",
     calendar: "Whether a calendar is shown on the page",
     calUsername: "Username for https://cal.eauw.org/",
-    pinned: "Whether a post is pinned to the top of the Posts page",
-    excerptHtml: "The HTML preview for a post summary",
+    excerptHtml: "The HTML preview for a project summary",
     popupEnabled: "Show popup on page load. Can only show one popup per page.",
     priority:
       "Helps adjust the position on the page — lower value is higher on the page",
@@ -61,9 +60,9 @@ module.exports = {
       _icon: "wysiwyg",
       _enabled_editors: ["visual", "data"]
     },
-    posts: {
-      path: "content/posts",
-      url: "/posts/[slug]",
+    projects: {
+      path: "content/projects",
+      url: "/projects/[slug]",
       output: true,
       _enabled_editors: ["visual", "content", "data"]
     },

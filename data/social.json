@@ -41,12 +41,6 @@
       "link": "https://www.instagram.com/uweffectivealtruism/",
       "socialIcon": "Instagram",
       "newTab": true
-    },
-    {
-      "name": "RSS",
-      "link": "/feed.xml",
-      "socialIcon": "RSS",
-      "newTab": false
     }
   ]
 }

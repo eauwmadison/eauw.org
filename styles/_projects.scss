@@ -1,14 +1,14 @@
-.post-list {
+.project-list {
   list-style: none;
   padding: 0;
 }
 
-.post-comments {
+.project-comments {
   @extend .box;
   margin-top: 20px;
 }
 
-.post-summary {
+.project-summary {
   @extend .box;
   display: flex;
   flex-direction: column;
@@ -23,15 +23,15 @@
   }
 }
 
-.post-summary-excerpt {
+.project-summary-excerpt {
   margin-bottom: 0;
 }
 
-.post-summary-content.has-post-summary-image {
+.project-summary-content.has-project-summary-image {
   flex: 0 1 75%;
 }
 
-.post-summary-image {
+.project-summary-image {
   flex: 0 1 25%;
   box-sizing: border-box;
   margin-bottom: 15px;
@@ -42,12 +42,12 @@
   }
 }
 
-.post-summary-details {
+.project-summary-details {
   color: #75828a;
   font-size: 1.9rem;
 }
 
-.post-summary-author {
+.project-summary-author {
   @extend .testimonial-author;
   margin: 1em 0;
 }

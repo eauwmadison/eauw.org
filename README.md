@@ -1,6 +1,6 @@
-# Effective Altruism UW–Madison Website
+# Effective Altruism UW&ndash;Madison Website
 
-An Effective Altruism website built with Next.js. Browse through a
+An effective altruism website built with Next.js. Browse through a
 [live demo](https://excited-skunk.cloudvent.net/). Any other EA organizations are welcome to use this template.
 
 This site is based on the "Justice" template made by [CloudCannon](https://cloudcannon.com/).
@@ -13,13 +13,9 @@ This site is based on the "Justice" template made by [CloudCannon](https://cloud
 - Events from Google Calendar
 - Pre-built pages
 - Pre-styled components
-- Blog with pagination
-- Post category pages
-- Disqus comments for posts
 - Staff and author system
 - Configurable footer
 - Optimized for editing in [CloudCannon](https://cloudcannon.com/)
-- RSS/Atom feed
 - SEO tags
 - Google Analytics
 
@@ -41,14 +37,8 @@ $ npm run dev
 
 ## Editing
 
-This website is optimized for adding, updating and removing pages, staff, posts, company details
+This website is optimized for adding, updating and removing pages, staff, projects, company details
 and footer elements in [CloudCannon](https://app.cloudcannon.com/).
-
-### Posts
-
-- Add, update or remove a post in the _Posts_ collection.
-- The **Staff Author** field links to members in the **Staff** collection.
-- Change the defaults when new posts are created in `_posts/_defaults.md`.
 
 ### Contact Form
 
