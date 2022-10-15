@@ -206,7 +206,8 @@ export default function DefaultLayout({ children, page }) {
                 <li key={link.name}>
                   <Link href={link.link}>
                     <a target={link.external ? "_blank" : "_self"}>
-                      {link.external && <Icon icon="Link" />} {link.name}
+                      {link.external && <Icon icon="Link" />}
+                      {link.name}
                     </a>
                   </Link>
                 </li>
