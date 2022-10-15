@@ -122,6 +122,19 @@ footer {
   .organization-subheading {
     font-size: 1.5em;
   }
+
+  .ea-footer-link {
+    @extend a;
+
+    font-family: $font-serif !important;
+    font-style: normal !important;
+    text-decoration: underline !important;
+
+    &:hover {
+      font-variation-settings: "wght" 400 !important;
+      font-weight: 400 !important;
+    }
+  }
 }
 
 .organization-group > * {

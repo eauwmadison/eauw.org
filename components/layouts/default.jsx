@@ -315,6 +315,18 @@ export default function DefaultLayout({ children, page }) {
 
         <div className="bottom-line">
           <p className="container">Made with ❤️ in Madison, WI.</p>
+          <p className="container">
+            Based on{" "}
+            <a
+              className="ea-footer-link"
+              href="https://effectivealtruism.org"
+              target="_blank"
+              rel="noreferrer"
+            >
+              effectivealtruism.org
+            </a>
+            .
+          </p>
         </div>
       </footer>
     </>
