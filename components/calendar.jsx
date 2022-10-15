@@ -64,7 +64,7 @@ const TimeAgo = () => {
   return <span>{state.timeAgo}</span>;
 };
 
-export default function Calendar() {
+export default function Calendar({ maxEvents }) {
   const { data, error } = useSWR(
     "https://www.googleapis.com/calendar/v3/calendars/" +
       siteData.site.google_calendar_id +
@@ -121,7 +121,7 @@ export default function Calendar() {
         const eventEnd = new Date(event.end.dateTime || event.end.date);
         return eventEnd > now && event.visibility !== "private";
       })
-      .slice(0, 6);
+      .slice(0, maxEvents);
   }
 
   return (

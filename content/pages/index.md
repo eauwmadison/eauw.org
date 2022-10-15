@@ -2,8 +2,9 @@
 title:
 callToAction: Subscribe
 largeHeader: true
+fullWidth: true
 calendar: true
-# testimonialSection: true
+maxEvents: 6
 mainImage: /images/members.png
 testimonials:
   - message: >-

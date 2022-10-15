@@ -13,6 +13,7 @@ module.exports = {
     contactEmailAddress: "Address to be displayed on the Contact page",
     newTab: "Whether the link opens a new browser tab",
     calendar: "Whether a calendar is shown on the page",
+    maxEvents: "The maximum number of events to show on the page",
     calUsername: "Username for https://cal.eauw.org/",
     excerptHtml: "The HTML preview for a project summary",
     popupEnabled: "Show popup on page load. Can only show one popup per page.",

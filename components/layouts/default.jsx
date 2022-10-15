@@ -152,37 +152,6 @@ export default function DefaultLayout({ children, page }) {
         <div className={page.fullWidth ? "" : "container"}>{children}</div>
       </section>
 
-      {page.calendar && (
-        <section className="beige-section">
-          <div className="container">
-            <h2>Upcoming Events</h2>
-            <Calendar />
-          </div>
-        </section>
-      )}
-
-      {page.testimonials && (
-        <section className="container white-section">
-          <div className="testimonials">
-            {page.testimonials.map((testimonial, i) => (
-              <blockquote className="testimonial" key={i}>
-                <p className="testimonial-message">{testimonial.message}</p>
-                <p className="testimonial-author">
-                  <ExportedImage
-                    src={testimonial.testimonialImage}
-                    alt={`Photo of ${testimonial.name}`}
-                    width={60}
-                    height={60}
-                    unoptimized
-                  />{" "}
-                  {testimonial.name}
-                </p>
-              </blockquote>
-            ))}
-          </div>
-        </section>
-      )}
-
       {page.callToAction === "Contact" && (
         <section className="quote-section">
           <p className="container editable">
