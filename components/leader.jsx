@@ -21,7 +21,7 @@ export default function Leader({ leader }) {
             alt={`Placeholder image for ${leader.name}`}
             width="512"
             height="512"
-            // layout="responsive"
+            layout="responsive"
             unoptimized
           />
         )}
@@ -36,8 +36,6 @@ export default function Leader({ leader }) {
           ))}
         </div>
       )}
-
-      {/* horizontal line comes from `.label:last-child` */}
 
       <div
         className="leader-bio"

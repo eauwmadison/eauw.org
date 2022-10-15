@@ -5,9 +5,7 @@
 .executive-section {
   @extend .dark-section;
 
-  // margin-top: -80px;
-
-  label:last-child {
+  .leader-bio {
     border-color: $color-ea-beige !important;
   }
 }
@@ -18,12 +16,20 @@
   flex-direction: column;
   overflow: hidden;
 
+  h3 {
+    margin-top: 1rem !important;
+  }
+
   .leader-bio {
     font-size: small;
+    border-top: 1px solid #054d5a;
+  }
+
+  label:first-child {
+    margin-top: 8px;
   }
 
   label:last-child {
     padding-bottom: 8px;
-    border-bottom: 1px solid #054d5a;
   }
 }

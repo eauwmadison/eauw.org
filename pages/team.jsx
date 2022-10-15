@@ -15,7 +15,7 @@ export default function Team({ page, leaders, popups }) {
   return (
     <>
       <PageLayout page={page} popups={popups}>
-        <section className="executive-section">
+        <section id="executive" className="executive-section">
           <div className="container">
             <h2>Executive Team</h2>
             <p>
@@ -49,7 +49,7 @@ export default function Team({ page, leaders, popups }) {
                 </Item>
               ))}
           </Grid>
-          <h2>Alumni and Affiliates</h2>
+          <h2 id="alumni-and-affiliates">Alumni and Affiliates</h2>
           <Grid>
             {leaders
               .filter((leader) => leader.previous && !leader.hidden)
