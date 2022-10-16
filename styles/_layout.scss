@@ -247,6 +247,10 @@ footer {
   svg {
     fill: $color-ea-beige;
   }
+
+  .btn {
+    @extend .btn-light;
+  }
 }
 
 .quote-section {
