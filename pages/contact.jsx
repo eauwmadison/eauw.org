@@ -116,20 +116,20 @@ export default function Contact({ page, placeholders, popups }) {
 
         <div className="column" style={{ flexGrow: 4 }}>
           <form onSubmit={handleSubmit}>
-            <label htmlFor="email_address">Your Email Address</label>
-            <input
-              id="email_address"
-              type="text"
-              name="email"
-              placeholder={randomPlaceholder.email}
-            />
-
             <label htmlFor="name">Name</label>
             <input
               id="name"
               type="text"
               name="name"
               placeholder={randomPlaceholder.name}
+            />
+
+            <label htmlFor="email_address">Your Email Address</label>
+            <input
+              id="email_address"
+              type="email"
+              name="email"
+              placeholder={randomPlaceholder.email}
             />
 
             <label htmlFor="message">Message</label>
