@@ -113,7 +113,7 @@ export default function Event({ event }) {
                     {eventEnd.toLocaleDateString(undefined, {
                       month: "long",
                       day: "numeric",
-                      year: "numeric"
+                      weekday: "long"
                     })}
                   </>
                 )}
