@@ -1,10 +1,11 @@
 ---
 name: Reid Kuenzi
 pronouns: he/him
-role: Faculty Outreach Coordinator, Social Event Planner
+role: Faculty Outreach Coordinator, Social Events Lead, Fellowship Coordinator
 image:
 executive: false
 previous: false
+hidden: true
 calUsername:
 priority: 5
 ---

@@ -1,7 +1,7 @@
 ---
 name: Eeshaan Pirani
 pronouns: he/they
-role: Technology Lead, President of Animal Advocacy UW–Madison
+role: Technology Lead, President of Animal Advocacy
 image:
 executive: true
 calUsername: eeshaan

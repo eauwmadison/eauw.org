@@ -2,9 +2,10 @@
 import Script from "next/script";
 
 /* first-party component imports */
+import PageLayout from "../components/layouts/page";
 import Grid, { Item } from "../components/grid";
 import Leader from "../components/leader";
-import PageLayout from "../components/layouts/page";
+import Icon from "../components/icon";
 
 /* site data */
 import { getCollection, getCollectionItem } from "../lib/collections";
@@ -18,9 +19,9 @@ export default function Team({ page, leaders, popups }) {
         <section id="executive" className="executive-section">
           <div className="container">
             <h2>Executive Team</h2>
-            <p>
-              Members of our executive team commit about 10 hours per week or
-              more to the organization.
+            <p className="executive-info editable">
+              <Icon icon="Info" /> Members of our executive team commit about 10
+              hours per week or more to the organization.
             </p>
             <Grid>
               {leaders

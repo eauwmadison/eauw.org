@@ -5,6 +5,19 @@
 .executive-section {
   @extend .dark-section;
 
+  h2 {
+    margin: 0;
+  }
+
+  .executive-info {
+    font-size: 0.85em;
+    margin: 0 0 3rem;
+
+    svg {
+      vertical-align: text-bottom;
+    }
+  }
+
   .leader-bio {
     border-color: $color-ea-beige !important;
   }
@@ -20,13 +33,13 @@
     margin-top: 1rem !important;
   }
 
+  .leader-pronouns {
+    margin-bottom: 8px;
+  }
+
   .leader-bio {
     font-size: small;
     border-top: 1px solid #054d5a;
-  }
-
-  label:first-child {
-    margin-top: 8px;
   }
 
   label:last-child {

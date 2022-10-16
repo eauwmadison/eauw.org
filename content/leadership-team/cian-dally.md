@@ -3,8 +3,6 @@ name: Cian Dally
 pronouns: he/him
 role: Student Organizer, Animal Ethics Fellowship Coordinator
 image:
-executive: false
-previous: false
 hidden: true
 calUsername:
 priority: 6
