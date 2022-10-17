@@ -75,7 +75,7 @@ export default function Calendar({ maxEvents }) {
 
   if (error) {
     return (
-      <div className="calendar-error">
+      <div className="noscript-error">
         An error occurred while trying to fetch our{" "}
         <a href={siteData.site.google_calendar_share_link}>Google Calendar</a>.
         <br />
@@ -94,7 +94,7 @@ export default function Calendar({ maxEvents }) {
       <>
         <div>Loading...</div>
         <noscript>
-          <div className="calendar-error">
+          <div className="noscript-error">
             Please enable JavaScript to view events from our{" "}
             <a href={siteData.site.google_calendar_share_link}>
               Google Calendar

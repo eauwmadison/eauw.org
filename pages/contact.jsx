@@ -115,6 +115,12 @@ export default function Contact({ page, placeholders, popups }) {
         </div>
 
         <div className="column" style={{ flexGrow: 4 }}>
+          <noscript>
+            <div className="noscript-error">
+              You must enable JavaScript to use this form.
+            </div>
+            <div style={{ height: "20px" }}></div>
+          </noscript>
           <form onSubmit={handleSubmit}>
             <label htmlFor="name">Name</label>
             <input
@@ -122,6 +128,7 @@ export default function Contact({ page, placeholders, popups }) {
               type="text"
               name="name"
               placeholder={randomPlaceholder.name}
+              required
             />
 
             <label htmlFor="email_address">Your Email Address</label>
@@ -130,6 +137,7 @@ export default function Contact({ page, placeholders, popups }) {
               type="email"
               name="email"
               placeholder={randomPlaceholder.email}
+              required
             />
 
             <label htmlFor="message">Message</label>
@@ -139,11 +147,6 @@ export default function Contact({ page, placeholders, popups }) {
               placeholder={randomPlaceholder.message}
             ></textarea>
 
-            <input
-              type="hidden"
-              name="_to"
-              value={data.organization.contactEmailAddress}
-            />
             <input type="text" name="_gotcha" style={{ display: "none" }} />
 
             <input type="submit" value="Send Message" />
