@@ -1,7 +1,7 @@
 ---
 name: Harmon Bhasin
 pronouns: he/him
-image: /uploads/harmon-bhasin.jpg
+image: /images/uploads/harmon-bhasin.jpg
 hidden: true
 ---
 

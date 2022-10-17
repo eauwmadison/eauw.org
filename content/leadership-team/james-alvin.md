@@ -2,7 +2,7 @@
 name: James Alvin
 pronouns: he/him
 role:
-image: /uploads/james-alvin.jpg
+image: /images/uploads/james-alvin.jpg
 executive: false
 previous: false
 ---

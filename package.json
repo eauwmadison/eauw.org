@@ -23,7 +23,7 @@
     "gray-matter": "^4.0.3",
     "markdown-it": "^13.0.1",
     "next": "^12.2.5",
-    "next-image-export-optimizer": "^0.12.2",
+    "next-image-export-optimizer": "^0.16.0",
     "next-seo": "^5.5.0",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",

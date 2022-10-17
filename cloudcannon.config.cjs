@@ -51,7 +51,7 @@ module.exports = {
     collections: "content",
     data: "data",
     static: "public",
-    uploads: "public/uploads"
+    uploads: "public/images/uploads"
   },
 
   "collections-config": {

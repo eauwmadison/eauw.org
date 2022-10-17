@@ -2,7 +2,7 @@
 name: Akhil Polamarasetty
 pronouns: he/him
 role: AI Safety Lead
-image: /uploads/akhil-polamarasetty.jpg
+image: /images/uploads/akhil-polamarasetty.jpg
 priority: 4
 ---
 

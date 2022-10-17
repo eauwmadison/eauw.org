@@ -2,7 +2,7 @@
 name: Declan Dally
 pronouns: he/him
 role: Treasurer, Campus Relations Coordinator
-image: /uploads/declan-dally.jpg
+image: /images/uploads/declan-dally.jpg
 calUsername: declan
 executive: true
 priority: 2

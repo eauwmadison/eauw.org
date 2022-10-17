@@ -2,7 +2,7 @@
 name: Max Gehred
 pronouns: he/him
 role: President
-image: /uploads/max-gehred.png
+image: /images/uploads/max-gehred.png
 calUsername: max
 executive: true
 priority: 1

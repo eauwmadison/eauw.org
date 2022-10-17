@@ -1,6 +1,6 @@
 ---
 name: Longtermist Fellowship
-image: /uploads/earth-1281025-960-720-2.png
+image: /images/uploads/earth-1281025-960-720-2.png
 startingDate: 2022-09-26T00:00:00Z
 semester: Fall 2022
 duration: 5 weeks
