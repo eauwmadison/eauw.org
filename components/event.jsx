@@ -9,8 +9,10 @@ import Icon from "./icon";
 /* site data */
 import siteData from "../lib/data";
 
-// pattern to match event type in the event description; max of 3 words
-// supports both HTML blob and plain text
+/* 
+  pattern to match event type in the event description; max of 3 words —
+  supports both HTML blob and plain text 
+*/
 const eventTypeRegEx =
   /((<span>){1,2})?event type:\s*\w+\s{0,2}\w+\s{0,2}\w+((<\/span>){1,2}\s<br>)?/i;
 
@@ -26,12 +28,18 @@ const isURL = (str) => {
 
 export default function Event({ event }) {
   const [tooltipOpen, setTooltipOpen] = useState(true);
+  const [tooltipText, setTooltipText] = useState("View in Google Calendar");
 
   const hideTooltip = () => setTooltipOpen(false);
   const showTooltip = () => setTooltipOpen(true);
 
-  // for each `a` element in the event description,
-  // add mouse events to show/hide the tooltip
+  const setMapsTooltipText = () => setTooltipText("View in Google Maps");
+  const unsetMapsTooltipText = () => setTooltipText("View in Google Calendar");
+
+  /* 
+    for each `a` element in the event description,
+    add mouse events to show/hide the tooltip
+  */
   const addMouseEventHandlers = (el) => {
     if (!el) return;
     el.querySelectorAll("a").forEach((child) => {
@@ -63,7 +71,7 @@ export default function Event({ event }) {
     <ManagedTooltip
       title={
         <span className="event-tooltip-child">
-          View in Google Calendar
+          {tooltipText}
           <Icon icon="Go" />
         </span>
       }
@@ -147,7 +155,16 @@ export default function Event({ event }) {
                       {event.location}
                     </a>
                   ) : (
-                    event.location
+                    <a
+                      className="event-location-link"
+                      href={`http://maps.google.com/?q=${event.location}`}
+                      target="_blank"
+                      rel="noreferrer"
+                      onMouseOver={setMapsTooltipText}
+                      onMouseOut={unsetMapsTooltipText}
+                    >
+                      {event.location}
+                    </a>
                   )}
                 </span>
               )}
