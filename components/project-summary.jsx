@@ -31,6 +31,7 @@ export default function ProjectSummary({ project }) {
               alt={`Photo of ${project.author.name}`}
               width="30"
               height="30"
+              placeholder="empty"
             />
           ) : (
             <ExportedImage
@@ -40,6 +41,7 @@ export default function ProjectSummary({ project }) {
               alt={`Photo of ${project.author.name}`}
               width="30"
               height="30"
+              unoptimized
             />
           )}{" "}
           {project.author.name}
