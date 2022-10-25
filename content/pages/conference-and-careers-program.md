@@ -1,0 +1,31 @@
+---
+title: Conference and Careers Program
+callToAction: Contact
+largeHeader: false
+contentHTML: >-
+  <p>As UW-Madison students we have an awesome opportunity to use our careers to
+  improve the lives of others. The average career lasts 80,000 hours,
+  that&rsquo;s a long time. If you could increase the impact of your career by
+  just 1% it would make sense to spend 800 hours thinking about how to do that.
+  And we think this program can increase your impact by much more, and in much
+  less time. So let&rsquo;s dive in.</p><p>&lt;aside&gt; 💡 <strong><a
+  href="https://docs.google.com/forms/d/e/1FAIpQLSdaHQ6KvJpROyyuztZnkVT69Ct1qIIEjEo_Y_qixzdiD0qZSA/viewform?usp=sf_link">Sign
+  Up Here</a></strong></p><p>&lt;/aside&gt;</p><h2>Who is this program
+  for?</h2><p>This program is about turning the ideas discussed in the
+  Fellowship into action. You&rsquo;d be a good fit for this program
+  if:</p><ul><li>You&rsquo;ve completed an Effective Altruism
+  Fellowship</li><li>You <strong>genuinely prioritise positive impact</strong>
+  in your career</li><li>You&rsquo;re in search of a career which
+  <strong>balances large positive impact and personal
+  satisfaction</strong></li><li>You&rsquo;re open to exploring novel career
+  paths <strong><a
+  href="https://80000hours.org/make-a-difference-with-your-career/">which may be
+  10 or 100x more impactful than your default
+  path</a></strong></li></ul><h2>Program Outcomes</h2><p>Our goal is that
+  participants walk away with:</p><ul><li>A clear long term career
+  plan</li><li>Actionable next steps to begin pursuing this plan</li><li>Most
+  career related uncertainties resolved after speaking to professionals at <a
+  href="https://www.eaglobal.org/events/eagxberkeley2022/">EAGx
+  Berkely</a></li></ul>
+showTitle: true
+---
