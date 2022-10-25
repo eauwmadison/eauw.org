@@ -1,5 +1,5 @@
 ---
-name: Introductory Fellowship
+name: Conference and Careers Program
 image: /images/uploads/1f9ed.svg
 startingDate: 2022-11-13T00:00:00Z
 semester: Fall 2022
