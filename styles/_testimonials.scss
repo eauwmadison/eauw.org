@@ -14,7 +14,7 @@
 
 .testimonial-author {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   column-gap: 10px;
   color: $color-ea-dark;
   margin: 25px 20px 0 20px;
@@ -26,6 +26,16 @@
     margin-right: 10px;
     position: relative;
     top: -2px;
+  }
+
+  .testimonial-author-name-and-subtitle {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .testimonial-author-subtitle {
+    font-style: italic;
+    font-size: 0.8em;
   }
 }
 
