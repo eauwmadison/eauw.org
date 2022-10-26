@@ -3,20 +3,21 @@ title: Research Grant
 callToAction: Subscribe
 largeHeader: false
 contentHTML: >-
-  <p><strong>UW-Madison Effective Altruism Research
-  Fellowship</strong></p><p>Application Deadline:&nbsp;</p><p><strong>November
-  28th, 2022</strong>&nbsp;</p><p><a
+  <h2><strong>UW-Madison Effective Altruism Research
+  Fellowship</strong></h2><h3>Application
+  Deadline:&nbsp;</h3><p><strong>November 28th, 2022</strong>&nbsp;</p><p><a
+  target="_blank" rel="noopener"
   href="https://docs.google.com/forms/d/e/1FAIpQLSekAuc-X9Y-lJsFWZaVRmHQBxqCNVa9qNMBG85PFQ8vjwXVGA/viewform?usp=sf_link"><strong>Apply
-  here</strong></a></p><p>Award:&nbsp;</p><p>$500 in funding will be granted to
-  all fellows who complete their research project or clearly demonstrate that
+  here</strong></a></p><h3>Award:&nbsp;</h3><p>$500 in funding will be granted
+  to all fellows who complete their research project or clearly demonstrate that
   they invested at least sixty hours into the project.</p><p>An additional $500
   will be awarded to the fellow who created the best original research according
   to guidelines laid out on this document, one award will be given per
-  semester.</p><p>Eligibility:&nbsp;</p><ul><li>Member of Effective Altruism
+  semester.</p><h3>Eligibility:&nbsp;</h3><ul><li>Member of Effective Altruism
   UW-Madison</li><li>Completion of semester long Introduction to Effective
   Altruism fellowship, Good Futures Fellowship, Effective Animal Advocacy
-  Fellowship or AGI Safety Fundamentals Program</li></ul><p>Selection
-  Criteria:&nbsp;</p><p>Our Research Committee will make selections based
+  Fellowship or AGI Safety Fundamentals Program</li></ul><h3>Selection
+  Criteria:&nbsp;</h3><p>Our Research Committee will make selections based
   on:</p><ul><li>Pertinence of project proposal to ideology of Effective
   Altruism&nbsp;</li><li>Quality of research
   proposal&nbsp;</li><li>Achievability of research outcome within proposed
@@ -24,14 +25,14 @@ contentHTML: >-
   demonstrated&nbsp;</li></ul><p><strong>Awardees may also apply without a
   research proposal and collaborate with another awardee. </strong>If accepted
   this does not impact grant size, but awardees with original research proposals
-  are preferred.&nbsp;</p><p>Conditions of the Award:</p><ul><li>Awardee must
+  are preferred.&nbsp;</p><h3>Conditions of the Award:</h3><ul><li>Awardee must
   demonstrate an investment of 60 hours or more into their research
   project</li><li>Awardee must attend bi-weekly meetings to provide updates to
   organizers on their research progress&nbsp;</li><li>Awardee must attend weekly
   awardee coworking sessions. (accommodations can be made for scheduling
   conflicts)</li><li>Awardee must prepare a 10-15 minute presentation on their
   research to be presented at an end-of-the-year conference on April
-  23rd.</li></ul><p>Application Process:</p><p>Submit completed research
+  23rd.</li></ul><h3>Application Process:</h3><p>Submit completed research
   proposals to <a
   href="https://docs.google.com/forms/d/e/1FAIpQLSekAuc-X9Y-lJsFWZaVRmHQBxqCNVa9qNMBG85PFQ8vjwXVGA/viewform?usp=sf_link">this
   form</a><strong> by 11/28/2022</strong></p><p>You will hear back from us
