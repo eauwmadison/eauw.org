@@ -7,11 +7,11 @@ contentHTML: >-
   improve the lives of others. The average career lasts 80,000 hours,
   that&rsquo;s a long time. If you could increase the impact of your career by
   just 1% it would make sense to spend 800 hours thinking about how to do that.
-  And we think this program can increase your impact by much more, and in much
-  less time. So let&rsquo;s dive in.</p><p>Join us for our Conference and
-  Careers Program where you'll develop longterm career plan and actionable next
-  steps to pursue a high-impact career and have the chance to network and
-  resolves career uncertainties with industry professionals at <a
+  And we think this <strong>2 week</strong> program can increase your impact by
+  much more, and in much less time. So let&rsquo;s dive in.</p><p>Join us for
+  our Conference and Careers Program where you'll develop longterm career plan
+  and actionable next steps to pursue a high-impact career and have the chance
+  to network and resolves career uncertainties with industry professionals at <a
   target="_blank" rel="noopener"
   href="https://www.eaglobal.org/events/eagxberkeley2022/">EAGx Berkely </a>on
   the 2nd - 4th of December.</p><p>💡 <strong><a
