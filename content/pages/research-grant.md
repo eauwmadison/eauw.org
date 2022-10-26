@@ -19,7 +19,10 @@ contentHTML: >-
   Fellowship or AGI Safety Fundamentals Program</li></ul><h3>Selection
   Criteria:&nbsp;</h3><p>Our Research Committee will make selections based
   on:</p><ul><li>Pertinence of project proposal to ideology of Effective
-  Altruism&nbsp;</li><li>Quality of research
+  Altruism&nbsp;<ul><li><a target="_blank" rel="noopener"
+  href="https://docs.google.com/document/d/1GsNv61oQtgJPzbWiIxrqdftR3trM6uJqPu5LFTVahDI/edit?usp=sharing">This
+  list of research questions</a> in a good place to
+  start</li></ul></li><li>Quality of research
   proposal&nbsp;</li><li>Achievability of research outcome within proposed
   timeline&nbsp;</li><li>Degree to which research need is
   demonstrated&nbsp;</li></ul><p><strong>Awardees may also apply without a
@@ -38,9 +41,11 @@ contentHTML: >-
   form</a><strong> by 11/28/2022</strong></p><p>You will hear back from us
   regarding the status of your application by
   <strong>12/05/2022</strong></p><p>Research Fellowship
-  Application:&nbsp;</p><ul><li><strong>Project proposal</strong> consisting of
-  1.5-2 (700-1000 words) double-spaced pages with at least 1 inch margins and
-  11-12pt font. All proposals should include the following
+  Application:&nbsp;</p><p>Note: If you are concerned your proposal isn't
+  sufficiently EA relevant, <strong>don't hesitate to reach out to us
+  beforehand.</strong>&nbsp;</p><ul><li><strong>Project proposal</strong>
+  consisting of 1.5-2 (700-1000 words) double-spaced pages with at least 1 inch
+  margins and 11-12pt font. All proposals should include the following
   information:&nbsp;<ul><li>Background paragraph establishing the basis for your
   research and the existing state of research around the
   topic(s)</li><li>Introduction detailing the originality and significance of
