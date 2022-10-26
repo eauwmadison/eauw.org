@@ -1,5 +1,5 @@
 ---
-title: UW-Madison Effective Altruism Research Grant
+title: Effective Altruism UW-Madison Research Grant
 callToAction: Subscribe
 largeHeader: false
 contentHTML: >-
