@@ -1,12 +1,10 @@
 ---
-title: Research Grant
+title: UW-Madison Effective Altruism Research Grant
 callToAction: Subscribe
 largeHeader: false
 contentHTML: >-
-  <h2><strong>UW-Madison Effective Altruism Research
-  Fellowship</strong></h2><h3>Application
-  Deadline:&nbsp;</h3><p><strong>November 28th, 2022</strong>&nbsp;</p><p><a
-  target="_blank" rel="noopener"
+  <h3>Application Deadline:&nbsp;</h3><p><strong>November 28th,
+  2022</strong>&nbsp;</p><p><a target="_blank" rel="noopener"
   href="https://docs.google.com/forms/d/e/1FAIpQLSekAuc-X9Y-lJsFWZaVRmHQBxqCNVa9qNMBG85PFQ8vjwXVGA/viewform?usp=sf_link"><strong>Apply
   here</strong></a></p><h3>Award:&nbsp;</h3><p>$500 in funding will be granted
   to all fellows who complete their research project or clearly demonstrate that
