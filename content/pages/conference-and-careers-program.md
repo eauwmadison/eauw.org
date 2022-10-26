@@ -7,13 +7,13 @@ contentHTML: >-
   improve the lives of others. The average career lasts 80,000 hours,
   that&rsquo;s a long time. If you could increase the impact of your career by
   just 1% it would make sense to spend 800 hours thinking about how to do that.
-  And we think this program can increase your impact by much more, and in much
-  less time. So let&rsquo;s dive in.</p><p>Join us for our Conference and
-  Careers Program where you'll develop longterm career plan and actionable next
-  steps to pursue a high-impact career and have the chance to network and
-  resolves career uncertainties with industry professionals at <a
+  And we think this <strong>2 week</strong> program can increase your impact by
+  much more, and in much less time. So let&rsquo;s dive in.</p><p>Join us for
+  our Conference and Careers Program where you'll develop a longterm career plan
+  and actionable next steps to pursue a high-impact career and have the chance
+  to network and resolve career uncertainties with industry professionals at <a
   target="_blank" rel="noopener"
-  href="https://www.eaglobal.org/events/eagxberkeley2022/">EAGx Berkely </a>on
+  href="https://www.eaglobal.org/events/eagxberkeley2022/">EAGx Berkeley </a>on
   the 2nd - 4th of December.</p><p>💡 <strong><a
   href="https://docs.google.com/forms/d/e/1FAIpQLSdaHQ6KvJpROyyuztZnkVT69Ct1qIIEjEo_Y_qixzdiD0qZSA/viewform?usp=sf_link">Sign
   Up Here</a></strong></p><h2>Who is this program for?</h2><p>This program is
@@ -32,7 +32,7 @@ contentHTML: >-
   career related uncertainties resolved after speaking to professionals at <a
   target="_blank" rel="noopener"
   href="https://www.eaglobal.org/events/eagxberkeley2022/">EAGx
-  Berkely</a></li></ul><p>If this is interesting to you 💡 <strong><a
+  Berkeley</a></li></ul><p>If this is interesting to you 💡 <strong><a
   target="_blank" rel="noopener"
   href="https://docs.google.com/forms/d/e/1FAIpQLSdaHQ6KvJpROyyuztZnkVT69Ct1qIIEjEo_Y_qixzdiD0qZSA/viewform?usp=sf_link">Sign
   Up Here</a>.&nbsp;</strong></p><p><strong>Explore the full
