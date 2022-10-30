@@ -1,17 +1,21 @@
 ---
-name: Introductory Fellowship
-image: /images/uploads/profile-pic.png
-startingDate: 2022-09-26T00:00:00Z
-semester: Spring 2022
-duration: 5 weeks
-main: true
-applicationLink: https://eauw.org/apply
-applicationDeadline: 2022-09-19T00:00:00Z
+name: Conference and Careers Program
+image: /images/uploads/1f9ed.svg
+startingDate: 2022-11-13T00:00:00Z
+semester: Fall 2022
+duration: 4 weeks
+main: false
+applicationLink: >-
+  https://outreach-handbook.notion.site/Career-Planning-Program-28f7534cb6e947f0ad896726005215b0
+applicationDeadline: 2022-11-11T00:00:00Z
 previous: false
 ---
+As UW-Madison students we have an awesome opportunity to use our careers to improve the lives of others. The average career lasts 80,000 hours, that’s a long time. If you could increase the impact of your career by just 1% it would make sense to spend 800 hours thinking about how to do that. And we think this program can increase your impact by much more, and in much less time. So let’s dive in.
 
-Some efforts to improve the world can be much more impactful than others. Smallpox eradication, the abolitionist movement, germ theory, and the Green Revolution demonstrate what's possible when people come together to solve pressing problems. At the other end of the spectrum, many well-intended initiatives are ineffective or even counterproductive. Doing good better is one of the defining challenges of our time.
+Join us for our Conference and Careers Program where you'll develop longterm career plan and actionable next steps to pursue a high-impact career and have the chance to network and resolves career uncertainties with industry professionals at&nbsp;<a target="_blank" rel="noopener" href="https://www.eaglobal.org/events/eagxberkeley2022/">EAGx Berkely&nbsp;</a>on the 2nd - 4th of December.
 
-Recognizing this need, EA UW hosts free Fellowship programs to equip students with the knowledge to do good in the world more effectively and the tools to think critically about their career ambitions. By the end of the fellowship, participants have access to in-depth coaching, career advice/connections, and unique opportunities to help others.
+**First, read the&nbsp;[Full Program Details](https://www.notion.so/outreach-handbook/Career-Planning-Program-28f7534cb6e947f0ad896726005215b0z)[&nbsp;](__notset__)[Here](https://www.notion.so/outreach-handbook/Career-Planning-Program-28f7534cb6e947f0ad896726005215b0). **
 
-Applications are open for about three weeks at the beginning of every semester, and the program runs for about the first half of the semester. Fellows are encouraged to use other resources, particularly career advising and connections to the wider community; completion of our fellowship qualifies members to go to effective altruism national and global conferences.
+**Then,&nbsp;**
+
+💡&nbsp;**[Sign Up Here](https://docs.google.com/forms/d/e/1FAIpQLSdaHQ6KvJpROyyuztZnkVT69Ct1qIIEjEo_Y_qixzdiD0qZSA/viewform?usp=sf_link).**

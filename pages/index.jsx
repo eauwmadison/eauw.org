@@ -68,7 +68,12 @@ export default function Home({ page, popups }) {
                     height={60}
                     unoptimized
                   />{" "}
-                  {testimonial.name}
+                  <span className="testimonial-author-name-and-subtitle">
+                    {testimonial.name}
+                    <span className="testimonial-author-subtitle">
+                      {testimonial.subtitle}
+                    </span>
+                  </span>
                 </p>
               </blockquote>
             ))}
