@@ -5,23 +5,21 @@ export default function Program({ program }) {
   return (
     <li className="program hover">
       <div className="event-header">
-      <ExportedImage
+        <ExportedImage
           src={program.image}
           alt={`Staff photo for ${program.name}`}
           width="120"
           height="120"
           unoptimized
         />
-        
-        <span className = "event-title">
+
+        <span className="event-title">
           <h3>{program.name}</h3>
-          
         </span>
       </div>
-      <div className = "event-description">
+      <div className="event-description">
         <div dangerouslySetInnerHTML={{ __html: program.contentHTML }}></div>
       </div>
     </li>
-    
   );
 }
