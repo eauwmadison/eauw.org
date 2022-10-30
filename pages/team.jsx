@@ -23,18 +23,18 @@ export default function Team({ page, leaders, popups }) {
               <Icon icon="Info" /> Members of our executive team commit about 10
               hours per week or more to the organization.
             </p>
-            <Grid>
+            <Grid> {/*check back here, making a grid but for the programs*/}
               {leaders
                 .filter(
                   (leader) =>
                     leader.executive && !leader.previous && !leader.hidden
                 )
                 .map((leader, i) => (
-                  <Item key={i}>
+                  <Item key={i}> {/* specificy column size*/}
                     <Leader leader={leader} />
                   </Item>
                 ))}
-            </Grid>
+            </Grid> 
           </div>
         </section>
         <section className="main container">

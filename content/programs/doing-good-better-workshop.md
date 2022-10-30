@@ -4,6 +4,7 @@ image: /images/uploads/istockphoto-958075654-170667a.jpg
 startingDate: 2022-10-16T00:00:00Z
 semester: Fall 2022
 duration: 1 weeks
+main: false
 applicationLink: https://go.eauw.org/DGBF22
 ---
 

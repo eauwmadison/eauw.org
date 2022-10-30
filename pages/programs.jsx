@@ -1,6 +1,8 @@
 /* first-party component imports */
 import PageLayout from "../components/layouts/page";
 import Program from "../components/program";
+import Grid, {Item} from "../components/grid";
+
 
 /* site data */
 import { getCollection, getCollectionItem } from "../lib/collections";
@@ -11,12 +13,27 @@ export default function Programs({ page, programs, popups }) {
 
   return (
     <PageLayout page={page}>
-      {currentPrograms.length !== 0 && <h2>Current Programs</h2>}
-      {currentPrograms
-        .filter((program) => !program.main)
-        .map((program, i) => (
-          <Program program={program} popups={popups} key={i} />
+      {currentPrograms.length !== 0 && <h2>Current Programs </h2>}
+      {/*Main Grid*/}
+      {/*main programs*/}
+      <Grid>
+        {currentPrograms
+          .filter((program) => program.main)
+          .map((program, i) => (
+              <Item lg ={6} md = {12} sm = {12} key={i}>
+                <Program program = {program} popups = {popups} key = {i} />
+              </Item>
         ))}
+      {/*non-main programs*/}
+        {currentPrograms
+          .filter((program) => !program.main)
+          .map((program, i) => (
+          
+            <Item lg = {3} md = {6} sm = {12} key={i}>
+              <Program program={program} popups={popups} key={i}/>
+            </Item>
+        ))}
+      </Grid>
       <h2>Previous Programs</h2>
       {previousPrograms.map((program, i) => (
         <Program program={program} popups={popups} key={i} />
