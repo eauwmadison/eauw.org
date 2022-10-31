@@ -1,10 +1,11 @@
 ---
 name:
-image: "https://placehold.it/440/440?a=.png"
+image:
 startingDate:
 semester:
 duration:
 applicationLink:
+applicationDeadline:
 main: false
 previous: false
 priority: 0

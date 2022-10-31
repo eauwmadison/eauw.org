@@ -54,7 +54,8 @@ const ProgramChildren = ({ program, className }) => {
       <div className="link">
         {program.open ? (
           <>
-            Apply by {deadline.toLocaleDateString(undefined, {
+            Apply by{" "}
+            {deadline.toLocaleDateString(undefined, {
               month: "long",
               day: "numeric",
               weekday: "long"
