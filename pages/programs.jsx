@@ -7,13 +7,14 @@ import Grid, { Item } from "../components/grid";
 import { getCollection, getCollectionItem } from "../lib/collections";
 
 export default function Programs({ page, programs, popups }) {
+  programs.sort((a, b) => a.priority - b.priority);
+
   const currentPrograms = programs.filter((program) => !program.previous);
   const previousPrograms = programs.filter((program) => program.previous);
 
   return (
     <PageLayout page={page}>
       {currentPrograms.length !== 0 && <h2>Current Programs </h2>}
-      {/*Main Grid*/}
       {/*main programs*/}
       <Grid>
         {currentPrograms

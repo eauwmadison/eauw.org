@@ -24,8 +24,6 @@ export default function Team({ page, leaders, popups }) {
               hours per week or more to the organization.
             </p>
             <Grid>
-              {" "}
-              {/*check back here, making a grid but for the programs*/}
               {leaders
                 .filter(
                   (leader) =>
@@ -33,8 +31,6 @@ export default function Team({ page, leaders, popups }) {
                 )
                 .map((leader, i) => (
                   <Item key={i}>
-                    {" "}
-                    {/* specificy column size*/}
                     <Leader leader={leader} />
                   </Item>
                 ))}

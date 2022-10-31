@@ -6,6 +6,7 @@ semester: Fall 2022
 duration: 1 weeks
 main: false
 applicationLink: https://go.eauw.org/DGBF22
+priority: 5
 ---
 
 Have you ever wondered how to do more good with your time, money, or other resources? If you're reading this, you probably have\! Join us for **free vegan pizza** at this one-off concepts workshop highlighting key Effective Altruism ideas\! This is a great replacement for our "intro to EA" fellowship program for people who are too busy to participate.
