@@ -51,6 +51,21 @@
     flex-grow: 1;
   }
 
+  .link {
+    font-size: 0.75em;
+    font-weight: 700;
+    padding: 0 16px 16px;
+    text-align: right;
+
+    svg {
+      fill: $color-ea-dark;
+      margin-left: 0.5rem;
+      vertical-align: middle;
+      width: 1em;
+      height: 1em;
+    }
+  }
+
   .type {
     font-size: 0.75em;
     color: $white;

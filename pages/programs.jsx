@@ -13,17 +13,21 @@ export default function Programs({ page, programs, popups }) {
   const previousPrograms = programs.filter((program) => program.previous);
 
   return (
-    <PageLayout page={page}>
+    <PageLayout page={page} popups={popups}>
       {currentPrograms.length !== 0 && <h2>Current Programs </h2>}
       <div className="programs-grid">
         {currentPrograms.map((program, i) => (
-          <Program program={program} popups={popups} key={i} />
+          <Program program={program} key={i} />
         ))}
       </div>
       <h2>Previous Programs</h2>
-      {previousPrograms.map((program, i) => (
-        <Program program={program} popups={popups} key={i} />
-      ))}
+      <Grid>
+        {previousPrograms.map((program, i) => (
+          <Item key={i}>
+            <Program program={program} />
+          </Item>
+        ))}
+      </Grid>
     </PageLayout>
   );
 }

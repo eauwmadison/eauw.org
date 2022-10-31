@@ -1,24 +1,29 @@
 /* eslint-disable @next/next/no-img-element */
 
+/* React imports */
+import { useEffect, useState } from "react";
+
 /* Next.js imports */
 // import ExportedImage from "next-image-export-optimizer";
 
 /* first-party component imports */
 import Icon from "./icon";
 
-const open = (date) => {
+const past = (date) => {
   const now = new Date();
-  const open = new Date(date);
-  return now < open;
+  return now > date;
 };
 
-export default function Program({ program }) {
-  program.open = open(program.applicationDeadline);
+const ProgramChildren = ({ program, className }) => {
+  const start = new Date(program.startingDate);
+  const deadline = new Date(program.applicationDeadline);
+
+  // compensate for timezone differences
+  start.setMinutes(start.getMinutes() + start.getTimezoneOffset());
+  deadline.setMinutes(deadline.getMinutes() + deadline.getTimezoneOffset());
 
   return (
-    <div
-      className={`program ${program.main && "main"} ${program.open && "hover"}`}
-    >
+    <div className={`program ${program.main ? "main" : ""} ${className}`}>
       {program.image && (
         <div className="image">
           <img src={program.image} alt={`Photo for ${program.name}`} />
@@ -29,7 +34,12 @@ export default function Program({ program }) {
         <div className="info">
           <span>
             <Icon icon="Date" />
-            {new Date(program.startingDate).toLocaleDateString()}
+            {!past(start) ? "Begins " : "Began "}
+            {start.toLocaleDateString(undefined, {
+              month: "long",
+              day: "numeric",
+              year: "numeric"
+            })}
           </span>
           <span>
             <Icon icon="Time" />
@@ -37,13 +47,65 @@ export default function Program({ program }) {
           </span>
         </div>
       </div>
-      <div className="description">
-        <div dangerouslySetInnerHTML={{ __html: program.contentHTML }} />
-        {program.applicationLink}
+      <div
+        className="description"
+        dangerouslySetInnerHTML={{ __html: program.contentHTML }}
+      />
+      <div className="link">
+        {program.open ? (
+          <>
+            Apply by {deadline.toLocaleDateString(undefined, {
+              month: "long",
+              day: "numeric",
+              weekday: "long"
+            })}
+            <Icon icon="Go" />
+          </>
+        ) : (
+          <>
+            Application closed on{" "}
+            {deadline.toLocaleDateString(undefined, {
+              month: "long",
+              day: "numeric"
+            })}
+            .
+          </>
+        )}
       </div>
       <div className="type">
         <span>{program.semester}</span>
       </div>
     </div>
+  );
+};
+
+export default function Program({ program }) {
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    setOpen(() => {
+      const now = new Date();
+      const deadline = new Date(program.applicationDeadline);
+
+      // compensate for timezone differences
+      deadline.setMinutes(deadline.getMinutes() + deadline.getTimezoneOffset());
+
+      program.open = now < deadline;
+
+      return program.open;
+    });
+  }, [program]);
+
+  return open ? (
+    <a
+      className={`program-link`}
+      href={program.applicationLink}
+      target="_blank"
+      rel="noreferrer"
+    >
+      <ProgramChildren className="hover" program={program} />
+    </a>
+  ) : (
+    <ProgramChildren program={program} />
   );
 }

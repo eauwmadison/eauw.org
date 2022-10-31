@@ -89,7 +89,6 @@ export default function Event({ event }) {
         href={event.htmlLink}
         target="_blank"
         rel="noreferrer"
-        data-tip="View in Google Calendar"
       >
         <div className="event hover">
           {event.attachments &&
