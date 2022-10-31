@@ -89,12 +89,11 @@ export default function Event({ event }) {
         href={event.htmlLink}
         target="_blank"
         rel="noreferrer"
-        data-tip="View in Google Calendar"
       >
         <div className="event hover">
           {event.attachments &&
             event.attachments[0]?.mimeType.startsWith("image/") && (
-              <div className="event-image">
+              <div className="image">
                 <img
                   src={
                     "https://drive.google.com/uc?export=view&id=" +
@@ -104,10 +103,10 @@ export default function Event({ event }) {
                 />
               </div>
             )}
-          <div className="event-header">
-            <span className="event-title">{event.summary}</span>
-            <div className="event-info">
-              <span className="event-date">
+          <div className="header">
+            <span className="title">{event.summary}</span>
+            <div className="info">
+              <span>
                 <Icon icon="Date" />
                 {eventStart.toLocaleDateString(undefined, {
                   month: "long",
@@ -127,7 +126,7 @@ export default function Event({ event }) {
                 )}
               </span>
               {event.start.dateTime && event.end.dateTime && (
-                <span className="event-time">
+                <span>
                   <Icon icon="Time" />
                   {eventStart.toLocaleTimeString(undefined, {
                     hour: "numeric",
@@ -141,7 +140,7 @@ export default function Event({ event }) {
                 </span>
               )}
               {event.location && (
-                <span className="event-location">
+                <span>
                   <Icon icon={isURL(event.location) ? "Link" : "Location"} />
                   {isURL(event.location) ? (
                     <a
@@ -173,14 +172,14 @@ export default function Event({ event }) {
           {event.description && (
             <div
               ref={addMouseEventHandlers}
-              className="event-description"
+              className="description"
               dangerouslySetInnerHTML={{
                 __html: event.description
               }}
             />
           )}
           <div
-            className="event-type"
+            className="type"
             style={{ background: event.type ? `${event.type.color}` : `#999` }}
           >
             <span>{event.type ? event.type.name : "Other"}</span>
