@@ -5,6 +5,7 @@ role: Environmental Events Manager, Fellowship Coordinator
 image:
 executive: false
 previous: false
+hidden: true
 calUsername:
 priority: 11
 ---

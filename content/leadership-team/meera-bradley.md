@@ -5,6 +5,8 @@ role: Community Health Advisor
 image:
 calUsername: meera
 executive: true
+previous: false
+hidden: false
 priority: 4
 ---
 

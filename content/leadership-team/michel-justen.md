@@ -3,6 +3,7 @@ name: Michel Justen
 pronouns: he/him
 image: /images/uploads/michel-justen.png
 previous: true
+hidden: false
 priority: 1
 ---
 
