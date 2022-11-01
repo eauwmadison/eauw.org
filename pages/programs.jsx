@@ -14,7 +14,7 @@ export default function Programs({ page, programs, popups }) {
 
   return (
     <PageLayout page={page} popups={popups}>
-      {currentPrograms.length !== 0 && <h2>Current Programs </h2>}
+      {currentPrograms.length !== 0 && <h2>Current Programs</h2>}
       <div className="programs-grid">
         {currentPrograms.map((program, i) => (
           <Program program={program} key={i} />
