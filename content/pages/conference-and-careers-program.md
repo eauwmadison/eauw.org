@@ -16,12 +16,13 @@ contentHTML: >-
   href="https://www.eaglobal.org/events/eagxberkeley2022/">EAGx Berkeley </a>on
   the 2nd - 4th of December.</p><p>💡 <strong><a
   href="https://docs.google.com/forms/d/e/1FAIpQLSdaHQ6KvJpROyyuztZnkVT69Ct1qIIEjEo_Y_qixzdiD0qZSA/viewform?usp=sf_link">Sign
-  Up Here</a></strong></p><h2>Who is this program for?</h2><p>This program is
-  about turning the ideas discussed in the Fellowship into action. You&rsquo;d
-  be a good fit for this program if:</p><ul><li>You&rsquo;ve completed an
-  Effective Altruism Fellowship</li><li>You <strong>genuinely prioritise
-  positive impact</strong> in your career</li><li>You&rsquo;re in search of a
-  career which <strong>balances large positive impact and personal
+  Up Here</a>&nbsp;by November 15th</strong></p><h2>Who is this program
+  for?</h2><p>This program is about turning the ideas discussed in the
+  Fellowship into action. You&rsquo;d be a good fit for this program
+  if:</p><ul><li>You&rsquo;ve completed an Effective Altruism
+  Fellowship</li><li>You <strong>genuinely prioritise positive impact</strong>
+  in your career</li><li>You&rsquo;re in search of a career which
+  <strong>balances large positive impact and personal
   satisfaction</strong></li><li>You&rsquo;re open to exploring novel career
   paths <strong><a
   href="https://80000hours.org/make-a-difference-with-your-career/">which may be
@@ -35,7 +36,7 @@ contentHTML: >-
   Berkeley</a></li></ul><p>If this is interesting to you 💡 <strong><a
   target="_blank" rel="noopener"
   href="https://docs.google.com/forms/d/e/1FAIpQLSdaHQ6KvJpROyyuztZnkVT69Ct1qIIEjEo_Y_qixzdiD0qZSA/viewform?usp=sf_link">Sign
-  Up Here</a>.&nbsp;</strong></p><p><strong>Explore the full
+  Up Here</a>&nbsp;by November 15th</strong></p><p><strong>Explore the full
   program&nbsp;</strong><a target="_blank" rel="noopener noreferrer"
   href="/28f7534cb6e947f0ad896726005215b0">here</a></p>
 showTitle: true
