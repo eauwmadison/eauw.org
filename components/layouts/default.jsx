@@ -89,9 +89,9 @@ export default function DefaultLayout({ children, page }) {
         <link rel="shortcut icon" href="/ico/favicon.ico" />
         <meta name="apple-mobile-web-app-title" content="EA UW" />
         <meta name="application-name" content="EA UW&ndash;Madison" />
-        <meta name="msapplication-TileColor" content="#CBE5E9" />
+        <meta name="msapplication-TileColor" content="#e4f4f7" />
         <meta name="msapplication-config" content="/ico/browserconfig.xml" />
-        <meta name="theme-color" content="#CBE5E9" />
+        <meta name="theme-color" content="#e4f4f7" />
       </Head>
 
       <NextSeo
