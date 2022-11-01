@@ -3,11 +3,11 @@ title: Effective Altruism UW-Madison Research Grant
 callToAction: Subscribe
 largeHeader: false
 contentHTML: >-
-  <h3>Application Deadline:&nbsp;</h3><p><strong>November 28th,
-  2022</strong>&nbsp;</p><p><a target="_blank" rel="noopener"
+  <h3>Application Deadline:&nbsp;</h3><p><a target="_blank" rel="noopener"
   href="https://docs.google.com/forms/d/e/1FAIpQLSekAuc-X9Y-lJsFWZaVRmHQBxqCNVa9qNMBG85PFQ8vjwXVGA/viewform?usp=sf_link"><strong>Apply
-  here</strong></a></p><h3>Award:&nbsp;</h3><p>$500 in funding will be granted
-  to all fellows who complete their research project or clearly demonstrate that
+  here</strong></a>&nbsp;by&nbsp;<strong>November 28th,
+  2022</strong></p><h3>Award:&nbsp;</h3><p>$500 in funding will be granted to
+  all fellows who complete their research project or clearly demonstrate that
   they invested at least sixty hours into the project.</p><p>An additional $500
   will be awarded to the fellow who created the best original research according
   to guidelines laid out on this document, one award will be given per
@@ -31,10 +31,14 @@ contentHTML: >-
   project</li><li>Awardee must attend bi-weekly meetings to provide updates to
   organizers on their research progress&nbsp;</li><li>Awardee must attend weekly
   awardee coworking sessions. (accommodations can be made for scheduling
-  conflicts)</li><li>Awardee must prepare a 10-15 minute presentation on their
-  research to be presented at an end-of-the-year conference on April
-  23rd.</li></ul><h3>Application Process:</h3><p>Submit completed research
-  proposals to <a
+  conflicts)</li><li>Awardees must publicize their research in some way. This
+  could be a post on the <a href="https://forum.effectivealtruism.org/">EA
+  Forum</a>&nbsp;or a submission to&nbsp;<a
+  href="https://csld.wisc.edu/sifting-and-winnowing/">UW-Madison's Undergrad
+  Journal</a>, or any other reputable platform.</li><li>Awardee must prepare a
+  10-15 minute presentation on their research to be presented at an
+  end-of-the-year conference on April 23rd.</li></ul><h3>Application
+  Process:</h3><p>Submit completed research proposals to <a
   href="https://docs.google.com/forms/d/e/1FAIpQLSekAuc-X9Y-lJsFWZaVRmHQBxqCNVa9qNMBG85PFQ8vjwXVGA/viewform?usp=sf_link">this
   form</a><strong> by 11/28/2022</strong></p><p>You will hear back from us
   regarding the status of your application by
