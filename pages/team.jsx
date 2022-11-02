@@ -19,7 +19,7 @@ export default function Team({ page, leaders, popups }) {
         <section id="executive" className="executive-section">
           <div className="container">
             <h2>Executive Team</h2>
-            <div className="info">
+            <div className="info-subtitle">
               <Icon icon="Info" />
               <p className="editable">
                 Members of our executive team commit about 10 hours per week or

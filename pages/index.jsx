@@ -49,7 +49,7 @@ export default function Home({ page, popups }) {
         <section className="beige-section calendar">
           <div className="container">
             <h2>Upcoming Events</h2>
-            <div className="info">
+            <div className="info-subtitle">
               <Icon icon="Info" />
               <p className="editable">
                 All events are free and open to the public unless otherwise
