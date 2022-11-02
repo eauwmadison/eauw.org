@@ -2,6 +2,12 @@
 @import "typography";
 @import "card";
 
+.calendar {
+  h2 {
+    margin-bottom: 0.2em;
+  }
+}
+
 .event-link {
   display: inline-grid;
   color: $color-ea-dark;

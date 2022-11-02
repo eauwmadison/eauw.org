@@ -26,12 +26,11 @@ export default function Home({ page, popups }) {
           <div className="grid-right">
             <p className="editable">
               We are a community of UW&ndash;Madison students unified by a
-              common desire to do the most we can to improve the world. We run
-              free programs and events, almost all of which are open and 
-              welcome for anyone to attend. Our organization seeks to promote  
-              the global movement of effective altruism, using evidence and 
-              reason to assess how to benefit others as much as possible 
-              and taking action based on the findings.
+              common desire to do the most we can to improve the world. Our
+              organization seeks to promote the global movement of effective
+              altruism, using evidence and reason to assess how to benefit
+              others as much as possible and taking action based on the
+              findings.
             </p>
             <a
               className="btn"
@@ -47,11 +46,16 @@ export default function Home({ page, popups }) {
       </section>
 
       {page.calendar && (
-        <section className="beige-section">
+        <section className="beige-section calendar">
           <div className="container">
             <h2>Upcoming Events</h2>
-            <p>All events listed here are free, and open to the public (unless listed otherwise)
+            <div className="info">
+              <Icon icon="Info" />
+              <p className="editable">
+                All events are free and open to the public unless otherwise
+                noted.
               </p>
+            </div>
             <Calendar maxEvents={page.maxEvents} />
           </div>
         </section>
