@@ -183,6 +183,23 @@ footer {
   min-height: 0;
 }
 
+.info-subtitle {
+  font-size: 0.85em;
+  margin: 0 0 3rem;
+  display: flex;
+  align-items: flex-start;
+
+  svg {
+    fill: $color-ea-dark;
+    margin: 0.1em 0.5rem 0 0;
+    flex-shrink: 0;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
 .main {
   @extend .white-section;
 }
@@ -370,23 +387,6 @@ footer {
   a,
   span {
     flex: 1;
-  }
-}
-
-.info-subtitle {
-  font-size: 0.85em;
-  margin: 0 0 3rem;
-  display: flex;
-  align-items: flex-start;
-
-  svg {
-    fill: $color-ea-dark;
-    margin: 0.1em 0.5rem 0 0;
-    flex-shrink: 0;
-  }
-
-  p {
-    margin: 0;
   }
 }
 
