@@ -3,6 +3,7 @@ name: Aaron Yarmel
 pronouns: he/him
 image: /images/uploads/aaron-yarmel.jpg
 previous: true
+hidden: false
 priority: 7
 ---
 

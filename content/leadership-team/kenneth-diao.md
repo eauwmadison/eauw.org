@@ -5,6 +5,7 @@ role: Communications Lead, Fellowship Coordinator
 image:
 executive: false
 previous: false
+hidden: false
 calUsername:
 priority: 7
 ---

@@ -5,6 +5,8 @@ role: Treasurer, Campus Relations Coordinator
 image: /images/uploads/declan-dally.jpg
 calUsername: declan
 executive: true
+previous: false
+hidden: false
 priority: 2
 ---
 

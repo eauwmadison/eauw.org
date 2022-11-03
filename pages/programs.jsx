@@ -1,26 +1,33 @@
 /* first-party component imports */
 import PageLayout from "../components/layouts/page";
 import Program from "../components/program";
+import Grid, { Item } from "../components/grid";
 
 /* site data */
 import { getCollection, getCollectionItem } from "../lib/collections";
 
 export default function Programs({ page, programs, popups }) {
+  programs.sort((a, b) => a.priority - b.priority);
+
   const currentPrograms = programs.filter((program) => !program.previous);
   const previousPrograms = programs.filter((program) => program.previous);
 
   return (
-    <PageLayout page={page}>
+    <PageLayout page={page} popups={popups}>
       {currentPrograms.length !== 0 && <h2>Current Programs</h2>}
-      {currentPrograms
-        .filter((program) => !program.main)
-        .map((program, i) => (
-          <Program program={program} popups={popups} key={i} />
+      <div className="programs-grid">
+        {currentPrograms.map((program, i) => (
+          <Program program={program} key={i} />
         ))}
+      </div>
       <h2>Previous Programs</h2>
-      {previousPrograms.map((program, i) => (
-        <Program program={program} popups={popups} key={i} />
-      ))}
+      <Grid>
+        {previousPrograms.map((program, i) => (
+          <Item key={i}>
+            <Program program={program} />
+          </Item>
+        ))}
+      </Grid>
     </PageLayout>
   );
 }

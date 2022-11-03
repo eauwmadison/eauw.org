@@ -5,6 +5,8 @@ role: President
 image: /images/uploads/max-gehred.jpg
 calUsername: max
 executive: true
+previous: false
+hidden: false
 priority: 1
 ---
 

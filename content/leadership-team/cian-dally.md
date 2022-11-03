@@ -4,6 +4,8 @@ pronouns: he/him
 role: Student Organizer, Animal Ethics Fellowship Coordinator
 image:
 hidden: true
+executive: false
+previous: false
 calUsername:
 priority: 6
 ---

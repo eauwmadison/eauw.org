@@ -1,5 +1,12 @@
 @import "colors";
 @import "typography";
+@import "card";
+
+.calendar {
+  h2 {
+    margin-bottom: 0.2em;
+  }
+}
 
 .event-link {
   display: inline-grid;
@@ -11,62 +18,8 @@
 }
 
 .event {
-  @extend .box;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
+  @extend .card;
   cursor: pointer;
-}
-
-.event-header {
-  padding: 16px;
-  border-bottom: 1px solid $color-ea-dark;
-}
-
-.event-image img {
-  display: block;
-  width: 100%;
-}
-
-.event-title {
-  font-size: 1.125em;
-  font-weight: 600;
-  line-height: 0;
-}
-
-.event-info {
-  font-size: 0.75em;
-  line-height: 1.5em;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  row-gap: 0.5em;
-  margin-top: 16px;
-
-  & > span {
-    display: flex;
-  }
-}
-
-.event-info svg {
-  fill: $color-ea-dark;
-  margin: 0.15em 0.5rem 0 0;
-  width: 1em;
-  height: 1em;
-  flex-shrink: 0;
-}
-
-.event-description {
-  font-size: 0.75em;
-  padding: 16px;
-  flex-grow: 1;
-}
-
-.event-type {
-  font-size: 0.75em;
-  color: $white;
-  padding: 8px 16px;
 }
 
 .event-tooltip {

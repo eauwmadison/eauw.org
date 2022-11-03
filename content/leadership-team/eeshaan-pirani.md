@@ -4,6 +4,8 @@ pronouns: he/they
 role: Technology Lead, President of Animal Advocacy
 image:
 executive: true
+previous: false
+hidden: false
 calUsername: eeshaan
 priority: 3
 ---
