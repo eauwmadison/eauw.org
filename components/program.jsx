@@ -88,8 +88,14 @@ export default function Program({ program }) {
       const now = new Date();
       const deadline = new Date(program.applicationDeadline);
 
-      // compensate for timezone differences
-      deadline.setMinutes(deadline.getMinutes() + deadline.getTimezoneOffset());
+      /* 
+        compensate for timezone differences and
+        add 1 day to the deadline to allow for
+        applications to be submitted on the deadline
+      */
+      deadline.setMinutes(
+        deadline.getMinutes() + deadline.getTimezoneOffset() + 24 * 60
+      );
 
       program.open = now < deadline;
 
