@@ -107,7 +107,7 @@ export default function Contact({ page, placeholders, popups }) {
                   href={link.link}
                   target={link.newTab ? "_blank" : "_self"}
                 >
-                  {link.socialIcon && <Icon icon={link.socialIcon} />}{" "}
+                  {link.socialIcon && <Icon icon={link.socialIcon} />}
                   {link.name}
                 </Link>
               </li>
