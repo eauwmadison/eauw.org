@@ -118,18 +118,18 @@ export default function DefaultLayout({ children, page }) {
 
       {page.callToAction === "Contact" && (
         <section className="quote-section">
-          <p className="container editable">
+          <h2 className="container editable">
             <Link href="/contact">Contact us</Link> today to find out how we can
             help you do more good.
-          </p>
+          </h2>
         </section>
       )}
 
       {page.callToAction === "Subscribe" && (
         <section className="quote-section">
-          <p className="container editable">
+          <h2 className="container editable">
             Find out about our latest opportunities.
-          </p>
+          </h2>
           <form className="hero-subscription-form" onSubmit={handleSubmit}>
             {!formSubmitted ? (
               <>

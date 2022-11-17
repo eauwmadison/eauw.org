@@ -265,9 +265,13 @@ footer {
 
 .quote-section {
   @extend .blue-section;
-  font-size: 4rem;
   font-weight: 700;
   padding: 70px 20px;
+
+  h2 {
+    font-size: 3.75rem;
+    margin-bottom: 20px;
+  }
 
   .container {
     max-width: max-content;

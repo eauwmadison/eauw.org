@@ -33,7 +33,7 @@ export default function Home({ page, popups }) {
               findings.
             </p>
             <a
-              className="btn"
+              className="btn btn-go"
               href="https://www.effectivealtruism.org/articles/introduction-to-effective-altruism"
               target="_blank"
               rel="noreferrer"
