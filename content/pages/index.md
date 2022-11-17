@@ -1,7 +1,6 @@
 ---
 title:
 callToAction: Subscribe
-largeHeader: true
 fullWidth: true
 calendar: true
 maxEvents: 6

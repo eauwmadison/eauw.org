@@ -1,7 +1,6 @@
 ---
 title: Effective Altruism UW-Madison Research Grant
 callToAction: Subscribe
-largeHeader: false
 contentHTML: >-
   <h3>Application Deadline:&nbsp;</h3><p><a target="_blank" rel="noopener"
   href="https://docs.google.com/forms/d/e/1FAIpQLSekAuc-X9Y-lJsFWZaVRmHQBxqCNVa9qNMBG85PFQ8vjwXVGA/viewform?usp=sf_link"><strong>Apply

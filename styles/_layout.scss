@@ -18,7 +18,6 @@ body {
   padding: 20px;
 }
 
-header,
 footer,
 .section {
   padding: 30px 20px;
@@ -56,13 +55,6 @@ header {
 
   background: $light-blue;
   box-sizing: border-box;
-
-  // @media (min-width: $sm-break) {
-  //   // &.large-header {
-  //   //   // height: 80vh;
-  //   //   // background-position: calc(50% - 350px) calc(100% + 20px);
-  //   // }
-  // }
 
   .container {
     text-align: left;
@@ -139,16 +131,17 @@ footer {
 
 .organization-group > * {
   margin: 0 !important;
-  font-family: $font-slab !important;
 }
 
 .organization-name {
-  font-weight: bold;
+  font-family: $font-slab;
+  font-weight: 700;
   color: $color-ea-dark;
 }
 
 .organization-subheading {
   margin-top: 0;
+  font-family: $font-slab;
   font-weight: 400;
   color: $color-ea-primary;
 }

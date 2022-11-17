@@ -11,7 +11,6 @@ module.exports = {
     fullWidth:
       "Content stretches to the full width of the page. (Not recommended unless you know what you're doing.)",
     hidden: "Whether the element is shown",
-    largeHeader: "Toggles the size of the top banner",
     maxEvents: "The maximum number of events to show on the page",
     newTab: "Whether the link opens a new browser tab",
     page: 'Page to display on. ("index" for home page.)',

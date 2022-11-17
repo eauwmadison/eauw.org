@@ -1,0 +1,26 @@
+@import "colors";
+
+.MuiAppBar-root {
+  background-color: $light-blue;
+  color: $color-ea-dark;
+  border-bottom: 1px solid $color-ea-dark;
+  box-shadow: none;
+
+  .navbar-logo {
+    flex-grow: 1;
+  }
+
+  .links {
+    display: flex;
+    flex-grow: 0;
+    column-gap: 1em;
+
+    .active {
+      border-bottom: 2px solid;
+    }
+
+    @media (max-width: $sm-break) {
+      display: none;
+    }
+  }
+}
