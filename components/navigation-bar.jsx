@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import Link from "next/link";
 
+/* third-party component imports */
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Container from "@mui/material/Container";
@@ -10,37 +11,17 @@ import Container from "@mui/material/Container";
 import siteData from "../lib/data";
 
 export default function NavigationBar({ links, currentPage }) {
-  const [anchorElNav, setAnchorElNav] = useState(null);
-  const [anchorElUser, setAnchorElUser] = useState(null);
-
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
-
   return (
     <AppBar position="sticky">
       <Container maxWidth="xl">
         <Toolbar>
-          <Link href="/" passHref>
-            <div className="navbar-logo">
-              <span className="organization-name">
-                {siteData.organization.organizationName}
-              </span>{" "}
-              <span className="organization-subheading">
-                {siteData.organization.organizationSubheading}
-              </span>
-            </div>
+          <Link href="/" passHref className="navbar-logo">
+            <span className="organization-name">
+              {siteData.organization.organizationName}
+            </span>{" "}
+            <span className="organization-subheading">
+              {siteData.organization.organizationSubheading}
+            </span>
           </Link>
 
           <div className="links">

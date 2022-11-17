@@ -168,11 +168,12 @@ export default function DefaultLayout({ children, page }) {
 
               {siteData.footer.links.map((link) => (
                 <li key={link.name}>
-                  <Link href={link.link}>
-                    <a target={link.external ? "_blank" : "_self"}>
-                      {link.external && <Icon icon="Link" />}
-                      {link.name}
-                    </a>
+                  <Link
+                    href={link.link}
+                    target={link.external ? "_blank" : "_self"}
+                  >
+                    {link.external && <Icon icon="Link" />}
+                    {link.name}
                   </Link>
                 </li>
               ))}
@@ -185,11 +186,12 @@ export default function DefaultLayout({ children, page }) {
 
               {siteData.social.links.map((link) => (
                 <li key={link.name}>
-                  <Link href={link.link}>
-                    <a target={link.newTab ? "_blank" : "_self"}>
-                      {link.socialIcon && <Icon icon={link.socialIcon} />}
-                      {link.name}
-                    </a>
+                  <Link
+                    href={link.link}
+                    target={link.newTab ? "_blank" : "_self"}
+                  >
+                    {link.socialIcon && <Icon icon={link.socialIcon} />}
+                    {link.name}
                   </Link>
                 </li>
               ))}

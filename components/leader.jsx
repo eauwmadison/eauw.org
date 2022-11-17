@@ -1,5 +1,4 @@
 /* Next.js imports */
-import Image from "next/image";
 import ExportedImage from "next-image-export-optimizer";
 import Icon from "./icon";
 
@@ -13,7 +12,7 @@ export default function Leader({ leader }) {
             alt={`Photo of ${leader.name}`}
             width="512"
             height="512"
-            layout="responsive"
+            placeholder="blur"
           />
         ) : (
           <ExportedImage
@@ -21,8 +20,8 @@ export default function Leader({ leader }) {
             alt={`Placeholder image for ${leader.name}`}
             width="512"
             height="512"
-            layout="responsive"
             unoptimized
+            placeholder="blur"
           />
         )}
       </div>

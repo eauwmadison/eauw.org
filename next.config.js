@@ -22,5 +22,8 @@ module.exports = withBundleAnalyzer({
     nextImageExportOptimizer_quality: 75,
     nextImageExportOptimizer_storePicturesInWEBP: true,
     nextImageExportOptimizer_generateAndUseBlurImages: true
+  },
+  experimental: {
+    // appDir: true
   }
 });
