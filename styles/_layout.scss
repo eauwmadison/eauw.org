@@ -150,7 +150,7 @@ footer {
   font-family: $font-serif;
 }
 
-@media (min-width: 800px) {
+@media (min-width: $md-break) {
   .image-and-text {
     display: grid;
     grid-template-columns: 1fr 1fr;
