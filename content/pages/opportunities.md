@@ -1,7 +1,6 @@
 ---
 title: Opportunities
 callToAction: Contact
-largeHeader: false
 showTitle: true
 contentHTML: >-
   <p>There is a <em>lot </em>of impactful work to be done, and directly working

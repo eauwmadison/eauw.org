@@ -36,4 +36,14 @@
   label:last-child {
     padding-bottom: 8px;
   }
+
+  .leader-image {
+    display: flex;
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+  }
 }

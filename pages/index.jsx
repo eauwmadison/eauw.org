@@ -6,10 +6,15 @@ import PageLayout from "../components/layouts/page";
 import Calendar from "../components/calendar";
 import Icon from "../components/icon";
 
+/* third-party component imports */
+import useMediaQuery from "@mui/material/useMediaQuery";
+
 /* site data */
 import { getCollection, getCollectionItem } from "../lib/collections";
 
 export default function Home({ page, popups }) {
+  const small = useMediaQuery("(max-width: 600px)");
+
   return (
     <PageLayout page={page} popups={popups}>
       <section className="main container">
@@ -33,12 +38,12 @@ export default function Home({ page, popups }) {
               findings.
             </p>
             <a
-              className="btn"
+              className="btn btn-go"
               href="https://www.effectivealtruism.org/articles/introduction-to-effective-altruism"
               target="_blank"
               rel="noreferrer"
             >
-              Learn more about effective altruism
+              {small ? "Learn more" : "Learn more about effective altruism"}
               <Icon icon="Go" />
             </a>
           </div>

@@ -1,9 +1,16 @@
 /* Next.js imports */
 import Document, { Html, Head, Main, NextScript } from "next/document";
+// import { Inter, Merriweather } from "@next/font/google";
 
+// const inter = Inter();
+// const merriweather = Merriweather({
+//   weight: ["400", "700"],
+//   style: ["normal", "italic"]
+// });
 export default class MyDocument extends Document {
   render() {
     return (
+      // <Html className={[inter.className, merriweather.className]}>
       <Html>
         <Head>
           <link rel="preconnect" href="https://fonts.googleapis.com" />

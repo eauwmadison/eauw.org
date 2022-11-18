@@ -1,10 +1,8 @@
-/* eslint-disable @next/next/no-img-element */
-
 /* React imports */
 import { useEffect, useState } from "react";
 
 /* Next.js imports */
-// import ExportedImage from "next-image-export-optimizer";
+import ExportedImage from "next-image-export-optimizer";
 
 /* first-party component imports */
 import Icon from "./icon";
@@ -26,7 +24,17 @@ const ProgramChildren = ({ program, className }) => {
     <div className={`program ${program.main ? "main" : ""} ${className}`}>
       {program.image && (
         <div className="image">
-          <img src={program.image} alt={`Photo for ${program.name}`} />
+          <ExportedImage
+            src={program.image}
+            alt={`Photo for ${program.name}`}
+            width={1200}
+            height={600}
+            placeholder="blur"
+            style={{
+              width: "100%",
+              height: "auto"
+            }}
+          />
         </div>
       )}
       <div className="header">

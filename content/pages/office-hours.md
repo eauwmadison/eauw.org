@@ -1,7 +1,6 @@
 ---
 title: Office Hours
 callToAction: Contact
-largeHeader: false
 showTitle: true
 contentHTML: >-
   <p>Our office is located in room 3118 of the Student Activity Center. This is

@@ -1,7 +1,6 @@
 ---
 title: Checkout and Return Books
 callToAction: Contact
-largeHeader: false
 showTitle: true
 contentHTML: >-
   <p>To return books, simply leave them in the dropbox in front of our

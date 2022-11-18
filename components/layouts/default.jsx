@@ -7,11 +7,10 @@ import { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { NextSeo } from "next-seo";
-import ExportedImage from "next-image-export-optimizer";
 
 /* first-party component imports */
-import Calendar from "../../components/calendar";
 import Icon from "../../components/icon";
+import NavigationBar from "../navigation-bar";
 
 /* site data */
 import siteData from "../../lib/data";
@@ -111,42 +110,7 @@ export default function DefaultLayout({ children, page }) {
         }}
       />
 
-      <header className={page.largeHeader ? "large-header" : ""}>
-        <div className="container">
-          <Link href="/" passHref>
-            <div className="organization-group">
-              <img
-                className="logo"
-                src="/images/Effective Altruism Lightbulb.svg"
-                alt="EA lightbulb Logo"
-              ></img>
-              <div className="organization-text">
-                <h1 className="organization-name">
-                  {siteData.organization.organizationName}
-                </h1>
-                <h1 className="organization-subheading">
-                  {siteData.organization.organizationSubheading}
-                </h1>
-              </div>
-            </div>
-          </Link>
-          <nav>
-            <ul>
-              {siteData.navbar.links.map((link) => (
-                <li key={link.link}>
-                  <Link href={link.link}>
-                    <a
-                      className={"/" + page.slug === link.link ? "active" : ""}
-                    >
-                      {link.name}
-                    </a>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        </div>
-      </header>
+      <NavigationBar links={siteData.navbar.links} currentPage={page.slug} />
 
       <section className={page.fullWidth ? "" : "main"}>
         <div className={page.fullWidth ? "" : "container"}>{children}</div>
@@ -154,18 +118,18 @@ export default function DefaultLayout({ children, page }) {
 
       {page.callToAction === "Contact" && (
         <section className="quote-section">
-          <p className="container editable">
+          <h2 className="container editable">
             <Link href="/contact">Contact us</Link> today to find out how we can
             help you do more good.
-          </p>
+          </h2>
         </section>
       )}
 
       {page.callToAction === "Subscribe" && (
         <section className="quote-section">
-          <p className="container editable">
+          <h2 className="container editable">
             Find out about our latest opportunities.
-          </p>
+          </h2>
           <form className="hero-subscription-form" onSubmit={handleSubmit}>
             {!formSubmitted ? (
               <>
@@ -204,11 +168,12 @@ export default function DefaultLayout({ children, page }) {
 
               {siteData.footer.links.map((link) => (
                 <li key={link.name}>
-                  <Link href={link.link}>
-                    <a target={link.external ? "_blank" : "_self"}>
-                      {link.external && <Icon icon="Link" />}
-                      {link.name}
-                    </a>
+                  <Link
+                    href={link.link}
+                    target={link.external ? "_blank" : "_self"}
+                  >
+                    {link.external && <Icon icon="Link" />}
+                    {link.name}
                   </Link>
                 </li>
               ))}
@@ -221,11 +186,12 @@ export default function DefaultLayout({ children, page }) {
 
               {siteData.social.links.map((link) => (
                 <li key={link.name}>
-                  <Link href={link.link}>
-                    <a target={link.newTab ? "_blank" : "_self"}>
-                      {link.socialIcon && <Icon icon={link.socialIcon} />}
-                      {link.name}
-                    </a>
+                  <Link
+                    href={link.link}
+                    target={link.newTab ? "_blank" : "_self"}
+                  >
+                    {link.socialIcon && <Icon icon={link.socialIcon} />}
+                    {link.name}
                   </Link>
                 </li>
               ))}

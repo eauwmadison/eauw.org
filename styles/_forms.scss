@@ -24,7 +24,7 @@ textarea {
   width: 100%;
   margin: 0 0 20px 0;
   box-sizing: border-box;
-  font-size: 2rem;
+  font-size: 1em;
 }
 
 textarea {
@@ -49,13 +49,17 @@ textarea:focus {
 
 .hero-subscription-form {
   margin: 0 auto;
-  max-width: 550px;
+  max-width: 500px;
   padding: 0 20px;
   text-align: center;
 
   input,
   textarea {
     margin: 0 auto;
+
+    &:first-of-type {
+      margin-bottom: 20px;
+    }
   }
 
   button {

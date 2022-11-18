@@ -103,11 +103,12 @@ export default function Contact({ page, placeholders, popups }) {
           <ul className="social-links">
             {data.social.links.map((link) => (
               <li key={link.name}>
-                <Link href={link.link}>
-                  <a target={link.newTab ? "_blank" : "_self"}>
-                    {link.socialIcon && <Icon icon={link.socialIcon} />}{" "}
-                    {link.name}
-                  </a>
+                <Link
+                  href={link.link}
+                  target={link.newTab ? "_blank" : "_self"}
+                >
+                  {link.socialIcon && <Icon icon={link.socialIcon} />}
+                  {link.name}
                 </Link>
               </li>
             ))}
