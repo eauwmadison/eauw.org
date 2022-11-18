@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import Link from "next/link";
 
@@ -33,14 +33,15 @@ export default function NavigationBar({ links, currentPage }) {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const showMenuIcon = useMediaQuery("(max-width: 900px)");
 
+  // close the drawer when the window is resized to a width greater than 900px
+  useEffect(() => {
+    if (!showMenuIcon) {
+      setDrawerOpen(false);
+    }
+  }, [showMenuIcon]);
+
   return (
     <>
-      {showMenuIcon && (
-        <MenuIcon
-          open={drawerOpen}
-          onChange={() => setDrawerOpen(!drawerOpen)}
-        />
-      )}
       <AppBar position="sticky">
         <Container maxWidth="xl">
           <Toolbar>
@@ -71,6 +72,12 @@ export default function NavigationBar({ links, currentPage }) {
               ))}
             </div>
           </Toolbar>
+          {showMenuIcon && (
+            <MenuIcon
+              open={drawerOpen}
+              onChange={() => setDrawerOpen(!drawerOpen)}
+            />
+          )}
         </Container>
       </AppBar>
       <Drawer
@@ -80,9 +87,7 @@ export default function NavigationBar({ links, currentPage }) {
       >
         <div className="drawer">
           <ul className="links">
-            <h2>Pages</h2>
-
-            {siteData.footer.links.map((link) => (
+            {siteData.navbar.links.map((link) => (
               <li key={link.name}>
                 <Link
                   href={link.link}
@@ -90,24 +95,6 @@ export default function NavigationBar({ links, currentPage }) {
                   className={"/" + currentPage === link.link ? "active" : ""}
                 >
                   {link.external && <Icon icon="Link" />}
-                  {link.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
-
-          <ul className="links">
-            <li>
-              <h2>Social</h2>
-            </li>
-
-            {siteData.social.links.map((link) => (
-              <li key={link.name}>
-                <Link
-                  href={link.link}
-                  target={link.newTab ? "_blank" : "_self"}
-                >
-                  {link.socialIcon && <Icon icon={link.socialIcon} />}
                   {link.name}
                 </Link>
               </li>

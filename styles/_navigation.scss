@@ -5,6 +5,7 @@
   color: $color-ea-dark;
   border-bottom: 1px solid $color-ea-dark;
   box-shadow: none;
+  z-index: 1201;
 
   .navbar-logo {
     flex-grow: 1;
@@ -36,8 +37,16 @@
 }
 
 .drawer {
+  @media (min-width: $sm-break) {
+    min-width: 250px;
+  }
+
   .links {
     @extend .footer-links;
+
+    &:first-child {
+      margin-top: 10rem;
+    }
   }
 
   .active {
@@ -48,19 +57,22 @@
 // https://codepen.io/fromwireframes
 .menu-icon {
   position: absolute;
-  top: 0;
+  top: 2.5px;
   right: 0;
-  z-index: 1201; // MUI draws drawer at Z-index 1200
   width: 50px;
   height: 50px;
+  z-index: 1201 !important; // MUI draws drawer at Z-index 1200
   cursor: pointer;
 
+  @media (min-width: 600px) {
+    top: 7px;
+  }
+
   .menu-icon__checkbox {
-    display: block;
+    position: absolute;
     width: 100%;
     height: 100%;
     z-index: 2;
-    position: absolute;
     opacity: 0;
     cursor: pointer;
   }
@@ -78,16 +90,12 @@
 
   span {
     position: absolute;
-    display: block;
-    width: 100%;
-    height: 2px;
     background-color: $color-ea-dark;
     border-radius: 1px;
-    transition: all 0.2s cubic-bezier(0.1, 0.82, 0.76, 0.965);
+    width: 100%;
+    height: 2px;
+    transition: all 0.2s cubic-bezier(0.1, 0.8, 0.75, 0.98);
 
-    &:first-of-type {
-      top: 0;
-    }
     &:last-of-type {
       bottom: 0;
     }
