@@ -1,10 +1,10 @@
 @import "colors";
 
-.MuiAppBar-root {
-  background-color: $light-blue;
-  color: $color-ea-dark;
-  border-bottom: 1px solid $color-ea-dark;
-  box-shadow: none;
+.navbar-root {
+  background-color: $light-blue !important;
+  color: $color-ea-dark !important;
+  border-bottom: 1px solid $color-ea-dark !important;
+  box-shadow: none !important;
   z-index: 1201;
 
   .navbar-logo {
@@ -26,17 +26,17 @@
   }
 }
 
-.MuiDrawer-root {
-  .MuiDrawer-paper {
-    background-color: $light-blue;
-    color: $color-ea-dark;
-    border-left: 1px solid $color-ea-dark;
-    z-index: 10;
-    box-shadow: none;
-  }
-}
-
 .drawer {
+  background-color: $light-blue;
+  color: $color-ea-dark;
+  border-left: 1px solid $color-ea-dark;
+  z-index: 10;
+  box-shadow: none;
+
+  @media (min-width: 300px) {
+    min-width: 185px;
+  }
+
   @media (min-width: $sm-break) {
     min-width: 250px;
   }
@@ -47,10 +47,10 @@
     &:first-child {
       margin-top: 10rem;
     }
-  }
 
-  .active {
-    border-bottom: 2px solid;
+    .active {
+      border-bottom: 2px solid;
+    }
   }
 }
 
@@ -58,14 +58,15 @@
 .menu-icon {
   position: absolute;
   top: 2.5px;
-  right: 0;
+  right: 10px;
   width: 50px;
   height: 50px;
   z-index: 1201 !important; // MUI draws drawer at Z-index 1200
   cursor: pointer;
 
-  @media (min-width: 600px) {
+  @media (min-width: $sm-break) {
     top: 7px;
+    right: 30px;
   }
 
   .menu-icon__checkbox {
