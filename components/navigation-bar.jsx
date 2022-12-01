@@ -16,12 +16,15 @@ import siteData from "../lib/data";
 
 const MenuIcon = ({ open, onChange }) => (
   <div className="menu-icon">
-    <input
-      className="menu-icon__checkbox"
-      type="checkbox"
-      checked={open}
-      onChange={onChange}
-    />
+    <label htmlFor="menu-toggle" aria-label="Toggle menu" hidden>
+      <input
+        id="menu-toggle"
+        className="menu-icon__checkbox"
+        type="checkbox"
+        checked={open}
+        onChange={onChange}
+      />
+    </label>
     <div>
       <span></span>
       <span></span>

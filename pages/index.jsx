@@ -78,7 +78,6 @@ export default function Home({ page, popups }) {
                     alt={`Photo of ${testimonial.name}`}
                     width={60}
                     height={60}
-                    unoptimized
                   />{" "}
                   <span className="testimonial-author-name-and-subtitle">
                     {testimonial.name}

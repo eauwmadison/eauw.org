@@ -216,7 +216,7 @@ export default function DefaultLayout({ children, page }) {
                   className="footer-subscription-form"
                   onSubmit={handleSubmit}
                 >
-                  <h4>Stay up-to-date!</h4>
+                  <h3>Stay up-to-date!</h3>
                   {!formSubmitted ? (
                     <>
                       <input
