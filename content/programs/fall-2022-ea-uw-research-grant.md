@@ -5,7 +5,7 @@ startingDate: 2022-12-05T00:00:00Z
 semester: Fall 2022 / Spring 2023
 duration: 60 hours
 applicationLink: /research-grant
-applicationDeadline: 2022-11-28T00:00:00Z
+applicationDeadline: 2023-01-24T00:00:00Z
 main: false
 previous: false
 priority: 2

@@ -42,7 +42,7 @@ export default function NavigationBar({ links, currentPage }) {
 
   return (
     <>
-      <AppBar position="sticky">
+      <AppBar position="sticky" classes={{ root: "navbar-root" }}>
         <Container maxWidth="xl">
           <Toolbar>
             <Link href="/" passHref className="navbar-logo">
@@ -82,25 +82,24 @@ export default function NavigationBar({ links, currentPage }) {
       </AppBar>
       <Drawer
         anchor="right"
+        classes={{ paper: "drawer" }}
         open={drawerOpen}
         onClose={() => setDrawerOpen(false)}
       >
-        <div className="drawer">
-          <ul className="links">
-            {siteData.navbar.links.map((link) => (
-              <li key={link.name}>
-                <Link
-                  href={link.link}
-                  target={link.external ? "_blank" : "_self"}
-                  className={"/" + currentPage === link.link ? "active" : ""}
-                >
-                  {link.external && <Icon icon="Link" />}
-                  {link.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
+        <ul className="links">
+          {siteData.navbar.links.map((link) => (
+            <li key={link.name}>
+              <Link
+                href={link.link}
+                target={link.external ? "_blank" : "_self"}
+                className={"/" + currentPage === link.link ? "active" : ""}
+              >
+                {link.external && <Icon icon="Link" />}
+                {link.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
       </Drawer>
     </>
   );
