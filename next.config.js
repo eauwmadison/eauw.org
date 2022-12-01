@@ -23,6 +23,20 @@ module.exports = withBundleAnalyzer({
     nextImageExportOptimizer_storePicturesInWEBP: true,
     nextImageExportOptimizer_generateAndUseBlurImages: true
   },
+  redirects: async () => {
+    return [
+      {
+        source: "/slack",
+        destination: "https://go.eauw.org/slack",
+        statusCode: 308
+      },
+      {
+        source: "/feedback",
+        destination: "https://go.eauw.org/feedback",
+        statusCode: 302
+      }
+    ];
+  },
   experimental: {
     // appDir: true
   }

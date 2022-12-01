@@ -10,4 +10,5 @@ main: false
 previous: false
 priority: 2
 ---
+
 Interested in a low-stakes way to try your hand at EA-adjacent research? Apply for **$500 grant** from EA UW to run a small research project next semester.
