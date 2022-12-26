@@ -4,7 +4,7 @@ callToAction: Subscribe
 contentHTML: >-
   <h3>Application Deadline:&nbsp;</h3><p><a target="_blank" rel="noopener"
   href="https://docs.google.com/forms/d/e/1FAIpQLSekAuc-X9Y-lJsFWZaVRmHQBxqCNVa9qNMBG85PFQ8vjwXVGA/viewform?usp=sf_link"><strong>Apply
-  here</strong></a>&nbsp;by&nbsp;<strong>November 28th,
+  here</strong></a>&nbsp;by&nbsp;<strong>January 24th,
   2022</strong></p><h3>Award:&nbsp;</h3><p>$500 in funding will be granted to
   all fellows who complete their research project or clearly demonstrate that
   they invested at least sixty hours into the project.</p><p>An additional $500
