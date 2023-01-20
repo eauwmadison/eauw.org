@@ -3,10 +3,9 @@ title: 👋 Saying hello with new opportunities to do good
 date: 2021-09-15T00:00:00Z
 tags:
   - Newsletter
-author_staff_member: eeshaan-pirani
-image: "https://unsplash.it/600/450?image=737&a=.png"
+author_staff_member: doran-redlich
+image: https://unsplash.it/600/450?image=737&a=.png
 ---
-
 # Welcome back!
 
 ## EA UW–Madison’s future.
