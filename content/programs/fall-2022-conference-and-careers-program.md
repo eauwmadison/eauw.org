@@ -9,7 +9,7 @@ applicationLink: >-
   https://docs.google.com/forms/d/e/1FAIpQLSdaHQ6KvJpROyyuztZnkVT69Ct1qIIEjEo_Y_qixzdiD0qZSA/viewform
 applicationDeadline: 2022-11-15T00:00:00Z
 previous: false
-priority: 1
+priority: 4
 ---
 As UW–Madison students we have an awesome opportunity to use our careers to improve the lives of others. The average career lasts 80,000 hours, that’s a long time. If you could increase the impact of your career by just 1%, it would make sense to spend 800 hours thinking about how to do that. And we think this program can increase your impact by much more, and in much less time.
 
