@@ -4,7 +4,7 @@ image: /images/uploads/conference.jpg
 startingDate: 2022-11-20T00:00:00Z
 semester: Fall 2022
 duration: 2 weeks
-main:
+main: 'yes'
 applicationLink: >-
   https://docs.google.com/forms/d/e/1FAIpQLSdaHQ6KvJpROyyuztZnkVT69Ct1qIIEjEo_Y_qixzdiD0qZSA/viewform
 applicationDeadline: 2022-11-15T00:00:00Z
