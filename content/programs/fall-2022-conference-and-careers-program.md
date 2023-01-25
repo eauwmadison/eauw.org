@@ -1,6 +1,6 @@
 ---
 name: Conference and Careers Program
-image: /images/uploads/conference.jpg
+image: /images/uploads/img-7867.jpg
 startingDate: 2022-11-20T00:00:00Z
 semester: Fall 2022
 duration: 2 weeks
