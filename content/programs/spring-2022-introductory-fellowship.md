@@ -7,6 +7,7 @@ main: false
 previous: true
 applicationLink: https://eauw.org/apply
 applicationDeadline: 2022-02-18T00:00:00Z
+parentGroup: EA UW
 priority: 1
 ---
 
