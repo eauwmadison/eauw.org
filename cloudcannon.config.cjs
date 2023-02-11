@@ -43,6 +43,13 @@ module.exports = {
       "Twitter",
       "WIN",
       "YouTube"
+    ],
+    parentGroups: [
+      "AI Safety",
+      "Animal Advocacy",
+      "Biosecurity",
+      "EA UW",
+      "Good Futures"
     ]
   },
 
