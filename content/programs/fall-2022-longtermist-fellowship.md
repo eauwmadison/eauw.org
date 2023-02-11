@@ -8,6 +8,8 @@ main: false
 previous: true
 applicationLink:
 applicationDeadline: 2022-09-19T00:00:00Z
+parentGroup: Good Futures
 priority: 5
 ---
+
 Assuring that the trajectory for the long-term future is heading in a safe, positive direction is potentially one of the most impactful things we could be doing right now.
