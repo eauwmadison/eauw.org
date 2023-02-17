@@ -5,26 +5,30 @@
     "Navigate to cloudcannon.config.cjs, then _select_data, then add to parentGroups."
   ],
 
-  "links": [
+  "groups": [
+    {
+      "name": "All",
+      "link": ""
+    },
     {
       "name": "AI Safety",
-      "link": "/ai-safety"
+      "link": "#ai-safety"
     },
     {
       "name": "Animal Advocacy",
-      "link": "/animal-advocacy"
+      "link": "#animal-advocacy"
     },
     {
       "name": "Biosecurity",
-      "link": "/biosecurity"
+      "link": "#biosecurity"
     },
     {
       "name": "EA UW",
-      "link": "/ea-uw"
+      "link": "#ea-uw"
     },
     {
       "name": "Good Futures",
-      "link": "/good-futures"
+      "link": "#good-futures"
     }
   ]
 }

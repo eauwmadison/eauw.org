@@ -1,5 +1,8 @@
+/* Next.js & React imports*/
+import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
+
 /* first-party component imports */
-import { useState } from "react";
 import PageLayout from "../components/layouts/page";
 import Program from "../components/program";
 import Grid, { Item } from "../components/grid";
@@ -29,42 +32,62 @@ export default function Programs({ page, programs, popups }) {
   // programGroup.jsx ?
   // might need to change the names here, could get confusing... or just add more comments lol
 
-  const currentPrograms = programs.filter((program) => !program.previous);
-  const previousPrograms = programs.filter((program) => program.previous);
+  const router = useRouter();
 
-  const [groupFilter, setGroupFilter] = useState("Current Programs");
+  const [groupFilter, setGroupFilter] = useState("All");
   const new_currentPrograms = programs.filter(
     (program) =>
       !program.previous &&
-      (groupFilter.includes(program.parentGroup) ||
-        groupFilter === "Current Programs")
+      (groupFilter.includes(program.parentGroup) || groupFilter.includes("All"))
   );
   const new_previousPrograms = programs.filter(
     (program) =>
       program.previous &&
-      (groupFilter.includes(program.parentGroup) ||
-        groupFilter === "Current Programs")
+      (groupFilter.includes(program.parentGroup) || groupFilter.includes("All"))
   );
+
+  const handleFilterChange = (event) => {
+    event.preventDefault();
+
+    const parentGroupName = event.target.value;
+    const link = data.parentGroups.groups.filter(
+      (entry) => entry.name === parentGroupName
+    )[0].link;
+    router.push("/programs" + link);
+  };
+
+  useEffect(() => {
+    if (router.asPath.includes("#")) {
+      let entry = router.asPath.substring(9);
+
+      for (const element of data.parentGroups.groups) {
+        if (element.link === entry) {
+          setGroupFilter(element.name);
+          break;
+        }
+      }
+    }
+  }, [router.asPath]);
 
   return (
     <PageLayout page={page} popups={popups}>
-      <select
-        value={groupFilter}
-        onChange={(e) => setGroupFilter(e.target.value)}
-      >
-        <option>Current Programs</option>
-        {data.parentGroups.links.map((parentGroup, i) => (
-          <option>{parentGroup.name} Programs</option>
+      <select value={groupFilter} onChange={(e) => handleFilterChange(e)}>
+        {data.parentGroups.groups.map((parentGroup, i) => (
+          <option value={parentGroup.name} key={parentGroup.name}>
+            {parentGroup.name} Programs
+          </option>
         ))}
       </select>
 
-      {currentPrograms.length !== 0 && <h2>{groupFilter}</h2>}
+      {new_currentPrograms.length !== 0 && <h2>{groupFilter} Programs</h2>}
       <div className="programs-grid">
         {new_currentPrograms.map((program, i) => (
           <Program program={program} key={i} />
         ))}
       </div>
-      <h2>Previous Programs</h2>
+      {new_currentPrograms.length === 0 && <h3>No programs found!</h3>}
+
+      {new_previousPrograms.length !== 0 && <h2>Previous Programs</h2>}
       <Grid>
         {new_previousPrograms.map((program, i) => (
           <Item key={i}>
