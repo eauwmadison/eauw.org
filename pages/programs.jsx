@@ -1,10 +1,12 @@
 /* first-party component imports */
+import { useState } from "react";
 import PageLayout from "../components/layouts/page";
 import Program from "../components/program";
 import Grid, { Item } from "../components/grid";
 
 /* site data */
 import { getCollection, getCollectionItem } from "../lib/collections";
+import data from "../lib/data";
 
 export default function Programs({ page, programs, popups }) {
   programs.sort((a, b) => a.priority - b.priority);
@@ -23,22 +25,48 @@ export default function Programs({ page, programs, popups }) {
   - message or display if no programs available
   */
 
+  // a href link: 117 program.jsx
+  // programGroup.jsx ?
+  // might need to change the names here, could get confusing... or just add more comments lol
+
   const currentPrograms = programs.filter((program) => !program.previous);
   const previousPrograms = programs.filter((program) => program.previous);
 
+  const [groupFilter, setGroupFilter] = useState("Current Programs");
+  const new_currentPrograms = programs.filter(
+    (program) =>
+      !program.previous &&
+      (groupFilter.includes(program.parentGroup) ||
+        groupFilter === "Current Programs")
+  );
+  const new_previousPrograms = programs.filter(
+    (program) =>
+      program.previous &&
+      (groupFilter.includes(program.parentGroup) ||
+        groupFilter === "Current Programs")
+  );
+
   return (
     <PageLayout page={page} popups={popups}>
-      {currentPrograms.length !== 0 && (
-        <h2>Current Programs Are Very Neat And You Should Go To Them</h2>
-      )}
+      <select
+        value={groupFilter}
+        onChange={(e) => setGroupFilter(e.target.value)}
+      >
+        <option>Current Programs</option>
+        {data.parentGroups.links.map((parentGroup, i) => (
+          <option>{parentGroup.name} Programs</option>
+        ))}
+      </select>
+
+      {currentPrograms.length !== 0 && <h2>{groupFilter}</h2>}
       <div className="programs-grid">
-        {currentPrograms.map((program, i) => (
+        {new_currentPrograms.map((program, i) => (
           <Program program={program} key={i} />
         ))}
       </div>
       <h2>Previous Programs</h2>
       <Grid>
-        {previousPrograms.map((program, i) => (
+        {new_previousPrograms.map((program, i) => (
           <Item key={i}>
             <Program program={program} />
           </Item>
