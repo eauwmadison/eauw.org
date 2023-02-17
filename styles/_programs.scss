@@ -26,6 +26,28 @@
   }
 }
 
+.program-group-select {
+  font-family: $font-serif;
+  font-weight: 700;
+  margin-bottom: 1em;
+  padding-right: 35px;
+  font-size: 3.25rem;
+  border: none;
+  color: $color-ea-dark;
+
+  overflow: hidden;
+  overflow: -moz-hidden-unscrollable;
+  background: url(/ico/drop-arrow.svg) no-repeat white;
+  background-position: center right;
+  background-size: 25px;
+  appearance: none;
+
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+
 .program {
   @extend .card;
 

@@ -14,36 +14,20 @@ import data from "../lib/data";
 export default function Programs({ page, programs, popups }) {
   programs.sort((a, b) => a.priority - b.priority);
 
-  // let filter = "Animal Advocacy";
-
-  // const currentPrograms = programs.filter((program) => !program.previous && program.parentGroup === filter);
-
-  /*
-  Filter functionality:
-  - "All" displays all programs
-  - drop-down for specific programs
-    - displays on previous programs as well
-    - changes heading "current programs" to "current animal advocacy programs" etc.
-    - THIS WILL BE ON A NEW PAGE. NEEDS A SHAREABLE LINK.
-  - message or display if no programs available
-  */
-
-  // a href link: 117 program.jsx
-  // programGroup.jsx ?
-  // might need to change the names here, could get confusing... or just add more comments lol
-
   const router = useRouter();
 
-  const [groupFilter, setGroupFilter] = useState("All");
-  const new_currentPrograms = programs.filter(
+  const [groupFilter, setGroupFilter] = useState("Current");
+  const currentPrograms = programs.filter(
     (program) =>
       !program.previous &&
-      (groupFilter.includes(program.parentGroup) || groupFilter.includes("All"))
+      (groupFilter.includes(program.parentGroup) ||
+        groupFilter.includes("Current"))
   );
-  const new_previousPrograms = programs.filter(
+  const previousPrograms = programs.filter(
     (program) =>
       program.previous &&
-      (groupFilter.includes(program.parentGroup) || groupFilter.includes("All"))
+      (groupFilter.includes(program.parentGroup) ||
+        groupFilter.includes("Current"))
   );
 
   const handleFilterChange = (event) => {
@@ -71,25 +55,30 @@ export default function Programs({ page, programs, popups }) {
 
   return (
     <PageLayout page={page} popups={popups}>
-      <select value={groupFilter} onChange={(e) => handleFilterChange(e)}>
+      <select
+        class="program-group-select"
+        value={groupFilter}
+        onChange={(e) => handleFilterChange(e)}
+      >
         {data.parentGroups.groups.map((parentGroup, i) => (
-          <option value={parentGroup.name} key={parentGroup.name}>
+          <option value={parentGroup.name} key={i}>
             {parentGroup.name} Programs
           </option>
         ))}
       </select>
 
-      {new_currentPrograms.length !== 0 && <h2>{groupFilter} Programs</h2>}
       <div className="programs-grid">
-        {new_currentPrograms.map((program, i) => (
+        {currentPrograms.map((program, i) => (
           <Program program={program} key={i} />
         ))}
       </div>
-      {new_currentPrograms.length === 0 && <h3>No programs found!</h3>}
+      {currentPrograms.length === 0 && <h3>No programs found!</h3>}
 
-      {new_previousPrograms.length !== 0 && <h2>Previous Programs</h2>}
+      {previousPrograms.length !== 0 && (
+        <h2>Previous {groupFilter} Programs</h2>
+      )}
       <Grid>
-        {new_previousPrograms.map((program, i) => (
+        {previousPrograms.map((program, i) => (
           <Item key={i}>
             <Program program={program} />
           </Item>
