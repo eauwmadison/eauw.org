@@ -4,7 +4,7 @@ module.exports = {
     buttonText: "The text on the button",
     calendar: "Whether a calendar is shown on the page",
     callToAction: "Type of request shown at the bottom of this page",
-    calUsername: "Username for https://cal.eauw.org/",
+    calUsername: "Username for https://cal.com/",
     contactEmailAddress: "Address to be displayed on the Contact page",
     excerptHtml: "The HTML preview for a project summary",
     executive: "Toggles whether the leader is a member of the executive team",
