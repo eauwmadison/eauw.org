@@ -5,9 +5,11 @@
     "Navigate to cloudcannon.config.cjs, then _select_data, then add to parentGroups."
   ],
 
+  "default": "All Programs",
+  "color": "#054d5a",
   "groups": [
     {
-      "name": "Current",
+      "name": "All Programs",
       "link": ""
     },
     {

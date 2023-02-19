@@ -1,6 +1,7 @@
 /* Next.js & React imports*/
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
+import Select from "react-select";
 
 /* first-party component imports */
 import PageLayout from "../components/layouts/page";
@@ -14,35 +15,25 @@ import data from "../lib/data";
 export default function Programs({ page, programs, popups }) {
   programs.sort((a, b) => a.priority - b.priority);
 
-  const router = useRouter();
-
-  const [groupFilter, setGroupFilter] = useState("Current");
+  const [groupFilter, setGroupFilter] = useState(data.parentGroups.default);
   const currentPrograms = programs.filter(
     (program) =>
       !program.previous &&
       (groupFilter.includes(program.parentGroup) ||
-        groupFilter.includes("Current"))
+        groupFilter === data.parentGroups.default)
   );
   const previousPrograms = programs.filter(
     (program) =>
       program.previous &&
       (groupFilter.includes(program.parentGroup) ||
-        groupFilter.includes("Current"))
+        groupFilter === data.parentGroups.default)
   );
 
-  const handleFilterChange = (event) => {
-    event.preventDefault();
-
-    const parentGroupName = event.target.value;
-    const link = data.parentGroups.groups.filter(
-      (entry) => entry.name === parentGroupName
-    )[0].link;
-    router.push("/programs" + link);
-  };
-
+  const router = useRouter();
   useEffect(() => {
     if (router.asPath.includes("#")) {
       let entry = router.asPath.substring(9);
+      // let entry = router.asPath.indexOf("#")
 
       for (const element of data.parentGroups.groups) {
         if (element.link === entry) {
@@ -53,19 +44,57 @@ export default function Programs({ page, programs, popups }) {
     }
   }, [router.asPath]);
 
+  const getSelectedOption = () => {
+    let option = data.parentGroups.groups.find(
+      (group) => group.name === groupFilter
+    );
+    option.label = option.name;
+
+    return option;
+  };
+
+  const getOptions = () => {
+    const options = data.parentGroups.groups.map((group) => {
+      const name = group.name;
+
+      return {
+        label: name,
+        value: name
+      };
+    });
+
+    return options;
+  };
+
+  const handleFilterChange = (event) => {
+    const parentGroupName = event.label;
+    const link = data.parentGroups.groups.filter(
+      (entry) => entry.name === parentGroupName
+    )[0].link;
+    router.push("/programs" + link);
+  };
+
+  const dropDownStyles = {
+    singleValue: (provided) => ({
+      ...provided,
+      color: data.parentGroups.color,
+      padding: "1em"
+    }),
+    option: (provided) => ({
+      ...provided,
+      color: data.parentGroups.color
+    })
+  };
+
   return (
     <PageLayout page={page} popups={popups}>
-      <select
-        class="program-group-select"
-        value={groupFilter}
+      <Select
+        styles={dropDownStyles}
+        // className="program-group-select"
+        value={getSelectedOption()}
+        options={getOptions()}
         onChange={(e) => handleFilterChange(e)}
-      >
-        {data.parentGroups.groups.map((parentGroup, i) => (
-          <option value={parentGroup.name} key={i}>
-            {parentGroup.name} Programs
-          </option>
-        ))}
-      </select>
+      />
 
       <div className="programs-grid">
         {currentPrograms.map((program, i) => (
@@ -74,9 +103,7 @@ export default function Programs({ page, programs, popups }) {
       </div>
       {currentPrograms.length === 0 && <h3>No programs found!</h3>}
 
-      {previousPrograms.length !== 0 && (
-        <h2>Previous {groupFilter} Programs</h2>
-      )}
+      {previousPrograms.length !== 0 && <h2>Previous Programs</h2>}
       <Grid>
         {previousPrograms.map((program, i) => (
           <Item key={i}>
