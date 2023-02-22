@@ -1,0 +1,36 @@
+{
+  "_README": [
+    "If you add a new group, THIS IS NOT THE ONLY FILE YOU MUST EDIT.",
+    "The new group must also be added to CloudCannon as an option for drop-down menus.",
+    "Navigate to cloudcannon.config.cjs, then _select_data, then add to parentGroups."
+  ],
+
+  "default": "All Programs",
+  "color": "#054d5a",
+  "groups": [
+    {
+      "name": "All Programs",
+      "link": ""
+    },
+    {
+      "name": "AI Safety",
+      "link": "#ai-safety"
+    },
+    {
+      "name": "Animal Advocacy",
+      "link": "#animal-advocacy"
+    },
+    {
+      "name": "Biosecurity",
+      "link": "#biosecurity"
+    },
+    {
+      "name": "EA UW",
+      "link": "#ea-uw"
+    },
+    {
+      "name": "Good Futures",
+      "link": "#good-futures"
+    }
+  ]
+}
