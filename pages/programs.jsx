@@ -88,13 +88,39 @@ export default function Programs({ page, programs, popups }) {
   // Styling for the react-select drop-down menu
   // For specifics see https://react-select.com/styles
   const dropDownStyles = {
+    // Modifies border
+    control: (provided) => ({
+      ...provided,
+      "border": "1px solid " + data.parentGroups.color,
+      "boxShadow": "none",
+      "&:hover": {
+        border: "1px solid " + data.parentGroups.color
+      }
+    }),
+    // Modifies the selected value
     singleValue: (provided) => ({
       ...provided,
       color: data.parentGroups.color,
       padding: "1em"
     }),
-    option: (provided) => ({
+    // Modifies drop down indicator
+    dropdownIndicator: (provided) => ({
       ...provided,
+      color: data.parentGroups.color
+    }),
+    // Modifies the options container
+    menu: (provided) => ({
+      ...provided,
+      "border": "1px solid " + data.parentGroups.color,
+      "boxShadow": "none",
+      "&:hover": {
+        border: "1px solid " + data.parentGroups.color
+      }
+    }),
+    // Modifies drop-down options
+    option: (provided, { isFocused }) => ({
+      ...provided,
+      backgroundColor: isFocused ? "#35bbd233" : null,
       color: data.parentGroups.color
     })
   };
@@ -102,6 +128,7 @@ export default function Programs({ page, programs, popups }) {
   return (
     <PageLayout page={page} popups={popups}>
       <Select
+        isSearchable={false} // default react-select allows search, we just want a drop-down menu
         styles={dropDownStyles}
         value={getSelectedOption()}
         options={getOptions()}
