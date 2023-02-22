@@ -91,6 +91,7 @@ export default function Programs({ page, programs, popups }) {
     // Modifies border
     control: (provided) => ({
       ...provided,
+      // backgroundColor: "#35bbd233",
       "border": "1px solid " + data.parentGroups.color,
       "boxShadow": "none",
       "&:hover": {
@@ -100,8 +101,15 @@ export default function Programs({ page, programs, popups }) {
     // Modifies the selected value
     singleValue: (provided) => ({
       ...provided,
-      color: data.parentGroups.color,
-      padding: "1em"
+      "color": data.parentGroups.color,
+      "transition": "0.2s ease",
+      "font-size": "1.2em",
+      "padding": "0.5em",
+      "&:hover": {
+        "cursor": "pointer",
+        "font-size": "1.25em",
+        "font-weight": "bold"
+      }
     }),
     // Modifies drop down indicator
     dropdownIndicator: (provided) => ({
