@@ -15,25 +15,33 @@ import data from "../lib/data";
 export default function Programs({ page, programs, popups }) {
   programs.sort((a, b) => a.priority - b.priority);
 
+  // On page load, the programs are filtered by the default parentGroup
   const [groupFilter, setGroupFilter] = useState(data.parentGroups.default);
+
+  // currentPrograms is populated with all programs that:
+  // are not marked previous, and
+  // either match the filter, or match the default.
   const currentPrograms = programs.filter(
     (program) =>
       !program.previous &&
-      (groupFilter.includes(program.parentGroup) ||
+      (groupFilter === program.parentGroup ||
         groupFilter === data.parentGroups.default)
   );
+  // previousPrograms is the same, except with programs that ARE marked previous.
   const previousPrograms = programs.filter(
     (program) =>
       program.previous &&
-      (groupFilter.includes(program.parentGroup) ||
+      (groupFilter === program.parentGroup ||
         groupFilter === data.parentGroups.default)
   );
 
+  // After page update: check for a "#" in the URL, if it matches, check for matches in parent-groups.json
+  // If a parent group match is found, change the filter so currentPrograms and previousPrograms are updated.
   const router = useRouter();
   useEffect(() => {
     if (router.asPath.includes("#")) {
-      let entry = router.asPath.substring(9);
-      // let entry = router.asPath.indexOf("#")
+      const urlStub = router.asPath; // returns "/programs#parent-group"
+      let entry = urlStub.substring(urlStub.indexOf("#")); // returns "#parent-group"
 
       for (const element of data.parentGroups.groups) {
         if (element.link === entry) {
@@ -44,6 +52,18 @@ export default function Programs({ page, programs, popups }) {
     }
   }, [router.asPath]);
 
+  // When user clicks an option in the drop down menu, add "#parent-group-name" to the URL.
+  // This causes the group filter to change---see useEffect().
+  // Allows for the sharing of parent-group specific links.
+  const handleFilterChange = (event) => {
+    const parentGroupName = event.label;
+    const link = data.parentGroups.groups.filter(
+      (entry) => entry.name === parentGroupName
+    )[0].link;
+    router.push("/programs" + link);
+  };
+
+  // Retrieves selected option from parent-groups.json, formatted for the drop down menu
   const getSelectedOption = () => {
     let option = data.parentGroups.groups.find(
       (group) => group.name === groupFilter
@@ -53,27 +73,20 @@ export default function Programs({ page, programs, popups }) {
     return option;
   };
 
+  // Retrieves options from parent-groups.json, formatted for the drop down menu
   const getOptions = () => {
     const options = data.parentGroups.groups.map((group) => {
-      const name = group.name;
-
       return {
-        label: name,
-        value: name
+        label: group.name,
+        value: group.name
       };
     });
 
     return options;
   };
 
-  const handleFilterChange = (event) => {
-    const parentGroupName = event.label;
-    const link = data.parentGroups.groups.filter(
-      (entry) => entry.name === parentGroupName
-    )[0].link;
-    router.push("/programs" + link);
-  };
-
+  // Styling for the react-select drop-down menu
+  // For specifics see https://react-select.com/styles
   const dropDownStyles = {
     singleValue: (provided) => ({
       ...provided,
@@ -90,7 +103,6 @@ export default function Programs({ page, programs, popups }) {
     <PageLayout page={page} popups={popups}>
       <Select
         styles={dropDownStyles}
-        // className="program-group-select"
         value={getSelectedOption()}
         options={getOptions()}
         onChange={(e) => handleFilterChange(e)}
