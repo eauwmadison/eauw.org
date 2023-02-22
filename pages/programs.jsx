@@ -140,7 +140,7 @@ export default function Programs({ page, programs, popups }) {
           <Program program={program} key={i} />
         ))}
       </div>
-      {currentPrograms.length === 0 && <h3>No programs found!</h3>}
+      {currentPrograms.length === 0 && <h2>No programs found!</h2>}
 
       {previousPrograms.length !== 0 && <h2>Previous Programs</h2>}
       <Grid>
