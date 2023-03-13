@@ -37,6 +37,11 @@
       "link": "/office-hours"
     },
     {
+      "name": "Server Status",
+      "link": "https://status.eauw.org",
+      "external": true
+    },
+    {
       "name": "Anonymous Feedback",
       "link": "/feedback",
       "external": true
