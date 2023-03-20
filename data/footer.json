@@ -38,7 +38,7 @@
     },
     {
       "name": "Server Status",
-      "link": "https://status.eauw.org",
+      "link": "https://status.eauw.org/status/services",
       "external": true
     },
     {
