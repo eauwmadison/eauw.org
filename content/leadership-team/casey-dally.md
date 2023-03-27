@@ -2,7 +2,7 @@
 name: Casey (Declan) Dally
 pronouns: she/they
 role: Treasurer, Campus Relations Coordinator
-image: /images/uploads/20230119-104608.jpg
+image: /images/uploads/meh-prof-headshot.jpg
 calUsername:
 executive: true
 previous: false
