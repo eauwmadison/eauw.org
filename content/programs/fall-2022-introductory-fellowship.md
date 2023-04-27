@@ -5,7 +5,7 @@ startingDate: 2023-02-20T00:00:00Z
 semester: Spring 2023
 duration: 5 weeks
 main: true
-previous: false
+previous: true
 applicationLink: https://eauw.org/apply
 applicationDeadline: 2023-02-14T23:59:00Z
 parentGroup: EA UW

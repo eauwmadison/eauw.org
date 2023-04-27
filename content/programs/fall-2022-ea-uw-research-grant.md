@@ -8,7 +8,7 @@ applicationLink: /research-grant
 applicationDeadline: 2023-01-24T00:00:00Z
 main: false
 parentGroup: EA UW
-previous: false
+previous: true
 priority: 2
 ---
 

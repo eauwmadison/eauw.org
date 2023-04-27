@@ -4,10 +4,10 @@ image: /images/uploads/img-7867.jpg
 startingDate: 2022-11-20T00:00:00Z
 semester: Spring 2023
 duration: 2 weeks
-main: "yes"
+main: false
 applicationLink:
 applicationDeadline:
-previous:
+previous: true
 parentGroup: EA UW
 priority: 4
 ---
