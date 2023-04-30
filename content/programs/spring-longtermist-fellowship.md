@@ -5,7 +5,7 @@ startingDate: 2023-02-20T00:00:00Z
 semester: Spring 2023
 duration: 5 weeks
 main: false
-previous: false
+previous: true
 applicationLink: >-
   https://docs.google.com/forms/d/e/1FAIpQLSetR3JMwTEtDKpGx3PVUuDBHBHYpQx8Dp3nrFVEvxLDD_uBtg/viewform?usp=sf_link
 applicationDeadline: "2023-02-14T00:00:00.000Z"

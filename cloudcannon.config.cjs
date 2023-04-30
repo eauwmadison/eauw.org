@@ -45,9 +45,9 @@ module.exports = {
       "YouTube"
     ],
     parentGroups: [
-      "AI Safety",
+      "Wisconsin AI Safety Initiative",
       "Animal Advocacy",
-      "Biosecurity",
+      "Wisconsin Biosecurity Initiative",
       "EA UW",
       "Good Futures"
     ]
