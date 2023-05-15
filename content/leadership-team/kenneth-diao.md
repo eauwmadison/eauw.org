@@ -2,7 +2,7 @@
 name: Kenneth Diao
 pronouns: he/him
 role: Communications Lead, Fellowship Coordinator
-image:
+image: /images/uploads/kenneth-pic.jpg
 executive: true
 previous: false
 hidden: false
