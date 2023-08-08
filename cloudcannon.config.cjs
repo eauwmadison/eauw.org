@@ -69,12 +69,6 @@ module.exports = {
       _icon: "wysiwyg",
       _enabled_editors: ["visual", "data"]
     },
-    projects: {
-      path: "content/projects",
-      url: "/projects/[slug]",
-      output: true,
-      _enabled_editors: ["visual", "content", "data"]
-    },
     leadership_team: {
       path: "content/leadership-team",
       output: false,

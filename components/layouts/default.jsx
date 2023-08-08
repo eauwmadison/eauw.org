@@ -11,6 +11,7 @@ import { NextSeo } from "next-seo";
 /* first-party component imports */
 import Icon from "../../components/icon";
 import NavigationBar from "../navigation-bar";
+import MailingList from "../mailing-list";
 
 /* site data */
 import siteData from "../../lib/data";
@@ -197,55 +198,7 @@ export default function DefaultLayout({ children, page }) {
               ))}
             </ul>
 
-            <ul className="footer-links">
-              <li>
-                <div className="organization-group">
-                  <h2 className="organization-name">
-                    {siteData.organization.organizationName}
-                  </h2>
-                  <h2 className="organization-subheading">
-                    {siteData.organization.organizationSubheading}
-                  </h2>
-                </div>
-              </li>
-              <li className="organization-description">
-                {siteData.organization.description}
-              </li>
-              <li>
-                <form
-                  className="footer-subscription-form"
-                  onSubmit={handleSubmit}
-                >
-                  <h3>Stay up-to-date!</h3>
-                  {!formSubmitted ? (
-                    <>
-                      <input
-                        placeholder="First name"
-                        type="text"
-                        name="firstName"
-                        required
-                      />
-                      <input
-                        placeholder="Email"
-                        type="email"
-                        name="email"
-                        required
-                      />
-                      <button className="btn" type="submit">
-                        <span>Subscribe</span>
-                      </button>
-                    </>
-                  ) : (
-                    <div className="footer-subscription-confirmation">
-                      <p>
-                        Thanks, {firstName}! Check your inbox for a
-                        confirmation. 🙂
-                      </p>
-                    </div>
-                  )}
-                </form>
-              </li>
-            </ul>
+            <MailingList />
           </div>
         </div>
 

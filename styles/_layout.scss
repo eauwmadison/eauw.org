@@ -151,7 +151,7 @@ footer {
 }
 
 @media (min-width: $md-break) {
-  .image-and-text {
+  .two-columns {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "left right";
@@ -167,13 +167,8 @@ footer {
   }
 }
 
-.image-and-text img {
-  display: block;
-  width: 100%;
-  height: fit-content;
-  border-radius: 4px;
-  flex: 1;
-  min-height: 0;
+.justify-self-end {
+  justify-self: end;
 }
 
 .info-subtitle {
