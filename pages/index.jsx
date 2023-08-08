@@ -57,7 +57,7 @@ export default function Home({ page, popups }) {
             </a> */}
           </div>
 
-          <div className="grid-right beige-section container">
+          <div className="grid-right blue-section">
             <MailingList
               useClubName={false}
               useDescription={false}

@@ -11,6 +11,10 @@
     {
       "name": "Contact",
       "link": "/contact"
+    },
+    {
+      "name": "Events",
+      "link": "/events"
     }
   ]
 }

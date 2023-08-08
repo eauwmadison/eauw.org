@@ -48,8 +48,7 @@ module.exports = {
       "Wisconsin AI Safety Initiative",
       "Animal Advocacy",
       "Wisconsin Biosecurity Initiative",
-      "EA UW",
-      "Good Futures"
+      "EA UW"
     ]
   },
 
