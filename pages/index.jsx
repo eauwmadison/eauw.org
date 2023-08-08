@@ -31,7 +31,7 @@ export default function Home({ page, popups }) {
 
           <div className="grid-left">
             <h2 className="editable">
-              We're a community at UW&ndash;Madison aiming to tackle the world's
+              We’re a community at UW&ndash;Madison aiming to tackle the world’s
               most pressing problems.
             </h2>
             <p className="editable">
