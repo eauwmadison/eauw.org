@@ -57,19 +57,24 @@ export default function Home({ page, popups }) {
             </a> */}
           </div>
 
-          <div className="grid-right justify-self-end">
-            <MailingList useDescription={false} />
-            {/* <a
-              className="btn btn-go"
-              href="https://go.eauw.org/slack"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Join our Slack <Icon icon="Slack" />
-            </a> */}
+          <div className="grid-right beige-section container">
+            <MailingList
+              useClubName={false}
+              useDescription={false}
+              userAsk="Join our mailing list!"
+            />
           </div>
         </div>
       </section>
+
+      {/* <section className="">
+        <ExportedImage
+          src={page.mainImage}
+          alt="EA UW&ndash;Madison members"
+          width="1146"
+          height="828"
+        />
+      </section> */}
 
       <section className="beige-section">
         <div className="container">

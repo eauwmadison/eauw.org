@@ -4,7 +4,11 @@ import { useState } from "react";
 /* site data */
 import siteData from "../lib/data";
 
-export default function MailingList({ useDescription = true }) {
+export default function MailingList({
+  useClubName = true,
+  useDescription = true,
+  userAsk = "Stay up-to-date!"
+}) {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [firstName, setFirstName] = useState("");
 
@@ -44,14 +48,16 @@ export default function MailingList({ useDescription = true }) {
     <>
       <ul className="footer-links">
         <li>
-          <div className="organization-group">
-            <h2 className="organization-name">
-              {siteData.organization.organizationName}
-            </h2>
-            <h2 className="organization-subheading">
-              {siteData.organization.organizationSubheading}
-            </h2>
-          </div>
+          {useClubName && (
+            <div className="organization-group">
+              <h2 className="organization-name">
+                {siteData.organization.organizationName}
+              </h2>
+              <h2 className="organization-subheading">
+                {siteData.organization.organizationSubheading}
+              </h2>
+            </div>
+          )}
         </li>
         {useDescription && (
           <li className="organization-description">
@@ -60,7 +66,7 @@ export default function MailingList({ useDescription = true }) {
         )}
         <li>
           <form className="footer-subscription-form" onSubmit={handleSubmit}>
-            <h3>Stay up-to-date!</h3>
+            <h3>{userAsk}</h3>
             {!formSubmitted ? (
               <>
                 <input
