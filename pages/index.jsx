@@ -67,14 +67,15 @@ export default function Home({ page, popups }) {
         </div>
       </section>
 
-      {/* <section className="">
+      <div className="banner-image">
         <ExportedImage
-          src={page.mainImage}
+          className="image"
+          src="/images/uploads/banner-image.jpg"
           alt="EA UW&ndash;Madison members"
           width="1146"
           height="828"
         />
-      </section> */}
+      </div>
 
       <section className="beige-section">
         <div className="container">
