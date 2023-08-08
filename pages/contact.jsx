@@ -66,6 +66,16 @@ export default function Contact({ page, placeholders, popups }) {
             </a>
           </p>
 
+          <label>Meet with an Organizer</label>
+          <a
+            className="contact-info btn btn-small btn-go"
+            href={data.organization.organizerCalendly}
+            rel="noreferrer"
+          >
+            Book a 1:1 Meeting
+            <Icon icon="Go" />
+          </a>
+
           <label>Email Address</label>
           <p className="contact-info">
             <a href={`mailto:${data.organization.contactEmailAddress}`}>
