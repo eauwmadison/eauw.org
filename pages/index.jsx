@@ -6,11 +6,11 @@ import PageLayout from "../components/layouts/page";
 import Calendar from "../components/calendar";
 import Icon from "../components/icon";
 import MailingList from "../components/mailing-list";
-
 /* third-party component imports */
 import useMediaQuery from "@mui/material/useMediaQuery";
 
 /* site data */
+import data from "../lib/data";
 import { getCollection, getCollectionItem } from "../lib/collections";
 
 export default function Home({ page, popups }) {
@@ -19,17 +19,8 @@ export default function Home({ page, popups }) {
   return (
     <PageLayout page={page} popups={popups}>
       <section className="main container">
-        <div className="two-columns">
-          {/* <div className="grid-left">
-            <ExportedImage
-              src={page.mainImage}
-              alt="members"
-              width={1146}
-              height={828}
-            />
-          </div> */}
-
-          <div className="grid-left">
+        <div className="two-columns-uneven">
+          <div className="grid-left blue">
             <h2 className="editable">
               We’re a community at UW&ndash;Madison aiming to tackle the world’s
               most pressing problems.
@@ -46,23 +37,26 @@ export default function Home({ page, popups }) {
               community of people supporting each other in our shared pursuit of
               helping others.
             </p>
-            {/* <a
-              className="btn btn-go"
-              href="https://www.effectivealtruism.org/articles/introduction-to-effective-altruism"
-              target="_blank"
-              rel="noreferrer"
-            >
-              {small ? "Learn more" : "Learn more about effective altruism"}
-              <Icon icon="Go" />
-            </a> */}
           </div>
 
-          <div className="grid-right blue-section">
+          <div className="grid-right small-blue-section two-rows">
             <MailingList
+              className="grid-top"
               useClubName={false}
               useDescription={false}
               userAsk="Join our mailing list!"
             />
+
+            <div className="grid-bottom justify-self-center align-self-end">
+              <a
+                className="contact-info btn-light btn btn-small btn-go"
+                href={data.social.links[0].link}
+                rel="noreferrer"
+              >
+                <b>Join our Slack!</b>
+                <Icon icon="Slack" />
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -132,8 +126,14 @@ export default function Home({ page, popups }) {
         </section>
       )}
 
+      <section className="beige-section">
+        <div className="container">
+          <h2>What We Offer</h2>
+        </div>
+      </section>
+
       {page.testimonials && (
-        <section className="beige-section">
+        <section className="white-section">
           <div className="container">
             <div className="testimonials">
               {page.testimonials.map((testimonial, i) => (

@@ -163,9 +163,9 @@ footer {
 }
 
 @media (min-width: $md-break) {
-  .two-columns {
+  .two-columns-uneven {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 0.8fr;
     grid-template-areas: "left right";
     column-gap: 40px;
   }
@@ -177,6 +177,29 @@ footer {
   .grid-right {
     grid-area: right;
   }
+}
+
+.two-rows {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-areas: "top" "bottom";
+  row-gap: 40px;
+}
+
+.grid-top {
+  grid-area: top;
+}
+
+.grid-bottom {
+  grid-area: bottom;
+}
+
+.justify-self-center {
+  justify-self: center;
+}
+
+.align-self-end {
+  align-self: end;
 }
 
 .info-subtitle {
@@ -234,6 +257,16 @@ footer {
 
   .btn {
     @extend .btn-light;
+  }
+}
+
+.small-blue-section {
+  @extend .blue-section;
+
+  padding: 15px 10px;
+
+  @media (min-width: $sm-break) {
+    padding: 20px 20px;
   }
 }
 
