@@ -9,6 +9,7 @@ previous: false
 hidden: false
 priority: 1
 ---
-Max is a junior studying Philosophy and Statistics and has been passionate about EA since early 2020. He's especially interested in the philosophical justifications for EA and ethics more broadly. Apart from EA, he loves recreational sports, weight lifting, podcasts, running, board games, and *Smash Ultimate*. He's excited bringing the ideas of effective altruism to UW–Madison and building a campus community of altruists dedicated to doing as much good possible.
 
-I'd love to meet and talk, set something up using this&nbsp;[link](https://calendly.com/maxgehred/30min)
+Hey, my name is Max : ) I'm a senior studying Statistics and Philosophy, and I've been involved in this group since it began. I want to pursue a career in politics because I thinks it's my best opportunity to improve the lives of others. I'm especially interested in ethics, economic policy, politically palatable animal welfare reform, and addressing oft-neglected tail risks. I also like basketball, ultimate frisbee, smash ultimate, and lots of music.
+
+If you want to do good with your career, I think we can help you! You should [meet with me](https://calendly.com/maxgehred/30min?month=2023-08) if you want to learn more - cheers!
