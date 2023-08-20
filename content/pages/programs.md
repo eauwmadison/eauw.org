@@ -1,5 +1,6 @@
 ---
 title: Programs
 callToAction: Contact
-showTitle: false # there is a header that says "Current Programs" above the programs
+showTitle: true
+contentHTML: "<p>We host discussion groups and fellowships to learn about the best ways to help others.</p>"
 ---

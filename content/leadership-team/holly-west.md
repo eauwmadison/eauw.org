@@ -3,10 +3,10 @@ name: Holly West
 pronouns: she/her
 image: /images/uploads/holly-west.jpg
 role:
-executive: false
+executive: true
 previous: false
 hidden: false
-priority: "2"
+priority: 3
 calUsername:
 ---
 

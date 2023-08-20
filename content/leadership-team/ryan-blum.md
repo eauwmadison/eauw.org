@@ -3,10 +3,10 @@ name: Ryan Blum
 pronouns: he/him
 image:
 role: Animal Advocacy UW Lead, Co-Founder of Alt Protein Project
-executive: false
+executive: true
 previous: false
 hidden: false
-priority: "2"
+priority: 4
 calUsername:
 ---
 
