@@ -24,15 +24,17 @@ export default function ProgramLayout({ page, popups }) {
       )}
 
       {page.applicationLink && (
-        <a
-          className="btn btn-go"
-          href={page.applicationLink}
-          target="_blank"
-          rel="noreferrer"
-        >
-          {small ? "Apply Now" : `Apply to the ${page.title}`}
-          <Icon icon="Go" />
-        </a>
+        <div className="btn-center-container">
+          <a
+            className="btn btn-go"
+            href={page.applicationLink}
+            target="_blank"
+            rel="noreferrer"
+          >
+            {small ? "Apply Now" : `Apply to the ${page.title}`}
+            <Icon icon="Go" />
+          </a>
+        </div>
       )}
 
       {page.descriptionHTML && (

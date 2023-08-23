@@ -1,5 +1,5 @@
 ---
-title: EA Intro Fellowship
+title: Intro to EA Fellowship
 priority: 1
 applicationLink: https://eauw.org/apply
 callToAction: Contact

@@ -16,5 +16,27 @@
       "name": "Team",
       "link": "/team"
     }
+  ],
+  "programs": [
+    {
+      "name": "EA Intro Fellowship",
+      "link": "/programs/ea-intro-fellowship"
+    },
+    {
+      "name": "Animal Ethics Fellowship",
+      "link": "/programs/animal-ethics"
+    },
+    {
+      "name": "Biosecurity Discusson Group",
+      "link": "/programs/biosecurity"
+    },
+    {
+      "name": "Intro to AI Safety",
+      "link": "/programs/ai-safety"
+    },
+    {
+      "name": "AI Governance",
+      "link": "/programs/ai-governance"
+    }
   ]
 }

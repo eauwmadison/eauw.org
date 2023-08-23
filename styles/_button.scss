@@ -72,6 +72,12 @@
   }
 }
 
+.btn-center-container {
+  display: flex;
+  justify-content: center;
+  margin: 2em;
+}
+
 .btn-flipped {
   svg {
     margin-left: 0;

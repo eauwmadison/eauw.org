@@ -14,16 +14,8 @@ export default function ProgramPage({ page, popups }) {
 
 export async function getStaticPaths() {
   const slugs = await getCollectionSlugs("pages/programs");
-  // const ignored = {
-  //   index: true,
-  //   team: true,
-  //   programs: true,
-  //   contact: true,
-  //   projects: true
-  // };
 
   return {
-    // paths: slugs.filter(({ params }) => !ignored[params.slug]),
     paths: slugs,
     fallback: false
   };

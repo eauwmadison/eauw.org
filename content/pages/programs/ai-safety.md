@@ -1,5 +1,5 @@
 ---
-title: AI Safety Technical
+title: Intro to AI Safety Discussion Group
 priority: 3
 applicationLink:
 callToAction: Contact

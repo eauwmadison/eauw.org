@@ -13,7 +13,6 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 
 /* site data */
 import siteData from "../lib/data";
-import getPrograms from "../pages/api/programs";
 
 const MenuIcon = ({ open, onChange }) => (
   <div className="menu-icon">
@@ -34,16 +33,9 @@ const MenuIcon = ({ open, onChange }) => (
 );
 
 export default function NavigationBar({ links, currentPage }) {
-  // Fetch content from content/pages/programs on page load. Store in programs state.
-  // This is used to populate the dropdown menu for the Programs link in the navbar.
-  const [programs, setPrograms] = useState([]);
   useEffect(() => {
-    fetch("/api/programs")
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        setPrograms(data);
-      });
+    const programs = siteData.navbar.programs;
+    console.log(programs.map((program) => program.name));
   }, []);
 
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -91,20 +83,15 @@ export default function NavigationBar({ links, currentPage }) {
                         {link.name}
                       </Link>
                       <div className="dropdown-container">
-                        {programs
-                          .sort((a, b) => a.priority - b.priority)
-                          .map(
-                            (program, i) =>
-                              program.slug && (
-                                <Link
-                                  className="dropdown-link"
-                                  href={"/programs/" + program.slug}
-                                  key={program.slug}
-                                >
-                                  {program.title}
-                                </Link>
-                              )
-                          )}
+                        {siteData.navbar.programs.map((program) => (
+                          <Link
+                            className="dropdown-link"
+                            href={program.link}
+                            key={program.link}
+                          >
+                            {program.name}
+                          </Link>
+                        ))}
                       </div>
                     </div>
                   );

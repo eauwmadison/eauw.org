@@ -9,6 +9,7 @@ export default function IntroToEA({ page, popups, programs }) {
     <PageLayout page={page} popups={popups}>
       <ul>
         {programs
+          .filter((program) => program.slug !== "README")
           .sort((a, b) => a.priority - b.priority)
           .map((program, i) => (
             <li key={i}>

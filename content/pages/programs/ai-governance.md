@@ -1,5 +1,5 @@
 ---
-title: AI Safety Governance
+title: AI Governance Discussion Group
 priority: 4
 applicationLink:
 callToAction: Contact
