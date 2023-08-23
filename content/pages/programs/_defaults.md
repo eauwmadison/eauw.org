@@ -5,6 +5,8 @@ applicationLink:
 callToAction: Contact
 introHTML:
 descriptionHTML:
-showTopics: false
+topics:
+  - title: Sample Header
+    contentHTML: <p>Sample Information</p>
 whoShouldApplyHTML:
 ---

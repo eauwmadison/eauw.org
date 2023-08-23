@@ -34,8 +34,12 @@ const MenuIcon = ({ open, onChange }) => (
 
 export default function NavigationBar({ links, currentPage }) {
   useEffect(() => {
-    const programs = siteData.navbar.programs;
-    console.log(programs.map((program) => program.name));
+    console.log("/" + currentPage);
+    console.log(
+      siteData.navbar.programs
+        .map((program) => program.link)
+        .includes("/" + currentPage)
+    );
   }, []);
 
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -77,7 +81,12 @@ export default function NavigationBar({ links, currentPage }) {
                         href={link.link}
                         key={link.link}
                         className={
-                          "/" + currentPage === link.link ? "active" : ""
+                          "/" + currentPage === link.link ||
+                          siteData.navbar.programs
+                            .map((program) => program.link)
+                            .includes("/" + currentPage)
+                            ? "active"
+                            : ""
                         }
                       >
                         {link.name}
@@ -86,7 +95,7 @@ export default function NavigationBar({ links, currentPage }) {
                         {siteData.navbar.programs.map((program) => (
                           <Link
                             className="dropdown-link"
-                            href={program.link}
+                            href={"/programs/" + program.link}
                             key={program.link}
                           >
                             {program.name}

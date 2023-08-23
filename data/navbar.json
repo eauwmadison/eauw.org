@@ -20,23 +20,23 @@
   "programs": [
     {
       "name": "EA Intro Fellowship",
-      "link": "/programs/ea-intro-fellowship"
+      "link": "/ea-intro-fellowship"
     },
     {
       "name": "Animal Ethics Fellowship",
-      "link": "/programs/animal-ethics"
+      "link": "/animal-ethics"
     },
     {
       "name": "Biosecurity Discusson Group",
-      "link": "/programs/biosecurity"
+      "link": "/biosecurity"
     },
     {
       "name": "Intro to AI Safety",
-      "link": "/programs/ai-safety"
+      "link": "/ai-safety"
     },
     {
       "name": "AI Governance",
-      "link": "/programs/ai-governance"
+      "link": "/ai-governance"
     }
   ]
 }

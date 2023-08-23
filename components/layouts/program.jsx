@@ -2,6 +2,7 @@
 import DefaultLayout from "./default";
 import Popup from "../popup";
 import Icon from "../icon";
+import Accordion from "../accordion";
 
 /* third-party component imports */
 import useMediaQuery from "@mui/material/useMediaQuery";
@@ -44,6 +45,8 @@ export default function ProgramLayout({ page, popups }) {
           )}
         </article>
       )}
+
+      {page.topics && <Accordion topics={page.topics} />}
 
       {page.whoShouldApplyHTML && (
         <article>

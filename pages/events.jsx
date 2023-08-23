@@ -9,16 +9,14 @@ import { getCollection, getCollectionItem } from "../lib/collections";
 export default function Events({ page, popups }) {
   return (
     <PageLayout page={page} popups={popups}>
-      <section className="white-section calendar container">
-        <h2>Upcoming Events</h2>
-        <div className="info-subtitle">
-          <Icon icon="Info" />
-          <p className="editable">
-            All events are free and open to the public unless otherwise noted.
-          </p>
-        </div>
-        <Calendar maxEvents={6} />
-      </section>
+      <h2>Upcoming Events</h2>
+      <div className="info-subtitle">
+        <Icon icon="Info" />
+        <p className="editable">
+          All events are free and open to the public unless otherwise noted.
+        </p>
+      </div>
+      <Calendar maxEvents={6} />
     </PageLayout>
   );
 }

@@ -1,6 +1,9 @@
 {
   "_README": [
-    "This file is now DEPRECATED.",
+    "--------------------------------------------------------------------------------",
+
+    "This file is DEPRECATED as of August 22, 2023.",
+
     "It previously interacted with content/archived-programs and the previous programs.jsx page.",
     "For more information on its usage, see this previous commit:",
     "https://github.com/eauwmadison/eauw.org/tree/02c3d419d9632eb36a757aa87d847a5699e04ee6",
@@ -8,7 +11,9 @@
     "Previous description:",
     "If you add a new group, THIS IS NOT THE ONLY FILE YOU MUST EDIT.",
     "The new group must also be added to CloudCannon as an option for drop-down menus.",
-    "Navigate to cloudcannon.config.cjs, then _select_data, then add to parentGroups."
+    "Navigate to cloudcannon.config.cjs, then _select_data, then add to parentGroups.",
+
+    "--------------------------------------------------------------------------------"
   ],
 
   "default": "All Programs",

@@ -29,7 +29,7 @@ module.exports = {
     startingDate: "The first day of the week when the fellowship begins",
     testimonials: "Update, add or remove testimonials",
     whoShouldApplyHTML:
-      "A paragraph description of who should apply. Shown third"
+      "A paragraph description of who should apply. Shown last"
   },
 
   "_select_data": {
@@ -48,12 +48,40 @@ module.exports = {
       "WIN",
       "YouTube"
     ],
+    // These parentGroups were for the previous iteration of
+    // the Programs page. As of August 22, 2023, they are not
+    // used.
     parentGroups: [
       "Wisconsin AI Safety Initiative",
       "Animal Advocacy",
       "Wisconsin Biosecurity Initiative",
       "EA UW"
     ]
+  },
+
+  // As of August 22, 2023, the _input and _structures sections
+  // are just for content/pages/programs. But feel free to edit this
+  // as needed.
+  // https://cloudcannon.com/documentation/articles/using-arrays-to-edit-your-data/
+  "_input": {
+    topics: {
+      type: "array",
+      structures: "_structures.topics"
+    }
+  },
+
+  // https://cloudcannon.com/documentation/articles/defining-what-adds-to-an-array-with-array-structures/
+  "_structures": {
+    topics: {
+      values: [
+        {
+          value: {
+            title: null,
+            contentHTML: null
+          }
+        }
+      ]
+    }
   },
 
   "paths": {

@@ -64,16 +64,17 @@
   position: absolute;
   display: flex;
   flex-direction: column;
+  left: -0.9em;
 }
 
 .dropdown-link {
   display: none; // hide by default
 
   position: relative;
-  padding: 1em;
+  padding: 0.5em 1em;
   margin-right: -10em;
   background-color: $light-blue;
-  font-size: small;
+  font-size: 0.9em;
 }
 
 // show dropdown on hover

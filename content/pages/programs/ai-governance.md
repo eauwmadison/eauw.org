@@ -5,6 +5,6 @@ applicationLink:
 callToAction: Contact
 introHTML:
 descriptionHTML:
-showTopics: false
+topics:
 whoShouldApplyHTML:
 ---

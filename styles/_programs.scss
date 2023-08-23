@@ -2,79 +2,128 @@
 @import "typography";
 @import "card";
 
-.programs-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  margin-top: 2em;
-  row-gap: 24px;
-  column-gap: 24px;
-
-  @media (min-width: $sm-break) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @media (min-width: $lg-break) {
-    grid-template-columns: repeat(4, 1fr);
-  }
+.accordion {
+  border-bottom: 2px solid $color-ea-primary;
+  margin-bottom: 2em;
 }
 
-.program-link {
-  display: contents;
-  color: $color-ea-dark;
-
-  &:hover {
-    color: $color-ea-dark;
-  }
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 2px solid $color-ea-primary;
+  padding: 1.5em 0;
+  cursor: pointer;
 }
 
-.program {
-  @extend .card;
-
-  p:first-of-type {
-    margin-top: 0;
-  }
-
-  &.main {
-    ::selection,
-    ::-moz-selection {
-      background-color: $color-ea-primary;
-    }
-
-    grid-row: span 2;
-    grid-column: span 2;
-
-    border: 1px solid black;
-    background-color: $color-ea-dark;
-    color: $color-ea-beige;
-
-    a {
-      color: $color-ea-light;
-
-      &:hover {
-        color: $light-blue;
-      }
-    }
-
-    svg {
-      fill: $color-ea-beige;
-    }
-
-    .header {
-      border-color: $color-ea-beige;
-    }
-
-    .type {
-      background-color: $color-ea-beige;
-      color: $color-ea-dark;
-    }
-  }
-
-  &.hover {
-    cursor: pointer;
-  }
-
-  @media (max-width: $sm-break) {
-    grid-row: span 2;
-    grid-column: span 2;
-  }
+.accordion-icon {
+  fill: $color-ea-primary;
+  font-size: 1.5em;
 }
+
+.accordion-content {
+  display: none;
+}
+
+.accordion-active {
+  display: block;
+}
+
+/*
+
+------------------------------------ README ------------------------------------
+
+As of August 22, 2023, the content below this README is deprecated
+and is only kept for future reference.
+
+It previously interacted with:
+
+- data/parent-groups.json
+- pages/programs.jsx
+- content/archived-programs
+
+For more information on their usage, see this previous commit:
+https://github.com/eauwmadison/eauw.org/tree/02c3d419d9632eb36a757aa87d847a5699e04ee6
+
+If you feel that you can delete this without consequences, go for it!
+
+--------------------------------------------------------------------------------
+
+*/
+
+// .programs-grid {
+//   display: grid;
+//   grid-template-columns: 1fr;
+//   margin-top: 2em;
+//   row-gap: 24px;
+//   column-gap: 24px;
+
+//   @media (min-width: $sm-break) {
+//     grid-template-columns: repeat(2, 1fr);
+//   }
+
+//   @media (min-width: $lg-break) {
+//     grid-template-columns: repeat(4, 1fr);
+//   }
+// }
+
+// .program-link {
+//   display: contents;
+//   color: $color-ea-dark;
+
+//   &:hover {
+//     color: $color-ea-dark;
+//   }
+// }
+
+// .program {
+//   @extend .card;
+
+//   p:first-of-type {
+//     margin-top: 0;
+//   }
+
+//   &.main {
+//     ::selection,
+//     ::-moz-selection {
+//       background-color: $color-ea-primary;
+//     }
+
+//     grid-row: span 2;
+//     grid-column: span 2;
+
+//     border: 1px solid black;
+//     background-color: $color-ea-dark;
+//     color: $color-ea-beige;
+
+//     a {
+//       color: $color-ea-light;
+
+//       &:hover {
+//         color: $light-blue;
+//       }
+//     }
+
+//     svg {
+//       fill: $color-ea-beige;
+//     }
+
+//     .header {
+//       border-color: $color-ea-beige;
+//     }
+
+//     .type {
+//       background-color: $color-ea-beige;
+//       color: $color-ea-dark;
+//     }
+//   }
+
+//   &.hover {
+//     cursor: pointer;
+//   }
+
+//   @media (max-width: $sm-break) {
+//     grid-row: span 2;
+//     grid-column: span 2;
+//   }
+// }
