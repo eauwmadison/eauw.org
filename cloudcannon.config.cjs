@@ -6,11 +6,13 @@ module.exports = {
     callToAction: "Type of request shown at the bottom of this page",
     calUsername: "Username for https://cal.com/",
     contactEmailAddress: "Address to be displayed on the Contact page",
+    descriptionHTML: "A paragraph description of the program. Shown second",
     excerptHtml: "The HTML preview for a project summary",
     executive: "Toggles whether the leader is a member of the executive team",
     fullWidth:
       "Content stretches to the full width of the page. (Not recommended unless you know what you're doing.)",
     hidden: "Whether the element is shown",
+    introHTML: "1-2 sentence introduction to the program. Shown first",
     maxEvents: "The maximum number of events to show on the page",
     newTab: "Whether the link opens a new browser tab",
     page: 'Page to display on. ("index" for home page.)',
@@ -25,7 +27,9 @@ module.exports = {
       "Displays as a small horizontal banner at the bottom of the program box",
     showTitle: "Toggles the title on the page",
     startingDate: "The first day of the week when the fellowship begins",
-    testimonials: "Update, add or remove testimonials"
+    testimonials: "Update, add or remove testimonials",
+    whoShouldApplyHTML:
+      "A paragraph description of who should apply. Shown third"
   },
 
   "_select_data": {

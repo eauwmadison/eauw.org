@@ -1,5 +1,5 @@
 ---
-title: Global Catastrophic Biological Risks Discussion Group
+title: Biosecurity
 priority: 2
 applicationLink:
 callToAction: Contact

@@ -1,20 +1,20 @@
 {
   "links": [
     {
-      "name": "Team",
-      "link": "/team"
-    },
-    {
       "name": "Programs",
       "link": "/programs"
+    },
+    {
+      "name": "Events",
+      "link": "/events"
     },
     {
       "name": "Contact",
       "link": "/contact"
     },
     {
-      "name": "Events",
-      "link": "/events"
+      "name": "Team",
+      "link": "/team"
     }
   ]
 }

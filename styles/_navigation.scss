@@ -29,7 +29,7 @@
 .drawer {
   background-color: $light-blue;
   color: $color-ea-dark;
-  border-left: 1px solid $color-ea-dark;
+  // border-left: 1px solid $color-ea-dark;
   z-index: 10;
   box-shadow: none;
 
@@ -44,6 +44,8 @@
   .links {
     @extend .footer-links;
 
+    text-align: center;
+
     &:first-child {
       margin-top: 10rem;
     }
@@ -52,6 +54,32 @@
       border-bottom: 2px solid;
     }
   }
+}
+
+.dropdown-menu {
+  position: relative;
+}
+
+.dropdown-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-link {
+  display: none; // hide by default
+
+  position: relative;
+  padding: 1em;
+  margin-right: -10em;
+  background-color: $light-blue;
+  font-size: small;
+}
+
+// show dropdown on hover
+.dropdown-menu:hover .dropdown-link,
+.dropdown-link:hover {
+  display: block;
 }
 
 // https://codepen.io/fromwireframes

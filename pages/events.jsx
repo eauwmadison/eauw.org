@@ -3,14 +3,12 @@ import PageLayout from "../components/layouts/page";
 import Calendar from "../components/calendar";
 import Icon from "../components/icon";
 
-export default function Events() {
+/* site data */
+import { getCollection, getCollectionItem } from "../lib/collections";
+
+export default function Events({ page, popups }) {
   return (
-    <PageLayout
-      page={{
-        title: "Events",
-        callToAction: "Contact"
-      }}
-    >
+    <PageLayout page={page} popups={popups}>
       <section className="white-section calendar container">
         <h2>Upcoming Events</h2>
         <div className="info-subtitle">
@@ -23,4 +21,16 @@ export default function Events() {
       </section>
     </PageLayout>
   );
+}
+
+export async function getStaticProps() {
+  const page = await getCollectionItem("pages", "events");
+  const popups = await getCollection("popups");
+
+  return {
+    props: {
+      page: JSON.parse(JSON.stringify(page)),
+      popups
+    }
+  };
 }

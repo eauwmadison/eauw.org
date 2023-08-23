@@ -1,5 +1,5 @@
 ---
-title: AI Safety Discussion Group
+title: AI Safety Technical
 priority: 3
 applicationLink:
 callToAction: Contact
