@@ -1,6 +1,10 @@
 {
   "links": [
     {
+      "name": "Home",
+      "link": "/"
+    },
+    {
       "name": "Programs",
       "link": "/programs"
     },

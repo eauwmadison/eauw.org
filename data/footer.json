@@ -5,16 +5,20 @@
       "link": "/"
     },
     {
-      "name": "Team",
-      "link": "/team"
-    },
-    {
       "name": "Programs",
       "link": "/programs"
     },
     {
+      "name": "Events",
+      "link": "/events"
+    },
+    {
       "name": "Contact",
       "link": "/contact"
+    },
+    {
+      "name": "Team",
+      "link": "/team"
     },
     {
       "name": "Apply",

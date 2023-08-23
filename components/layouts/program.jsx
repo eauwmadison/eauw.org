@@ -12,31 +12,27 @@ export default function ProgramLayout({ page, popups }) {
 
   return (
     <DefaultLayout page={page}>
-      <div className="page-header">
+      <div className="page-header beige-section">
         <h2>{page.title}</h2>
+
+        {page.introHTML && (
+          <div dangerouslySetInnerHTML={{ __html: page.introHTML }} />
+        )}
+
+        {page.applicationLink && (
+          <div className="btn-center-container">
+            <a
+              className="btn btn-go"
+              href={page.applicationLink}
+              target="_blank"
+              rel="noreferrer"
+            >
+              {small ? "Apply Now" : `Apply to the ${page.title}`}
+              <Icon icon="Go" />
+            </a>
+          </div>
+        )}
       </div>
-
-      {page.introHTML && (
-        <article>
-          {page.introHTML && (
-            <div dangerouslySetInnerHTML={{ __html: page.introHTML }} />
-          )}
-        </article>
-      )}
-
-      {page.applicationLink && (
-        <div className="btn-center-container">
-          <a
-            className="btn btn-go"
-            href={page.applicationLink}
-            target="_blank"
-            rel="noreferrer"
-          >
-            {small ? "Apply Now" : `Apply to the ${page.title}`}
-            <Icon icon="Go" />
-          </a>
-        </div>
-      )}
 
       {page.descriptionHTML && (
         <article>
@@ -49,7 +45,7 @@ export default function ProgramLayout({ page, popups }) {
       {page.topics && <Accordion topics={page.topics} />}
 
       {page.whoShouldApplyHTML && (
-        <article>
+        <article className="beige-section">
           <h3>Who Should Apply?</h3>
           {page.whoShouldApplyHTML && (
             <div

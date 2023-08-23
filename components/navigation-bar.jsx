@@ -34,12 +34,9 @@ const MenuIcon = ({ open, onChange }) => (
 
 export default function NavigationBar({ links, currentPage }) {
   useEffect(() => {
-    console.log("/" + currentPage);
-    console.log(
-      siteData.navbar.programs
-        .map((program) => program.link)
-        .includes("/" + currentPage)
-    );
+    links.forEach((link) => {
+      console.log(link.link === "/" && currentPage === "index");
+    });
   }, []);
 
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -110,7 +107,10 @@ export default function NavigationBar({ links, currentPage }) {
                       href={link.link}
                       key={link.link}
                       className={
-                        "/" + currentPage === link.link ? "active" : ""
+                        "/" + currentPage === link.link ||
+                        (currentPage === "index" && link.link === "/")
+                          ? "active"
+                          : ""
                       }
                     >
                       {link.name}
@@ -140,7 +140,12 @@ export default function NavigationBar({ links, currentPage }) {
               <Link
                 href={link.link}
                 target={link.external ? "_blank" : "_self"}
-                className={"/" + currentPage === link.link ? "active" : ""}
+                className={
+                  "/" + currentPage === link.link ||
+                  (currentPage === "index" && link.link === "/")
+                    ? "active"
+                    : ""
+                }
               >
                 {link.external && <Icon icon="Link" />}
                 {link.name}
