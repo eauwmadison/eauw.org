@@ -76,26 +76,26 @@ export default function NavigationBar({ links, currentPage }) {
               {links.map((link) => {
                 if (link.name === "Programs") {
                   return (
-                    <div className="dropdown-menu" key="Programs">
-                      <Link
-                        href={link.link}
-                        key={link.link}
-                        className={
-                          "/" + currentPage === link.link ||
-                          siteData.navbar.programs
-                            .map((program) => program.link)
-                            .includes("/" + currentPage)
-                            ? "active"
-                            : ""
-                        }
-                      >
+                    <div
+                      className={
+                        "dropdown-menu " +
+                        ("/" + currentPage === link.link ||
+                        siteData.navbar.programs
+                          .map((program) => program.link)
+                          .includes("/" + currentPage)
+                          ? "active"
+                          : "")
+                      }
+                      key="Programs"
+                    >
+                      <Link href={link.link} key={link.link}>
                         {link.name}
                       </Link>
                       <div className="dropdown-container">
                         {siteData.navbar.programs.map((program) => (
                           <Link
                             className="dropdown-link"
-                            href={"/programs/" + program.link}
+                            href={"/programs" + program.link}
                             key={program.link}
                           >
                             {program.name}
