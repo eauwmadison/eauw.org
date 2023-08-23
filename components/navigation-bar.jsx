@@ -33,12 +33,6 @@ const MenuIcon = ({ open, onChange }) => (
 );
 
 export default function NavigationBar({ links, currentPage }) {
-  useEffect(() => {
-    links.forEach((link) => {
-      console.log(link.link === "/" && currentPage === "index");
-    });
-  }, []);
-
   const [drawerOpen, setDrawerOpen] = useState(false);
   const showMenuIcon = useMediaQuery("(max-width: 900px)");
 

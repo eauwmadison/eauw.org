@@ -34,15 +34,17 @@ export default function ProgramLayout({ page, popups }) {
         )}
       </div>
 
-      {page.descriptionHTML && (
-        <article>
-          {page.descriptionHTML && (
-            <div dangerouslySetInnerHTML={{ __html: page.descriptionHTML }} />
-          )}
-        </article>
-      )}
+      <section className="white-section">
+        {page.descriptionHTML && (
+          <article>
+            {page.descriptionHTML && (
+              <div dangerouslySetInnerHTML={{ __html: page.descriptionHTML }} />
+            )}
+          </article>
+        )}
 
-      {page.topics && <Accordion topics={page.topics} />}
+        {page.topics && <Accordion topics={page.topics} />}
+      </section>
 
       {page.whoShouldApplyHTML && (
         <article className="beige-section">
