@@ -22,7 +22,7 @@ export default function Home({ page, popups }) {
         <div className="two-columns-uneven">
           <div className="grid-left blue">
             <h2 className="editable">
-              We’re a community at UW&ndash;Madison aiming to tackle the world’s
+              We're a community at UW&ndash;Madison aiming to tackle the world's
               most pressing problems.
             </h2>
             <p className="editable">
@@ -33,7 +33,7 @@ export default function Home({ page, popups }) {
             <p className="editable">
               Effective Altruism at UW&ndash;Madison aims to offer students
               tools to figure out how they can make a greater social impact,
-              combining our compassion with evidence and reasoning. We’re also a
+              combining our compassion with evidence and reasoning. We're also a
               community of people supporting each other in our shared pursuit of
               helping others.
             </p>
@@ -76,18 +76,19 @@ export default function Home({ page, popups }) {
           <h2>What is effective altruism?</h2>
           <p>
             Effective altruism is a project that aims to find the best ways to
-            help others, and put them into practice. It’s both a research field,
-            which aims to identify the world’s most pressing problems and the
-            best solutions to them, and a practical community that aims to use
-            those findings to do good.
+            help others, and put them into practice.
+          </p>
+          <p>
+            It’s both a <b>research field</b>, which aims to identify the
+            world’s most pressing problems and the best solutions to them, and a{" "}
+            <b>practical community</b> that aims to use those findings to do
+            good.
           </p>
           <p>
             This project matters because, while many attempts to do good fail,
             some are enormously effective. For instance, some charities help 100
             or even 1,000 times as many people as others, when given the same
-            amount of resources. This means that by thinking carefully about the
-            best ways to help, we can do far more to tackle the world’s biggest
-            problems.
+            amount of resources.
           </p>
           <p>
             People inspired by effective altruism have worked on projects that
@@ -97,9 +98,10 @@ export default function Home({ page, popups }) {
           </p>
           <p>
             They’re not united by any particular solution to the world’s
-            problems, but by a way of thinking. They try to find unusually good
-            ways of helping, such that a given amount of effort goes an
-            unusually long way.
+            problems, but by a way of thinking. They try to find{" "}
+            <i>unusually</i> good ways of helping, such that a given amount of
+            effort goes an unusually long way.
+            <br />
           </p>
           <a
             className="btn btn-go"
@@ -126,14 +128,8 @@ export default function Home({ page, popups }) {
         </section>
       )}
 
-      <section className="beige-section">
-        <div className="container">
-          <h2>What We Offer</h2>
-        </div>
-      </section>
-
       {page.testimonials && (
-        <section className="white-section">
+        <section className="beige-section">
           <div className="container">
             <div className="testimonials">
               {page.testimonials.map((testimonial, i) => (
