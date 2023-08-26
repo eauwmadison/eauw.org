@@ -1,5 +1,5 @@
 ---
-title: Global Catastrophic Biological Risks Discussion Group
+title: Global Catastrophic Biological Risks Course
 priority: 2
 applicationLink:
 callToAction: Contact

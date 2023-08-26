@@ -1,7 +1,7 @@
 ---
 name: Reid Kuenzi
 pronouns: he/him
-role: Faculty Outreach Coordinator, Social Events Lead, Fellowship Coordinator
+role: Mailing List Outreach Coordinator, Social Events Lead, Fellowship Coordinator
 image:
 executive: true
 previous: false

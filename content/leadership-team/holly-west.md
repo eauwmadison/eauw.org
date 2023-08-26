@@ -2,7 +2,7 @@
 name: Holly West
 pronouns: she/her
 image: /images/uploads/holly-west.jpg
-role:
+role: Global Development Project Lead, Newsletter Coordinator
 executive: true
 previous: false
 hidden: false

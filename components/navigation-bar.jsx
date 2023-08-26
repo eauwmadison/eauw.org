@@ -85,7 +85,7 @@ export default function NavigationBar({ links, currentPage }) {
                       <div className="dropdown-container">
                         {siteData.navbar.programs.map((program) => (
                           <Link
-                            className="dropdown-link"
+                            className={"dropdown-link " + program.name}
                             href={"/programs" + program.link}
                             key={program.link}
                           >

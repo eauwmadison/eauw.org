@@ -1,4 +1,12 @@
 @import "colors";
+@import "typography";
+
+// Really jank styling.
+// In components/navigation-bar.jsx, all the programs have their name in the className.
+// This singles out the Intro to EA program and bolds it.
+.EA {
+  font-family: "Rockwell Nova Bold";
+}
 
 .navbar-root {
   background-color: $light-blue !important;

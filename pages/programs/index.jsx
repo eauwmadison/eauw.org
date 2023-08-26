@@ -3,13 +3,18 @@ import PageLayout from "../../components/layouts/page";
 
 /* site data */
 import { getCollection, getCollectionItem } from "../../lib/collections";
+import data from "../../lib/data";
 
-export default function IntroToEA({ page, popups, programs }) {
+export default function Programs({ page, popups, programs }) {
   return (
     <PageLayout page={page} popups={popups}>
       <ul>
         {programs
-          .filter((program) => program.slug !== "README")
+          .filter(
+            (program) =>
+              program.slug !== "README" &&
+              program.slug !== "ea-intro-fellowship"
+          )
           .sort((a, b) => a.priority - b.priority)
           .map((program, i) => (
             <li key={i}>
@@ -17,6 +22,7 @@ export default function IntroToEA({ page, popups, programs }) {
             </li>
           ))}
       </ul>
+      <div dangerouslySetInnerHTML={{ __html: page.contactHTML }} />
     </PageLayout>
   );
 }
