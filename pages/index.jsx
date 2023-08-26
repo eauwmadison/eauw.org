@@ -22,8 +22,8 @@ export default function Home({ page, popups }) {
         <div className="two-columns-uneven">
           <div className="grid-left blue">
             <h2 className="editable">
-              We're a community at UW&ndash;Madison aiming to tackle the world's
-              most pressing problems.
+              We&apos;re a community at UW&ndash;Madison aiming to tackle the
+              world&apos;s most pressing problems.
             </h2>
             <p className="editable">
               Our student group is part of the effective altruism community — a
@@ -33,9 +33,9 @@ export default function Home({ page, popups }) {
             <p className="editable">
               Effective Altruism at UW&ndash;Madison aims to offer students
               tools to figure out how they can make a greater social impact,
-              combining our compassion with evidence and reasoning. We're also a
-              community of people supporting each other in our shared pursuit of
-              helping others.
+              combining our compassion with evidence and reasoning. We&apos;re
+              also a community of people supporting each other in our shared
+              pursuit of helping others.
             </p>
           </div>
 
