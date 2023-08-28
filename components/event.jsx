@@ -178,12 +178,16 @@ export default function Event({ event }) {
               }}
             />
           )}
-          <div
-            className="type"
-            style={{ background: event.type ? `${event.type.color}` : `#999` }}
-          >
-            <span>{event.type ? event.type.name : "Other"}</span>
-          </div>
+          {event.type && (
+            <div
+              className="type"
+              style={{
+                background: event.type.color
+              }}
+            >
+              <span>{event.type.name}</span>
+            </div>
+          )}
         </div>
       </a>
     </ManagedTooltip>
