@@ -5,27 +5,6 @@ import Icon from "./icon";
 export default function Leader({ leader }) {
   return (
     <li className="leader">
-      {/* <div className="leader-image">
-        {leader.image ? (
-          <ExportedImage
-            src={leader.image}
-            alt={`Photo of ${leader.name}`}
-            width="512"
-            height="512"
-            placeholder="blur"
-          />
-        ) : (
-          <ExportedImage
-            src="https://placehold.jp/f4efe9/054d5a/512x512.jpg?text=Image+Coming+Soon"
-            alt={`Placeholder image for ${leader.name}`}
-            width="512"
-            height="512"
-            unoptimized
-            placeholder="blur"
-          />
-        )}
-      </div> */}
-
       <div className="leader-image">
         <div className="image-container">
           {leader.image ? (
