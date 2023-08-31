@@ -27,6 +27,14 @@ footer,
   }
 }
 
+.short-section {
+  padding: 15px 20px;
+
+  @media (min-width: $sm-break) {
+    padding: 40px 40px;
+  }
+}
+
 header,
 footer {
   a {
@@ -226,10 +234,20 @@ footer {
   background-color: $white;
 }
 
+.short-white-section {
+  @extend .white-section;
+  @extend .short-section;
+}
+
 .beige-section {
   @extend .section;
   background-color: $color-ea-beige;
   color: $color-ea-dark;
+}
+
+.short-beige-section {
+  @extend .beige-section;
+  @extend .short-section;
 }
 
 .blue-section {

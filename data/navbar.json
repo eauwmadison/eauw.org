@@ -24,23 +24,28 @@
   "programs": [
     {
       "name": "Intro to EA Fellowship ★",
-      "link": "/ea-intro-fellowship"
+      "link": "/ea-intro-fellowship",
+      "redirect": false
     },
     {
       "name": "Animal Ethics Fellowship",
-      "link": "/animal-ethics"
+      "link": "/animal-ethics",
+      "redirect": false
     },
     {
       "name": "Global Catastrophic Biological Risks",
-      "link": "/biosecurity"
+      "link": "/biosecurity",
+      "redirect": false
     },
     {
       "name": "Intro to AI Safety",
-      "link": "/ai-safety"
+      "link": "https://waisi.org/programs",
+      "redirect": true
     },
     {
       "name": "AI Governance",
-      "link": "/ai-governance"
+      "link": "https://waisi.org/programs",
+      "redirect": true
     }
   ]
 }

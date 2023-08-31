@@ -22,6 +22,8 @@ module.exports = {
     priority:
       "Helps adjust the position on the page — lower value is higher on the page",
     pronouns: "Shown as subtext on leadership team member summaries",
+    redirectURL:
+      "URL to redirect to. Please note: you need to change this setting in data/navbar.json as well for the navbar to work.",
     role: "Shown as subtext on leadership team member summaries",
     semester:
       "Displays as a small horizontal banner at the bottom of the program box",
