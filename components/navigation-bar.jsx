@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
+import { ProgramContext } from "../context/program-context";
 
 import Link from "next/link";
 
@@ -13,6 +14,15 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 
 /* site data */
 import siteData from "../lib/data";
+
+/*
+
+To populate the programs dropdown, this file makes use
+of the following files:
+- context/program-context.jsx
+- pages/api/programs.js
+
+*/
 
 const MenuIcon = ({ open, onChange }) => (
   <div className="menu-icon">
@@ -43,6 +53,9 @@ export default function NavigationBar({ links, currentPage }) {
     }
   }, [showMenuIcon]);
 
+  // Data for the programs drop-down using context
+  const programs = useContext(ProgramContext);
+
   return (
     <>
       <AppBar position="sticky" classes={{ root: "navbar-root" }}>
@@ -71,8 +84,8 @@ export default function NavigationBar({ links, currentPage }) {
                       className={
                         "dropdown-menu " +
                         ("/" + currentPage === link.link ||
-                        siteData.navbar.programs
-                          .map((program) => program.link)
+                        programs
+                          .map((program) => program.slug)
                           .includes("/" + currentPage)
                           ? "active"
                           : "")
@@ -83,19 +96,23 @@ export default function NavigationBar({ links, currentPage }) {
                         {link.name}
                       </Link>
                       <div className="dropdown-container">
-                        {siteData.navbar.programs.map((program) => (
-                          <Link
-                            className={"dropdown-link " + program.name}
-                            href={
-                              program.redirect
-                                ? program.link
-                                : "/programs" + program.link
-                            }
-                            key={program.link}
-                          >
-                            {program.name}
-                          </Link>
-                        ))}
+                        {programs
+                          .sort((a, b) => a.priority - b.priority)
+                          .map((program, i) => (
+                            <Link
+                              className={
+                                "dropdown-link " + (i === 0 ? "bold" : "")
+                              }
+                              href={
+                                program.redirectURL
+                                  ? program.redirectURL
+                                  : "/programs/" + program.slug
+                              }
+                              key={program.link}
+                            >
+                              {program.title}
+                            </Link>
+                          ))}
                       </div>
                     </div>
                   );

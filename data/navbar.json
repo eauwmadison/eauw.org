@@ -20,32 +20,5 @@
       "name": "Team",
       "link": "/team"
     }
-  ],
-  "programs": [
-    {
-      "name": "Intro to EA Fellowship ★",
-      "link": "/ea-intro-fellowship",
-      "redirect": false
-    },
-    {
-      "name": "Animal Ethics Fellowship",
-      "link": "/animal-ethics",
-      "redirect": false
-    },
-    {
-      "name": "Global Catastrophic Biological Risks",
-      "link": "/biosecurity",
-      "redirect": false
-    },
-    {
-      "name": "Intro to AI Safety",
-      "link": "https://waisi.org/programs",
-      "redirect": true
-    },
-    {
-      "name": "AI Governance",
-      "link": "https://waisi.org/programs",
-      "redirect": true
-    }
   ]
 }

@@ -49,15 +49,6 @@ module.exports = {
       "Twitter",
       "WIN",
       "YouTube"
-    ],
-    // These parentGroups were for the previous iteration of
-    // the Programs page. As of August 22, 2023, they are not
-    // used.
-    parentGroups: [
-      "Wisconsin AI Safety Initiative",
-      "Animal Advocacy",
-      "Wisconsin Biosecurity Initiative",
-      "EA UW"
     ]
   },
 

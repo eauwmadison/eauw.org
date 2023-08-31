@@ -9,11 +9,7 @@ export default function Programs({ page, popups, programs }) {
     <PageLayout page={page} popups={popups}>
       <ul>
         {programs
-          .filter(
-            (program) =>
-              program.slug !== "README" &&
-              program.slug !== "ea-intro-fellowship"
-          )
+          .filter((program) => program.slug !== "ea-intro-fellowship")
           .sort((a, b) => a.priority - b.priority)
           .map((program, i) => (
             <li key={i}>
