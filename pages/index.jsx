@@ -102,6 +102,7 @@ export default function Home({ page, popups }) {
             <i>unusually</i> good ways of helping, such that a given amount of
             effort goes an unusually long way.
             <br />
+            <br />
           </p>
           <a
             className="btn btn-go"

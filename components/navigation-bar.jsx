@@ -21,6 +21,7 @@ To populate the programs dropdown, this file makes use
 of the following files:
 - context/program-context.jsx
 - public/programs.json
+- scripts/generate-programs-json.js
 
 */
 
@@ -101,7 +102,8 @@ export default function NavigationBar({ links, currentPage }) {
                           .map((program, i) => (
                             <Link
                               className={
-                                "dropdown-link " + (i === 0 ? "bold" : "")
+                                "dropdown-link " +
+                                (i === 0 ? "first-program" : "")
                               }
                               href={
                                 program.redirectURL

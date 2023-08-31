@@ -27,10 +27,23 @@
   }
 }
 
+// Styling for the first program in the dropdown menu.
+.first-program {
+  font-family: $font-slab;
+  font-weight: 700;
+
+  &:before {
+    content: "★ ";
+  }
+
+  &:after {
+    content: " ★";
+  }
+}
+
 .drawer {
   background-color: $light-blue;
   color: $color-ea-dark;
-  // border-left: 1px solid $color-ea-dark;
   z-index: 10;
   box-shadow: none;
 
@@ -44,6 +57,8 @@
 
   .links {
     @extend .footer-links;
+
+    font-size: 1.7em;
 
     text-align: center;
 

@@ -10,7 +10,10 @@ using the command: "prebuild": "node scripts/generate-programs-json.js".
 The file is placed in public/programs.json, and is read by
 context/program-context.jsx which serves as context to the navbar.
 
-This comment was last updated on August 30, 2023.
+This comment was last updated on August 30, 2023. The first implementation
+of this script can be found in this commit:
+
+https://github.com/eauwmadison/eauw.org/commit/a7cb0975a1537c44d269bf56166a2b5f4a8186e2
 
 */
 
