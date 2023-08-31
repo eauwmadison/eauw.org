@@ -13,7 +13,14 @@ export default function ProgramPage({ page, popups }) {
 }
 
 export async function getStaticPaths() {
-  const slugs = await getCollectionSlugs("pages/programs");
+  let ignored = await getCollection("pages/programs");
+  ignored = ignored
+    .filter((program) => program.redirectURL)
+    .map((program) => program.slug);
+  ignored.push("_defaults");
+
+  let slugs = await getCollectionSlugs("pages/programs");
+  slugs = slugs.filter(({ params }) => !ignored.includes(params.slug));
 
   return {
     paths: slugs,
