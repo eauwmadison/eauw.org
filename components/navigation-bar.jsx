@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
+import { ProgramContext } from "../context/program-context";
 
 import Link from "next/link";
 
@@ -13,6 +14,16 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 
 /* site data */
 import siteData from "../lib/data";
+
+/*
+
+To populate the programs dropdown, this file makes use
+of the following files:
+- context/program-context.jsx
+- public/programs.json
+- scripts/generate-programs-json.js
+
+*/
 
 const MenuIcon = ({ open, onChange }) => (
   <div className="menu-icon">
@@ -43,6 +54,9 @@ export default function NavigationBar({ links, currentPage }) {
     }
   }, [showMenuIcon]);
 
+  // Data for the programs drop-down using context
+  const programs = useContext(ProgramContext);
+
   return (
     <>
       <AppBar position="sticky" classes={{ root: "navbar-root" }}>
@@ -64,15 +78,63 @@ export default function NavigationBar({ links, currentPage }) {
             </Link>
 
             <div className="links">
-              {links.map((link) => (
-                <Link
-                  href={link.link}
-                  key={link.link}
-                  className={"/" + currentPage === link.link ? "active" : ""}
-                >
-                  {link.name}
-                </Link>
-              ))}
+              {links.map((link) => {
+                if (link.name === "Programs") {
+                  return (
+                    <div
+                      className={
+                        "dropdown-menu " +
+                        ("/" + currentPage === link.link ||
+                        programs
+                          .map((program) => program.slug)
+                          .includes("/" + currentPage)
+                          ? "active"
+                          : "")
+                      }
+                      key="Programs"
+                    >
+                      <Link href={link.link} key={link.link}>
+                        {link.name}
+                      </Link>
+                      <div className="dropdown-container">
+                        {programs
+                          .sort((a, b) => a.priority - b.priority)
+                          .map((program, i) => (
+                            <Link
+                              className={
+                                "dropdown-link " +
+                                (i === 0 ? "first-program" : "")
+                              }
+                              href={
+                                program.redirectURL
+                                  ? program.redirectURL
+                                  : "/programs/" + program.slug
+                              }
+                              key={program.link}
+                            >
+                              {program.title}
+                            </Link>
+                          ))}
+                      </div>
+                    </div>
+                  );
+                } else {
+                  return (
+                    <Link
+                      href={link.link}
+                      key={link.link}
+                      className={
+                        "/" + currentPage === link.link ||
+                        (currentPage === "index" && link.link === "/")
+                          ? "active"
+                          : ""
+                      }
+                    >
+                      {link.name}
+                    </Link>
+                  );
+                }
+              })}
             </div>
           </Toolbar>
           {showMenuIcon && (
@@ -84,7 +146,7 @@ export default function NavigationBar({ links, currentPage }) {
         </Container>
       </AppBar>
       <Drawer
-        anchor="right"
+        anchor="top"
         classes={{ paper: "drawer" }}
         open={drawerOpen}
         onClose={() => setDrawerOpen(false)}
@@ -95,7 +157,12 @@ export default function NavigationBar({ links, currentPage }) {
               <Link
                 href={link.link}
                 target={link.external ? "_blank" : "_self"}
-                className={"/" + currentPage === link.link ? "active" : ""}
+                className={
+                  "/" + currentPage === link.link ||
+                  (currentPage === "index" && link.link === "/")
+                    ? "active"
+                    : ""
+                }
               >
                 {link.external && <Icon icon="Link" />}
                 {link.name}

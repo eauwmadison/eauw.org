@@ -9,6 +9,11 @@
     margin: 0;
   }
 
+  a {
+    color: $color-ea-light;
+    text-decoration: underline;
+  }
+
   .leader-bio {
     border-color: $color-ea-beige !important;
   }

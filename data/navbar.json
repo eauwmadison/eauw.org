@@ -1,20 +1,24 @@
 {
   "links": [
     {
-      "name": "Team",
-      "link": "/team"
+      "name": "Home",
+      "link": "/"
     },
     {
       "name": "Programs",
       "link": "/programs"
     },
     {
-      "name": "Opportunities",
-      "link": "/opportunities"
+      "name": "Events",
+      "link": "/events"
     },
     {
       "name": "Contact",
       "link": "/contact"
+    },
+    {
+      "name": "Team",
+      "link": "/team"
     }
   ]
 }

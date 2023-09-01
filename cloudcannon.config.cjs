@@ -6,11 +6,13 @@ module.exports = {
     callToAction: "Type of request shown at the bottom of this page",
     calUsername: "Username for https://cal.com/",
     contactEmailAddress: "Address to be displayed on the Contact page",
+    descriptionHTML: "A paragraph description of the program. Shown second",
     excerptHtml: "The HTML preview for a project summary",
     executive: "Toggles whether the leader is a member of the executive team",
     fullWidth:
       "Content stretches to the full width of the page. (Not recommended unless you know what you're doing.)",
     hidden: "Whether the element is shown",
+    introHTML: "1-2 sentence introduction to the program. Shown first",
     maxEvents: "The maximum number of events to show on the page",
     newTab: "Whether the link opens a new browser tab",
     page: 'Page to display on. ("index" for home page.)',
@@ -20,12 +22,16 @@ module.exports = {
     priority:
       "Helps adjust the position on the page — lower value is higher on the page",
     pronouns: "Shown as subtext on leadership team member summaries",
+    redirectURL:
+      "URL to redirect to. Please note: you need to change this setting in data/navbar.json as well for the navbar to work.",
     role: "Shown as subtext on leadership team member summaries",
     semester:
       "Displays as a small horizontal banner at the bottom of the program box",
     showTitle: "Toggles the title on the page",
     startingDate: "The first day of the week when the fellowship begins",
-    testimonials: "Update, add or remove testimonials"
+    testimonials: "Update, add or remove testimonials",
+    whoShouldApplyHTML:
+      "A paragraph description of who should apply. Shown last"
   },
 
   "_select_data": {
@@ -43,14 +49,32 @@ module.exports = {
       "Twitter",
       "WIN",
       "YouTube"
-    ],
-    parentGroups: [
-      "Wisconsin AI Safety Initiative",
-      "Animal Advocacy",
-      "Wisconsin Biosecurity Initiative",
-      "EA UW",
-      "Good Futures"
     ]
+  },
+
+  // As of August 22, 2023, the _input and _structures sections
+  // are just for content/pages/programs. But feel free to edit this
+  // as needed.
+  // https://cloudcannon.com/documentation/articles/using-arrays-to-edit-your-data/
+  "_input": {
+    topics: {
+      type: "array",
+      structures: "_structures.topics"
+    }
+  },
+
+  // https://cloudcannon.com/documentation/articles/defining-what-adds-to-an-array-with-array-structures/
+  "_structures": {
+    topics: {
+      values: [
+        {
+          value: {
+            title: null,
+            contentHTML: null
+          }
+        }
+      ]
+    }
   },
 
   "paths": {
@@ -68,12 +92,6 @@ module.exports = {
       name: "Pages",
       _icon: "wysiwyg",
       _enabled_editors: ["visual", "data"]
-    },
-    projects: {
-      path: "content/projects",
-      url: "/projects/[slug]",
-      output: true,
-      _enabled_editors: ["visual", "content", "data"]
     },
     leadership_team: {
       path: "content/leadership-team",

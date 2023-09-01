@@ -19,7 +19,7 @@ export async function getStaticPaths() {
     team: true,
     programs: true,
     contact: true,
-    projects: true
+    events: true
   };
 
   return {

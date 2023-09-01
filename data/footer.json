@@ -5,37 +5,28 @@
       "link": "/"
     },
     {
-      "name": "Team",
-      "link": "/team"
-    },
-    {
       "name": "Programs",
       "link": "/programs"
+    },
+    {
+      "name": "Events",
+      "link": "/events"
     },
     {
       "name": "Contact",
       "link": "/contact"
     },
     {
+      "name": "Team",
+      "link": "/team"
+    },
+    {
       "name": "Apply",
       "link": "/apply"
     },
     {
-      "name": "Opportunities",
-      "link": "/opportunities"
-    },
-    {
-      "name": "Books",
-      "link": "/books"
-    },
-    {
       "name": "Office Hours",
       "link": "/office-hours"
-    },
-    {
-      "name": "Server Status",
-      "link": "https://status.eauw.org/status/services",
-      "external": true
     },
     {
       "name": "Anonymous Feedback",
@@ -48,8 +39,13 @@
       "external": true
     },
     {
-      "name": "Good Futures",
-      "link": "https://win.wisc.edu/organization/goodfutures",
+      "name": "Wisconsin AI Safety Initiative",
+      "link": "https://win.wisc.edu/organization/waisi",
+      "external": true
+    },
+    {
+      "name": "Wisconsin Biosecurity Initiative",
+      "link": "https://win.wisc.edu/organization/wbi",
       "external": true
     }
   ]

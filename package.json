@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "analyze": "ANALYZE=true next build",
+    "prebuild": "node scripts/generate-programs-json.js",
     "build": "next build && next-sitemap && next export && next-image-export-optimizer",
     "postbuild": "nexered --provider=cloudflare-pages",
     "dev": "next dev -p 3333",

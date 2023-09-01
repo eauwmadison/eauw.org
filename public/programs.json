@@ -1,0 +1,29 @@
+[
+  {
+    "slug": "ai-governance",
+    "title": "AI Governance Course",
+    "priority": 4,
+    "redirectURL": "https://waisi.org/programs"
+  },
+  {
+    "slug": "ai-safety",
+    "title": "Intro to AI Safety Course",
+    "priority": 3,
+    "redirectURL": "https://waisi.org/programs"
+  },
+  {
+    "slug": "animal-ethics",
+    "title": "Animal Ethics Fellowship",
+    "priority": 2
+  },
+  {
+    "slug": "biosecurity",
+    "title": "Global Catastrophic Biological Risks Course",
+    "priority": 2
+  },
+  {
+    "slug": "ea-intro-fellowship",
+    "title": "Intro to EA Fellowship",
+    "priority": 1
+  }
+]
