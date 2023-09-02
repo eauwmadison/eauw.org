@@ -84,3 +84,20 @@
     margin-right: 0.75rem;
   }
 }
+
+.btn .text-desktop,
+.btn .text-mobile {
+  display: none;
+}
+
+@media (max-width: $sm-break) {
+  .btn .text-mobile {
+    display: inline;
+  }
+}
+
+@media (min-width: calc(#{$sm-break} + 1px)) {
+  .btn .text-desktop {
+    display: inline;
+  }
+}

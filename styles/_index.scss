@@ -1,0 +1,13 @@
+@import "colors";
+
+.banner-image {
+  height: 40vh;
+  background-color: $color-ea-dark;
+
+  .image {
+    height: 100%;
+    width: 100%;
+    opacity: 50%;
+    object-fit: cover;
+  }
+}
