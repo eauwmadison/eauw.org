@@ -1,5 +1,5 @@
 /* React imports */
-import { useEffect, useReducer } from "react";
+import { useEffect, useState } from "react";
 
 /* Next.js imports */
 import Link from "next/link";
@@ -20,6 +20,7 @@ import Event from "./event";
 import siteData from "../lib/data";
 
 const fetcher = async (url) => {
+  console.log("fetching data from:", url);
   const res = await fetch(url);
 
   // if the status code is not in the range 200–299,
@@ -35,33 +36,26 @@ const fetcher = async (url) => {
   return res.json();
 };
 
-// grab current time both for checking if event is upcoming and for "time ago"
-const now = new Date();
+const TimeAgo = ({ data }) => {
+  const [fetchTime, setFetchTime] = useState(new Date());
+  const [timeAgo, setTimeAgo] = useState(dayjs().fromNow());
 
-// initial state for reducer
-const initialState = { timeAgo: dayjs(now).fromNow() };
-
-const reducer = (state, action) => {
-  switch (action.type) {
-    case "updateTimeAgo":
-      return { timeAgo: action.payload };
-    default:
-      return state;
-  }
-};
-
-const TimeAgo = () => {
-  const [state, dispatch] = useReducer(reducer, initialState);
-
+  // update time ago every 30 seconds
   useEffect(() => {
     const interval = setInterval(() => {
-      dispatch({ type: "updateTimeAgo", payload: dayjs(now).fromNow() });
-    }, 30000);
+      setTimeAgo(dayjs(fetchTime).fromNow());
+    }, 3000);
 
     return () => clearInterval(interval);
-  });
+  }, [fetchTime]);
 
-  return <span>{state.timeAgo}</span>;
+  // reset time ago and fetch time when data changes
+  useEffect(() => {
+    setFetchTime(new Date());
+    setTimeAgo(dayjs().fromNow());
+  }, [data]);
+
+  return <span>{timeAgo}</span>;
 };
 
 export default function Calendar({ maxEvents }) {
@@ -72,6 +66,9 @@ export default function Calendar({ maxEvents }) {
       siteData.site.google_calendar_read_only_api_key,
     fetcher
   );
+
+  // grab current time for checking if event is upcoming
+  const now = new Date();
 
   if (error) {
     return (
@@ -109,7 +106,7 @@ export default function Calendar({ maxEvents }) {
   let filteredEvents = [];
 
   if (data) {
-    // the first 6 non-private events which haven't ended
+    // `maxEvents` number of non-private events which haven't ended
     filteredEvents = data.items
       .filter((event) => event.start) // events must have a start
       .sort(
@@ -140,7 +137,7 @@ export default function Calendar({ maxEvents }) {
         )}
       </Masonry>
       <div className="time">
-        Last updated <TimeAgo /> via{" "}
+        Last updated <TimeAgo data={data} /> via{" "}
         <a href={siteData.site.google_calendar_share_link}>Google Calendar</a>.
       </div>
     </>
