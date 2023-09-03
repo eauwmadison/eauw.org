@@ -20,7 +20,6 @@ import Event from "./event";
 import siteData from "../lib/data";
 
 const fetcher = async (url) => {
-  console.log("fetching data from:", url);
   const res = await fetch(url);
 
   // if the status code is not in the range 200–299,
@@ -61,9 +60,9 @@ const TimeAgo = ({ data }) => {
 export default function Calendar({ maxEvents }) {
   const { data, error } = useSWR(
     "https://www.googleapis.com/calendar/v3/calendars/" +
-      siteData.site.google_calendar_id +
+      siteData.calendar.google_calendar_id +
       "/events?key=" +
-      siteData.site.google_calendar_read_only_api_key,
+      siteData.calendar.google_calendar_read_only_api_key,
     fetcher
   );
 
@@ -74,7 +73,10 @@ export default function Calendar({ maxEvents }) {
     return (
       <div className="noscript-error">
         An error occurred while trying to fetch our{" "}
-        <a href={siteData.site.google_calendar_share_link}>Google Calendar</a>.
+        <a href={siteData.calendar.google_calendar_share_link}>
+          Google Calendar
+        </a>
+        .
         <br />
         Please <Link href="/contact">contact us</Link> to let us know.
         <div className="error">
@@ -93,7 +95,7 @@ export default function Calendar({ maxEvents }) {
         <noscript>
           <div className="noscript-error">
             Please enable JavaScript to view events from our{" "}
-            <a href={siteData.site.google_calendar_share_link}>
+            <a href={siteData.calendar.google_calendar_share_link}>
               Google Calendar
             </a>{" "}
             on this page.
@@ -138,7 +140,10 @@ export default function Calendar({ maxEvents }) {
       </Masonry>
       <div className="time">
         Last updated <TimeAgo data={data} /> via{" "}
-        <a href={siteData.site.google_calendar_share_link}>Google Calendar</a>.
+        <a href={siteData.calendar.google_calendar_share_link}>
+          Google Calendar
+        </a>
+        .
       </div>
     </>
   );
