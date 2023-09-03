@@ -18,7 +18,7 @@ export default function Home({ page, popups }) {
         <div className="two-columns-uneven">
           <div className="grid-left blue">
             <h2 className="editable">
-              We&apos;re a community at UW&ndash;Madison aiming to tackle the
+              We&apos;re a community at UW&ndash;Madison aiming to solve the
               world&apos;s most pressing problems.
             </h2>
             <p className="editable">
