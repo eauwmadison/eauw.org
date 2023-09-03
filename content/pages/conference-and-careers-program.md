@@ -1,6 +1,6 @@
 ---
 title: Conference and Careers Program
-callToAction: Contact
+showTitle: true
 contentHTML: >-
   <p>As UW-Madison students we have an awesome opportunity to use our careers to
   improve the lives of others. The average career lasts 80,000 hours,
@@ -38,5 +38,5 @@ contentHTML: >-
   Up Here</a>&nbsp;by November 15th</strong></p><p><strong>Explore the full
   program&nbsp;</strong><a target="_blank" rel="noopener noreferrer"
   href="/28f7534cb6e947f0ad896726005215b0">here</a></p>
-showTitle: true
+callToAction: Contact
 ---

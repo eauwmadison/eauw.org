@@ -2,7 +2,6 @@
 title: Intro to EA Fellowship
 priority: 1
 applicationLink: https://eauw.org/apply
-callToAction: Contact
 introHTML: >-
   <p>The Fellowship program to equip students with the knowledge to do good in the world more effectively and the tools to think critically about their career ambitions. By the end of the fellowship, participants have access to in-depth coaching, career advice/connections, and mentored research and project groups.</p>
   <p>Each program lasts 5 weeks, and is built around weekly 1.5-hour discussions with 3-5 other Fellows in which you’ll talk freely about these ideas. The total time commitment is 2.5 hours per week for 5 weeks.</p>
@@ -22,4 +21,5 @@ topics:
 whoShouldApplyHTML: >-
   <p>The seminar is open to all members of the UW-Madison community. For others, please apply through <a href="https://www.effectivealtruism.org/virtual-programs/introductory-program/">EA Virtual Programs.</a></p><p>We recommend applying to this program if you:</p><ul><li>Want to make a large positive impact through your career, giving, or volunteering</li><li>Can commit 2 hours a week to readings and exercises, in addition to the weekly 1-hour discussions</li><li>Can attend at least 7 out of the 8 weekly discussion sessions</li></ul><p>We are committed to building a diverse group of members. We strongly encourage interested students to apply regardless of gender, race, ethnicity, nationality, ability, etc. We also encourage undergraduate, graduate, and professional students, as well as individuals from all intellectual backgrounds and majors to apply.</p>
 disclaimerHTML:
+callToAction: Contact
 ---

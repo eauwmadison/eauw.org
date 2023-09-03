@@ -1,5 +1,5 @@
 ---
 title: Events
-callToAction: Contact
 showTitle: false
+callToAction: Contact
 ---

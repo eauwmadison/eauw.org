@@ -1,6 +1,5 @@
 ---
 title:
-callToAction: Subscribe
 fullWidth: true
 calendar: true
 maxEvents: 6
@@ -21,4 +20,5 @@ testimonials:
     testimonialImage: /images/uploads/ishita-k.jpg
     name: Ishita K.
     subtitle: "B.B.A. in Actuarial Science, 2025"
+callToAction: Subscribe
 ---

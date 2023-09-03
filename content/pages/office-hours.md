@@ -1,6 +1,5 @@
 ---
 title: Office Hours
-callToAction: Contact
 showTitle: true
 contentHTML: >-
   <p>Office hours are currently <b>closed</b>. See you next semester!</p>
@@ -9,4 +8,5 @@ contentHTML: >-
   work done, hold events. Feel free to drop by at any of these times!</p>
   <iframe hidden class="responsive-iframe" height="750px"
   src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTxjmvC4aBTgZfBGFlBw3QRXHU1CYC0gSYGucCh2AfwZIzp3Wjmb3sUI-WfLXjDzenDgVT6ADC4lHYc/pubhtml?widget=false&amp;headers=false&amp;chrome=false"></iframe>
+callToAction: Contact
 ---

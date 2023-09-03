@@ -3,7 +3,6 @@ title:
 priority: 4
 applicationLink:
 redirectURL:
-callToAction: Contact
 introHTML:
 descriptionHTML:
 topics:
@@ -11,4 +10,5 @@ topics:
     contentHTML: <p>Sample Information</p>
 whoShouldApplyHTML:
 disclaimerHTML:
+callToAction: Contact
 ---

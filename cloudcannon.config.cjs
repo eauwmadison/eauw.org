@@ -9,8 +9,7 @@ module.exports = {
     descriptionHTML: "A paragraph description of the program. Shown second",
     excerptHtml: "The HTML preview for a project summary",
     executive: "Toggles whether the leader is a member of the executive team",
-    fullWidth:
-      "Content stretches to the full width of the page. (Not recommended unless you know what you're doing.)",
+    fullWidth: "Content stretches to the full width of the page.",
     hidden: "Whether the element is shown",
     introHTML: "1-2 sentence introduction to the program. Shown first",
     maxEvents: "The maximum number of events to show on the page",

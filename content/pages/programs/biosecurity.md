@@ -2,7 +2,6 @@
 title: Global Catastrophic Biological Risks Course
 priority: 2
 applicationLink:
-callToAction: Contact
 introHTML: >-
   <p>The Biosecurity Fundamentals course is a bite-sized introduction to the field of biosecurity. It consists of <b>6 weeks of discussion based learning</b>, and prepares participants for independent technical or policy biosecurity research. After completing the program, participants gain access to <b>Wisconsin Biosecurity Initiative’s mentored research program</b>, where you’ll have the opportunity to <b>publish novel research with the help of an expert mentor</b>.</p><p>The program lasts six weeks and includes weekly 1.5 hour discussions, which require an hour of prep. The total time commitment is 2.5 hours per week.</p>
 descriptionHTML: >-
@@ -24,4 +23,5 @@ whoShouldApplyHTML: >-
   <p>The seminar is open to all members of the UW-Madison community.</p><p>We recommend applying to this program if you:</p><ul><li>Are interested in exploring a career in the field of biosecurity</li><li>Can commit 1 hour a week to prep work and exercises, in addition to the weekly 1.5-hour discussions</li><li>Can attend at least 5 out of the 6 weekly discussion sessions</li></ul><p>We are committed to building a diverse group of members. We strongly encourage interested students to apply regardless of gender, race, ethnicity, nationality, ability, etc. We also encourage undergraduate, graduate, and professional students, as well as individuals from all intellectual backgrounds and majors to apply.</p>
 disclaimerHTML: >-
   <p>Note: This program is operated by Wisconsin Biosecurity Initiative, an independent RSO which shares many of the values of Effective Altruism UW-Madison.</p>
+callToAction: Contact
 ---
