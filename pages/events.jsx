@@ -16,7 +16,7 @@ export default function Events({ page, popups }) {
           All events are free and open to the public unless otherwise noted.
         </p>
       </div>
-      <Calendar maxEvents={6} />
+      <Calendar maxEvents={15} />
     </PageLayout>
   );
 }
