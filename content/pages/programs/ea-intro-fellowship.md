@@ -3,10 +3,10 @@ title: Intro to EA Fellowship
 priority: 1
 applicationLink: https://eauw.org/apply
 introHTML: >-
-  <p>The Fellowship program to equip students with the knowledge to do good in
-  the world more effectively and the tools to think critically about their
-  career ambitions. By the end of the fellowship, participants have access to
-  in-depth coaching, career advice/connections, and mentored research and
+  <p>The Fellowship program was built to equip students with the knowledge to do
+  good in the world more effectively and the tools to think critically about
+  their career ambitions. By the end of the fellowship, participants have access
+  to in-depth coaching, career advice/connections, and mentored research and
   project groups.</p><p>Each program lasts 5 weeks, and is built around weekly
   1.5-hour discussions with 3-5 other Fellows in which you’ll talk freely about
   these ideas. The total time commitment is 2.5 hours per week for 5 weeks.</p>
