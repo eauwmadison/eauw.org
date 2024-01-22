@@ -2,7 +2,7 @@
 name: Reid Kuenzi
 pronouns: he/him
 role: Mailing List Outreach Coordinator, Social Events Lead, Fellowship Coordinator
-image:
+image: /images/uploads/reid_kuenzi.jpg
 executive: true
 previous: false
 hidden: false
