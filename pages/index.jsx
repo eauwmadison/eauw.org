@@ -49,11 +49,11 @@ export default function Home({ page, popups }) {
                 <a href="https://groupme.com/join_group/98435056/5yJX1TJy">
                   Announcement GroupMe
                 </a>{" "}
-                to stay updated on events, and join our{" "}
+                to get event updates, and our{" "}
                 <a href="https://groupme.com/join_group/98425989/dA2yX1b5">
                   Community GroupMe
                 </a>{" "}
-                to join the community and share your ideas.
+                to connect with the club.
               </p>
             </div>
 
