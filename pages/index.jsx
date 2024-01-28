@@ -34,24 +34,56 @@ export default function Home({ page, popups }) {
               pursuit of helping others.
             </p>
           </div>
+          <div className="grid-right small-blue-section three-rows">
+            <div className="grid-a justify-self-center">
+              <h3>Learn more and get involved!</h3>
+            </div>
 
-          <div className="grid-right small-blue-section two-rows">
-            <MailingList
-              className="grid-top"
-              useClubName={false}
-              useDescription={false}
-              userAsk="Join our mailing list!"
-            />
+            <div className="grid-b">
+              <p className="editable">
+                The best way to get involved is to join our{" "}
+                <a href="https://eauw.org/programs/ea-intro-fellowship">
+                  Intro to Effective Altruism Fellowship
+                </a>
+                . You can also join our{" "}
+                <a href="https://groupme.com/join_group/98435056/5yJX1TJy">
+                  Announcement GroupMe
+                </a>{" "}
+                to stay updated on events, and join our{" "}
+                <a href="https://groupme.com/join_group/98425989/dA2yX1b5">
+                  Community GroupMe
+                </a>{" "}
+                to join the community and share your ideas.
+              </p>
+            </div>
 
-            <div className="grid-bottom justify-self-center align-self-end">
-              <a
-                className="contact-info btn-light btn btn-small btn-go"
-                href={data.social.links[0].link}
-                rel="noreferrer"
-              >
-                <b>Join our Slack!</b>
-                <Icon icon="Slack" />
-              </a>
+            <div className="grid-c align-self-end">
+              <div className="space-between">
+                <a
+                  className="btn btn-smaller btn-go"
+                  href={"https://eauw.org/programs/ea-intro-fellowship"}
+                  rel="noreferrer"
+                >
+                  <b>Fellowship</b>
+                  <Icon icon="Go" />
+                </a>
+                <a
+                  className="btn btn-smaller btn-go"
+                  href={"https://groupme.com/join_group/98435056/5yJX1TJy"}
+                  rel="noreferrer"
+                >
+                  <b>Announcements</b>
+                  <Icon icon="Megaphone" />
+                </a>
+                <a
+                  className="btn btn-smaller btn-go"
+                  href={"https://groupme.com/join_group/98425989/dA2yX1b5"}
+                  rel="noreferrer"
+                >
+                  <b>Community</b>
+                  <Icon icon="Group" />
+                </a>
+              </div>
             </div>
           </div>
         </div>
