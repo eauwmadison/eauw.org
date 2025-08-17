@@ -12,14 +12,16 @@
     "redirectURL": "https://waisi.org/programs"
   },
   {
-    "slug": "animal-ethics",
-    "title": "Animal Ethics Fellowship",
-    "priority": 2
+    "slug": "animal-advocacy",
+    "title": "Animal Advocacy",
+    "priority": 2,
+    "redirectURL": "https://win.wisc.edu/organization/animal"
   },
   {
-    "slug": "biosecurity",
-    "title": "Global Catastrophic Biological Risks Course",
-    "priority": 2
+    "slug": "wi-biosecurity-initiative",
+    "title": "Wisconsin Biosecurity Initiative",
+    "priority": 2,
+    "redirectURL": "https://www.wiscobiosec.org/"
   },
   {
     "slug": "ea-intro-fellowship",
