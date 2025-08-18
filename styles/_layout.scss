@@ -189,7 +189,6 @@ footer {
   display: grid;
   grid-template-columns: auto;
   grid-template-areas: "a" "b" "c";
-  gap: 10px;
 }
 
 .grid-a {
@@ -213,6 +212,10 @@ footer {
 
 .justify-self-center {
   justify-self: center;
+}
+
+.align-text-center {
+  text-align: center;
 }
 
 .align-self-end {
@@ -290,7 +293,8 @@ footer {
 .small-blue-section {
   @extend .blue-section;
 
-  padding: 20px 40px;
+  padding: 30px 40px;
+  padding-top: 40px;
 }
 
 .dark-section {

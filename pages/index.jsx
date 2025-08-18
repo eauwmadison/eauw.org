@@ -24,80 +24,42 @@ export default function Home({ page, popups }) {
             <p className="editable">
               Our student group is part of the effective altruism community — a
               social movement that asks: how can we best improve the lives of
-              others, using our limited time and resources?
-            </p>
-            <p className="editable">
-              Effective Altruism at UW&ndash;Madison aims to offer students
-              tools to figure out how they can make a greater social impact,
-              combining our compassion with evidence and reasoning. We&apos;re
-              also a community of people supporting each other in our shared
-              pursuit of helping others.
+              others, using our limited time and resources? Effective Altruism
+              at UW&ndash;Madison aims to offer students tools to figure out how
+              they can make a greater social impact, combining our compassion
+              with evidence and reasoning.
             </p>
           </div>
           <div className="grid-right small-blue-section three-rows">
             <div className="grid-a justify-self-center">
-              <h3>Learn more and get involved!</h3>
+              <h3 className="align-text-center">
+                Learn more and get involved!
+              </h3>
             </div>
 
-            <div className="grid-b">
-              <p className="editable">
-                The best way to get involved is to join our{" "}
+            <div className="grid-b justify-self-center">
+              <p className="editable align-text-center">
+                The best way to get involved is to join our <br />
                 <a href="https://eauw.org/programs/ea-intro-fellowship">
                   Intro to Effective Altruism Fellowship
                 </a>
-                . You can also join our{" "}
-                <a href="https://groupme.com/join_group/98435056/5yJX1TJy">
-                  Announcement GroupMe
-                </a>{" "}
-                to get event updates, and our{" "}
-                <a href="https://groupme.com/join_group/98425989/dA2yX1b5">
-                  Community GroupMe
-                </a>{" "}
-                to connect with the club.
+                .
               </p>
             </div>
 
-            <div className="grid-c align-self-end">
-              <div className="space-between">
-                <a
-                  className="btn btn-smaller btn-go"
-                  href={"https://eauw.org/programs/ea-intro-fellowship"}
-                  rel="noreferrer"
-                >
-                  <b>Fellowship</b>
-                  <Icon icon="Go" />
-                </a>
-                <a
-                  className="btn btn-smaller btn-go"
-                  href={"https://groupme.com/join_group/98435056/5yJX1TJy"}
-                  rel="noreferrer"
-                >
-                  <b>Announcements</b>
-                  <Icon icon="Megaphone" />
-                </a>
-                <a
-                  className="btn btn-smaller btn-go"
-                  href={"https://groupme.com/join_group/98425989/dA2yX1b5"}
-                  rel="noreferrer"
-                >
-                  <b>Community</b>
-                  <Icon icon="Group" />
-                </a>
-              </div>
+            <div className="grid-c justify-self-center">
+              <a
+                className="btn btn-smaller btn-go"
+                href={"https://eauw.org/programs/ea-intro-fellowship"}
+                rel="noreferrer"
+              >
+                <b>Fellowship</b>
+                <Icon icon="Go" />
+              </a>
             </div>
           </div>
         </div>
       </section>
-
-      <div className="banner-image">
-        <ExportedImage
-          className="image"
-          src="/images/uploads/banner-image.jpg"
-          alt="EA UW&ndash;Madison members"
-          width="1146"
-          height="828"
-        />
-      </div>
 
       <section className="beige-section">
         <div className="container">
@@ -160,7 +122,8 @@ export default function Home({ page, popups }) {
         </section>
       )}
 
-      {page.testimonials && (
+      {/* TODO: Uncomment when ready */}
+      {/* {page.testimonials && (
         <section className="beige-section">
           <div className="container">
             <div className="testimonials">
@@ -186,7 +149,7 @@ export default function Home({ page, popups }) {
             </div>
           </div>
         </section>
-      )}
+      )} */}
     </PageLayout>
   );
 }

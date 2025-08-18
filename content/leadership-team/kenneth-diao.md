@@ -10,4 +10,4 @@ calUsername:
 priority: 4
 ---
 
-Kenneth is a fourth-year Industrial Engineering and Psychology Student. His primary aim in life is reducing the suffering of all beings, whether or not they happen to be human. He is particularly interested in the psychological factors that influence the development of the moral circle. He also looks to cultivate compassion, for the self and for others, because he believes that boundless compassion will lead to the greatest good being done. His hobbies include reading, making memes, and tennis.
+Kenneth is a PhD student at Carnegie—Mellon University in the Social and Decision Sciences. He wishes to alleviate suffering for all sentient beings, and he is firmly committed to liberty and equality, animal rights, and veganism. In his free time, he writes a blog, plays Minecraft, and hangs out with friends.
