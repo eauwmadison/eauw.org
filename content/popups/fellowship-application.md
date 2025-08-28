@@ -3,6 +3,6 @@ title: Fellowship applications are now open!
 buttonText: Apply
 link: /apply
 page: index
-popUpEnabled: false
+popUpEnabled: true
 ---
-Application deadline Tuesday, Febuary 14th.
+Application deadline Friday, September 19th.
