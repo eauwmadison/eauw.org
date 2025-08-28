@@ -1,6 +1,4 @@
 ---
-layout: program
-priority: 1
 title: Introductory Programs
 showTitle: true
 applicationLink: https://eauw.org/apply

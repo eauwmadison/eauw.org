@@ -1,6 +1,7 @@
 /* first-party component imports */
 import DefaultLayout from "./default";
 import Popup from "../popup";
+import Icon from "../icon";
 
 export default function PageLayout({ children, page, popups }) {
   return (
@@ -10,7 +11,24 @@ export default function PageLayout({ children, page, popups }) {
           <h2>{page.title}</h2>
         </div>
       )}
-
+      {page.introHTML && (
+        <div className="page-header short-beige-section">
+          <div dangerouslySetInnerHTML={{ __html: page.introHTML }} />
+          {page.applicationLink && (
+            <div className="btn-center-container">
+              
+                className="btn btn-go"
+                href={page.applicationLink}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Apply Now
+                <Icon icon="Go" />
+              </a>
+            </div>
+          )}
+        </div>
+      )}
       <article>
         {page.contentHTML && (
           <div dangerouslySetInnerHTML={{ __html: page.contentHTML }} />
