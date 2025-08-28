@@ -22,7 +22,7 @@ export default function PageLayout({ children, page, popups }) {
                 target="_blank"
                 rel="noreferrer"
               >
-                Apply Now
+                Apply to the Intro to EA Fellowship
                 <Icon icon="Go" />
               </a>
             </div>
