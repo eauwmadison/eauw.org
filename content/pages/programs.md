@@ -1,9 +1,10 @@
 ---
+layout: program
+priority: 1
 title: Introductory Programs
 showTitle: true
-priority: 1
 applicationLink: https://eauw.org/apply
-descriptionHTML: >-
+introHTML: >-
   <p>The Fellowship program was built to equip students with the knowledge to do
   good in the world more effectively and the tools to think critically about
   their career ambitions. By the end of the fellowship, participants have access
