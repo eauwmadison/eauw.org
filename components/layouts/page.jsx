@@ -16,7 +16,7 @@ export default function PageLayout({ children, page, popups }) {
           <div dangerouslySetInnerHTML={{ __html: page.introHTML }} />
           {page.applicationLink && (
             <div className="btn-center-container">
-              
+              <a
                 className="btn btn-go"
                 href={page.applicationLink}
                 target="_blank"
