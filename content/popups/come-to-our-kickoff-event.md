@@ -1,6 +1,6 @@
 ---
 title: 'Come to our Kickoff Event! '
-button: RSVP Here!
+button: 'RSVP Here!'
 link: https://forms.gle/qxxMw2qqCXWn2TjV8
 page: index
 popUpEnabled: true
