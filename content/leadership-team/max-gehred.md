@@ -4,7 +4,7 @@ pronouns: he/him
 role: President
 image: /images/uploads/max-gehred.jpg
 calUsername:
-executive: true
+executive: false
 previous: false
 hidden: true
 priority: 1
