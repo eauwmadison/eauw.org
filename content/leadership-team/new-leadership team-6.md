@@ -7,6 +7,6 @@ executive: false
 previous: false
 hidden: false
 calUsername:
-priority: 11
+priority: 10
 ---
 Micah is a freshman at UW-Madison in the Pre-Business (Accounting) major.
