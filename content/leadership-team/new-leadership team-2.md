@@ -7,6 +7,6 @@ executive: false
 previous: false
 hidden: false
 calUsername:
-priority: 6
+priority: 7
 ---
 Azalea is a freshman at UW-Madison majoring in Political Science, Environmental Studies, and Spanish.
