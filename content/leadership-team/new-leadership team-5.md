@@ -7,6 +7,6 @@ executive: false
 previous: false
 hidden: false
 calUsername:
-priority: 9
+priority: 10
 ---
 Krishiv is a freshman at UW-Madison studying Computer Science and Physics.
