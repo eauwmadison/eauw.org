@@ -9,4 +9,4 @@ hidden: false
 calUsername:
 priority: 3
 ---
-Sruthi is a junior at UW-Madison, majoring in Computer Sciences and Psychology.
+Sruthi is a junior at UW-Madison studying Computer Sciences and Psychology.
