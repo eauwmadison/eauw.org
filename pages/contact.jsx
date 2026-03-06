@@ -100,16 +100,19 @@ export default function Contact({ page, placeholders, popups }) {
               __html: data.organization.officeAddress.replace(/,/g, "<br>")
             }}
           ></address>
-
-          <label>Office Hours</label>
-          <a
-            className="contact-info btn btn-small btn-go"
-            href={data.organization.officeHoursLink}
-            rel="noreferrer"
-          >
-            {data.organization.officeHoursLinkText}
-            <Icon icon="Go" />
-          </a>
+          {data.organization.officeHoursLink && (
+            <>
+              <label>Office Hours</label>
+              <a
+                className="contact-info btn btn-small btn-go"
+                href={data.organization.officeHoursLink}
+                rel="noreferrer"
+              >
+                {data.organization.officeHoursLinkText}
+                <Icon icon="Go" />
+              </a>
+            </>
+          )}
 
           <label>Postal Address</label>
           <address
