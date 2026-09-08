@@ -9,4 +9,4 @@ hidden: false
 calUsername:
 priority: 10
 ---
-Krishiv is a freshman at UW-Madison studying Computer Science and Physics.
+Krishiv is a sophomore at UW-Madison studying Computer Science and Physics.
